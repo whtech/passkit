@@ -1,0 +1,178 @@
+#summary Title here
+
+= Title here =
+
+|| *URL* || https://api.passkit.com/v1/pass/ rest of the URL{template name} (optional) /?format=xml ||
+|| *Verb* || POST ||
+|| *Auth* || Yes ||
+
+Introduce method here briefly
+
+== URL Parameters ==
+
+  * name (string)
+  * name (string)
+
+== Request Contents ==
+
+==== JSON Format ====
+
+<code language="json">
+{
+   "pass_1": {
+       "Check In": "2012-10-06T00:00:00+08:00",
+       "Check Out": "2012-10-08T00:00:00+08:00",
+       "No. Rooms": "1",
+       "No. Guests": "2",
+       "Reservation No.": "8864337",
+       "Guest Name": "Daniel Allen", 
+       "Hotel Name": "JW Marriott Hotel Hong Kong",
+       "Hotel Address": "Pacific Place, 88 Queensway, Hong Kong",
+       "Hotel Telephone": "+852 2810 8366",
+       "Nightly Rate": "HK$ 3,315",
+       "relevantDate": "2012-10-06T00:00:00+08:00",
+       "location1address": "Pacific Place, 88 Queensway, Hong Kong",
+       "location1latitude": "22.27772",
+       "location1longitude": "114.16481",
+       "location1locationAlert": "Enjoy your stay",
+       "recoveryEmail": "daniel.allen@example.com"       
+   },
+   "pass_2": {
+       "Check In": "2012-10-14T00:00:00+09:00",
+       "Check Out": "2012-10-15T00:00:00+09:00",
+       "No. Rooms": "1",
+       "No. Guests": "1",
+       "Reservation No.": "9423554",
+       "Guest Name": "Wendy Chan", 
+       "Hotel Name": "Grand Hyatt Seoul",
+       "Hotel Address": "322 Sowol-ro, Yongsan-gu, Seoul, South Korea 140-738",
+       "Hotel Telephone": "+82 2 797 1234",
+       "Nightly Rate": "KRW 305,000",
+       "relevantDate": "2012-10-14T00:00:00+09:00",
+       "location1address": "322 Sowol-ro, Yongsan-gu, Seoul, South Korea 140-738",
+       "location1latitude": "22.27772",
+       "location1longitude": "114.16481",
+       "location1locationAlert": "Enjoy your stay",
+       "recoveryEmail": "wendy.chan@example.com"  
+   }
+}
+</code>
+
+==== XML Format ====
+
+Note that for XML, spaces within tag names need to be replaced by middle-dot (\u00B7 / &#183;) and numbers or invalid tag first characters prefixed with a double underscore.
+
+{{{
+<?xml version="1.0" encoding="UTF-8" ?>
+<PassKit_API_Request>
+	<pass_1>
+		<Check·In>2012-10-06T00:00:00+08:00</Check·In>
+
+		<Check·Out>2012-10-08T00:00:00+08:00</Check·Out>
+
+		<No.·Rooms>1</No.·Rooms>
+
+		<No.·Guests>2</No.·Guests>
+
+		<Reservation·No.>8864337</Reservation·No.>
+		<Guest·Name>Daniel Allen</Guest·Name>
+		<Hotel·Name>JW Marriott Hotel Hong Kong</Hotel·Name>
+		<Hotel·Address>Pacific Place, 88 Queensway, Hong Kong</Hotel·Address>
+		<Hotel·Telephone>+852 2810 8366</Hotel·Telephone>
+		<Nightly·Rate>HK$ 3,315</Nightly·Rate>
+		<relevantDate>2012-10-06T00:00:00+08:00</relevantDate>
+		<location1address>Pacific Place, 88 Queensway, Hong Kong</location1address>
+		<location1latitude>22.27772</location1latitude>
+		<location1longitude>114.16481</location1longitude>
+		<location1locationAlert>Enjoy your stay</location1locationAlert>
+		<recoveryEmail>daniel.allen@example.com</recoveryEmail>
+	</pass_1>
+	<pass_2>
+		<Check·In>2012-10-14T00:00:00+09:00</Check·In>
+		<Check·Out>2012-10-15T00:00:00+09:00</Check·Out>
+		<No.·Rooms>1</No.·Rooms>
+		<No.·Guests>1</No.·Guests>
+		<Reservation·No.>9423554</Reservation·No.>
+		<Guest·Name>Wendy Chan</Guest·Name>
+		<Hotel·Name>Grand Hyatt Seoul</Hotel·Name>
+		<Hotel·Address>322 Sowol-ro, Yongsan-gu, Seoul, South Korea 140-738</Hotel·Address>
+		<Hotel·Telephone>+82 2 797 1234</Hotel·Telephone>
+		<Nightly·Rate>KRW 305,000</Nightly·Rate>
+		<relevantDate>2012-10-14T00:00:00+09:00</relevantDate>
+		<location1address>322 Sowol-ro, Yongsan-gu, Seoul, South Korea 140-738</location1address>
+		<location1latitude>22.27772</location1latitude>
+		<location1longitude>114.16481</location1longitude>
+		<location1locationAlert>Enjoy your stay</location1locationAlert>
+		<recoveryEmail>wendy.chan@example.com</recoveryEmail>
+	</pass_2>
+</PassKit_API_Request>
+}}}
+
+== Parameters ==
+
+  * *Parameter name* (String etc)
+    *_Explain the parameter_
+  * *Parameter name* (String etc)
+    *_Explain the parameter_
+  * *Parameter name* (String etc)
+    *_Explain the parameter_
+  * *Parameter name* (String etc)
+    *_Explain the parameter_
+
+== Response Examples ==
+
+==== JSON Format ====
+
+<code language="json">
+{
+    "success": true,
+    "passes": {
+        "pass_1": {
+            "serial": "0905188361315670",
+            "url": "https:\/\/r.pass.is\/DXerKmGmXyrx"
+        },
+        "pass_2": {
+            "serial": "0236642194858366",
+            "url": "https:\/\/r.pass.is\/B84Un7iu8xvo"
+        }
+    }
+}
+</code>
+
+==== XML Format ====
+
+{{{
+<?xml version="1.0"?>
+<PassKit_API_Response>
+	<success>1</success>
+	<passes>
+		<pass_1>
+			<serial>0586151635614775</serial>
+			<url>https://r.pass.is/JNkpa3eMLVsg</url>
+		</pass_1>
+		<pass_2>
+			<serial>0790081069148314</serial>
+			<url>https://r.pass.is/HutloddK8KGt</url>
+		</pass_2>
+	</passes>
+</PassKit_API_Response>
+}}}
+
+  * *Parameter name* (String etc)
+    *_Explain as required else delete this row_
+  * *Parameter name* (String etc)
+    *_Explain as required else delete this row_
+  * *Parameter name* (String etc)
+    *_Explain as required else delete this row_
+  * *Parameter name* (String etc)
+    *_Explain as required else delete this row_
+
+----
+
+<table border="0">
+  <tr>
+    <td width="361"><g:plusone size="medium"></g:plusone></td>
+    <td width="353">[http://PassKit.com/ PassKit Home Page]</td>
+    <td width="128">[https://create.passkit.com Register with PassKit]</td>
+  </tr>
+</table>

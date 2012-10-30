@@ -1,0 +1,17 @@
+#summary PassKit API Methods
+
+= PassKit API Methods =
+
+
+     * [Templates Template Methods]
+         * [GetTemplateDetails Get Template Field Names]
+     * [Images Image Methods]
+         * [UploadImage Upload Image]
+         * [GetImageData Get Image Data]
+     * [Passes Pass Methods]
+         * [IssuePass Issue Pass]
+         * [BatchIssuePass Batch Issue Pass]
+         * [UpdatePass Update Pass]
+         * [InvalidatePass Invalidate Pass]
+     * [Analytics Analytics Methods]
+     * [Admin Admin Methods]

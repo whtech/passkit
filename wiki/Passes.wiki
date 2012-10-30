@@ -1,0 +1,30 @@
+#summary Pass Methods
+
+= Pass Methods =
+
+Pass methods are designed for issuing, updating or obtaining information about individual passes, or batches of passes that have been or will be issued to a single template.
+----
+== Creating Passes ==
+
+  * [IssuePass Issue Pass]
+  * [BatchIssuePass Batch Issue Pass]
+----
+== Updating Passes ==
+
+  * [UpdatePass Update Pass]
+  * [InvalidatePass Invalidate Pass]
+----
+== Querying Passes ==
+
+  * Get Pass Details
+  * Batch Get Pass Details
+
+----
+
+<table border="0">
+  <tr>
+    <td width="361"><g:plusone size="medium"></g:plusone></td>
+    <td width="353">[http://PassKit.com/ PassKit Home Page]</td>
+    <td width="128">[https://create.passkit.com Register with PassKit]</td>
+  </tr>
+</table>

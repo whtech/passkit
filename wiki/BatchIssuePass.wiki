@@ -1,0 +1,197 @@
+#summary Batch Issue Pass API Method
+
+= Batch Issue Pass =
+
+|| *URI* || `https://api.passkit.com/v1/pass/issue/batch/template/`<font color="blue">{templateName}</font><font color="grey"> _/?format=xml_ (optional)</font> ||
+|| *Verb* || POST ||
+|| *Auth* || Yes ||
+
+This method is used for creating batches of up to 100 passes. It accepts the parameters returned by the [GetTemplateDetails Get Template Field Names] method, plus relevance fields for date and for up to 10 locations.
+
+A successful submission will return the serial number and URL for each pass created.
+
+== URI Parameters ==
+
+  * <font color="blue">*templateName*</font> <font color="green">_(string)_</font> The name of the template from which the pass will be created
+
+== Request Parameters ==
+
+  * *<font color="blue">{fieldName}</font>* <font color="green">_(mixed)_</font> <font color="grey">_optional_</font>
+    *_ The value for a dynamic field within the template. The submitted data type must match the data type of the field, as specified in the template.  Date values must be in ISO 8601 format.  If not provided, the pass will return the default value for the field or an empty string or zero value for number and currency fields if no default is present.
+  * *<font color="blue">{fieldName}`_`changeMessage</font>* <font color="green">_(string)_</font> <font color="grey">_optional_</font>
+    *_ The text of the notification message that will be displayed when the field value changes.  Include %@ in the string to include the new value in the notification.
+  * *<font color="blue">{fieldName}`_`label</font>* <font color="green">_(string)_</font> <font color="grey">_optional_</font>
+    *_ The value of a dynamic label field. Label values are always treated as text. 
+  * *<font color="blue">thumbnailImage</font>* <font color="green">_(imageID)_</font> <font color="grey">_optional_</font>
+    *_ For templates that accept a thumbnail image, the thumbnail imageID as returned by the [UploadImage Upload Image] method.  ImageIDs, can be checked with the [GetImageData Get Image Data] method.
+  * *<font color="blue">serialNumber</font>* <font color="green">_(string)_</font> <font color="grey">_optional_</font>
+    *_ For templates that require a serial number to be provided at pass creation. The serial provided must be unique within the template.
+  * *<font color="blue">recoveryEmail</font>* <font color="green">_(string)_</font> <font color="grey">_optional_</font>
+    *_ A recovery email address that can be used to assist users reinstall the pass. An invalid email address or an address domain with no mx records will return an error.
+  * *<font color="blue">barcodeContent</font>* <font color="green">_(string)_</font> <font color="grey">_optional_</font>
+    *_ For templates that allow the barcode encoded content to be changed.  Using %@ in the string will insert the pass serial number into the encoded content. 
+  * *<font color="blue">barcodeAltContent</font>* <font color="green">_(string)_</font> <font color="grey">_optional_</font>
+    *_ For templates that allow the barcode alternative content to be changed.  Using %@ in the string will insert the pass serial number into the message. 
+  * *<font color="blue">relevantDate</font>* <font color="green">_(date)_</font> <font color="grey">_optional_</font>
+    *_ For Pass types that support a relevant date, a date in ISO 8601 format can be provided. More information on the behavior of the relevant date can be found [LockScreenMessages here]. 
+
+==== Location Parameters ====
+Optionally, each pass can hold up to 10 locations. When submitting locations, the address, latitude, longitude and locationAlert parameters are all required. More information on the behavior of locations can be found [LockScreenMessages here]. 
+  * *<font color="blue">location_{number}_address</font>* <font color="green">_(string)_</font> <font color="grey">_required_</font>
+    *_ An address or other meaningful text that will help you identify the location. 
+  * *<font color="blue">location_{number}_latitude</font>* <font color="green">_(float)_</font> <font color="grey">_required_</font>
+    *_ The latitude of the location.
+  * *<font color="blue">location_{number}_longitude</font>* <font color="green">_(float)_</font> <font color="grey">_required_</font>
+    *_ The longitude of the location. 
+  * *<font color="blue">location_{number}_locationAlert</font>* <font color="green">_(string)_</font> <font color="grey">_required_</font>
+    *_ The message to be displayed on the lockscreen when the device is close to the location. 
+
+=== Request Examples ===
+Requests should be submitted as an array of passes, each with a unique key (E.g. pass_1, pass_2, etc.), with each key each containing an array of key/value pairs.
+
+==== JSON Format ====
+<code>
+{
+   "pass_1": {
+       "Check In": "2012-10-06T00:00:00+08:00",
+       "Check Out": "2012-10-08T00:00:00+08:00",
+       "No. Rooms": "1",
+       "No. Guests": "2",
+       "Reservation No.": "8864337",
+       "Guest Name": "Daniel Allen", 
+       "Hotel Name": "JW Marriott Hotel Hong Kong",
+       "Hotel Address": "Pacific Place, 88 Queensway, Hong Kong",
+       "Hotel Telephone": "+852 2810 8366",
+       "Nightly Rate": "HK$ 3,315",
+       "relevantDate": "2012-10-06T00:00:00+08:00",
+       "location1address": "Pacific Place, 88 Queensway, Hong Kong",
+       "location1latitude": "22.27772",
+       "location1longitude": "114.16481",
+       "location1locationAlert": "Enjoy your stay",
+       "recoveryEmail": "daniel.allen@example.com"       
+   },
+   "pass_2": {
+       "Check In": "2012-10-14T00:00:00+09:00",
+       "Check Out": "2012-10-15T00:00:00+09:00",
+       "No. Rooms": "1",
+       "No. Guests": "1",
+       "Reservation No.": "9423554",
+       "Guest Name": "Wendy Chan", 
+       "Hotel Name": "Grand Hyatt Seoul",
+       "Hotel Address": "322 Sowol-ro, Yongsan-gu, Seoul, South Korea 140-738",
+       "Hotel Telephone": "+82 2 797 1234",
+       "Nightly Rate": "KRW 305,000",
+       "relevantDate": "2012-10-14T00:00:00+09:00",
+       "location1address": "322 Sowol-ro, Yongsan-gu, Seoul, South Korea 140-738",
+       "location1latitude": "37.539448",
+       "location1longitude": "126.997193",
+       "location1locationAlert": "Enjoy your stay",
+       "recoveryEmail": "wendy.chan@example.com"  
+   }
+}
+</code>
+
+==== XML Format ====
+_Note that for XML requests, spaces in tag names must be replaced by 'middle dot' (·).  If a tag starts with an invalid character (E.g. a Number), the tag should be prexied with two underscores (`__`_)_
+{{{
+<?xml version="1.0" encoding="UTF-8" ?>
+<PassKit_API_Request>
+	<pass_1>
+		<Check·In>2012-10-06T00:00:00+08:00</Check·In>
+		<Check·Out>2012-10-08T00:00:00+08:00</Check·Out>
+		<No.·Rooms>1</No.·Rooms>
+		<No.·Guests>2</No.·Guests>
+		<Reservation·No.>8864337</Reservation·No.>
+		<Guest·Name>Daniel Allen</Guest·Name>
+		<Hotel·Name>JW Marriott Hotel Hong Kong</Hotel·Name>
+		<Hotel·Address>Pacific Place, 88 Queensway, Hong Kong</Hotel·Address>
+		<Hotel·Telephone>+852 2810 8366</Hotel·Telephone>
+		<Nightly·Rate>HK$ 3,315</Nightly·Rate>
+		<relevantDate>2012-10-06T00:00:00+08:00</relevantDate>
+		<location1address>Pacific Place, 88 Queensway, Hong Kong</location1address>
+		<location1latitude>22.27772</location1latitude>
+		<location1longitude>114.16481</location1longitude>
+		<location1locationAlert>Enjoy your stay</location1locationAlert>
+		<recoveryEmail>daniel.allen@example.com</recoveryEmail>
+	</pass_1>
+	<pass_2>
+		<Check·In>2012-10-14T00:00:00+09:00</Check·In>
+		<Check·Out>2012-10-15T00:00:00+09:00</Check·Out>
+		<No.·Rooms>1</No.·Rooms>
+		<No.·Guests>1</No.·Guests>
+		<Reservation·No.>9423554</Reservation·No.>
+		<Guest·Name>Wendy Chan</Guest·Name>
+		<Hotel·Name>Grand Hyatt Seoul</Hotel·Name>
+		<Hotel·Address>322 Sowol-ro, Yongsan-gu, Seoul, South Korea 140-738</Hotel·Address>
+		<Hotel·Telephone>+82 2 797 1234</Hotel·Telephone>
+		<Nightly·Rate>KRW 305,000</Nightly·Rate>
+		<relevantDate>2012-10-14T00:00:00+09:00</relevantDate>
+		<location1address>322 Sowol-ro, Yongsan-gu, Seoul, South Korea 140-738</location1address>
+		<location1latitude>37.539448</location1latitude>
+		<location1longitude>126.997193</location1longitude>
+		<location1locationAlert>Enjoy your stay</location1locationAlert>
+		<recoveryEmail>wendy.chan@example.com</recoveryEmail>
+	</pass_2>
+</PassKit_API_Request>
+}}}
+
+=== cURL Syntax ===
+<code>curl --digest -u {APIKey}:{APISecret} -F @{filename} -X POST "https://api.passkit.com/v1/pass/issue/batch/template/{templateName}"</code>
+----
+  
+== Response Examples ==
+
+==== JSON Format ====
+
+<code>
+{
+    "success": true,
+    "passes": {
+        "pass_1": {
+            "serial": "0905188361315670",
+            "url": "https:\/\/r.pass.is\/DXerKmGmXyrx"
+        },
+        "pass_2": {
+            "serial": "0236642194858366",
+            "url": "https:\/\/r.pass.is\/B84Un7iu8xvo"
+        }
+    }
+}
+</code>
+
+==== XML Format ====
+{{{
+<?xml version="1.0"?>
+<PassKit_API_Response>
+	<success>1</success>
+	<passes>
+		<pass_1>
+			<serial>0586151635614775</serial>
+			<url>https://r.pass.is/JNkpa3eMLVsg</url>
+		</pass_1>
+		<pass_2>
+			<serial>0790081069148314</serial>
+			<url>https://r.pass.is/HutloddK8KGt</url>
+		</pass_2>
+	</passes>
+</PassKit_API_Response>
+}}}
+
+=== Response Parameters === 
+  * *<font color="blue">success</font>* <font color="green">_(string)_</font>
+    *_ WIll return <font color="purple">true</font> for a successful submission, or will not be present in the case of an error.
+  * *<font color="blue">passes</font>* <font color="green">_(array)_</font>
+    *_ An array containing data for each pass issued.
+  * *<font color="blue">serial</font>* <font color="green">_(string)_</font>
+    *_ The serial number of the issued pass.
+  * *<font color="blue">url</font>* <font color="green">_(string)_</font>
+    *_ The URL for downloading the issued pass.
+----
+
+<table border="0">
+  <tr>
+    <td width="361"><g:plusone size="medium"></g:plusone></td>
+    <td width="353">[http://PassKit.com/ PassKit Home Page]</td>
+    <td width="128">[https://create.passkit.com Register with PassKit]</td>
+  </tr>
+</table>

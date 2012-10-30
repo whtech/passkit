@@ -1,0 +1,72 @@
+#summary Get Image Data
+
+= Get Image Data =
+
+|| *URI* || `https://api.passkit.com/v1/image/`<font color="blue">{imageID}</font> <font color="grey">_/?format=xml (optional)_</font> ||
+|| *Verb* || GET ||
+|| *Auth* || No ||
+
+This method returns data about a particular <font color="blue">imageID</font>, specifically the useage types that it has been processed for
+
+A call to this method can be used to validate the validity of a an <font color="blue">imageID</font> for use as a particular _imageType_
+
+== URL Parameters ==
+
+* <font color="blue">imageID</font> *<font color="green"> _(string)_</font>
+
+The imageID returned when when the image was uploaded with the upload method
+
+_*Note:* Image types, sizes and their role in each pass type is explained in more detail [PassImages here]_ 
+
+==== cURL Syntax ====
+<code>
+curl "https://api.passkit.com/v1/image/{imageID}"</code>
+----
+== Responses ==
+
+A successful upload should receive the following response:
+
+==== JSON Format ====
+
+<code language="javascript">
+{
+  "imageID":"3YrwmjaWGrESOM5rVjd6dK",
+  "Icon":"true"
+}
+</code>
+
+==== XML Format ====
+
+{{{
+<?xml version="1.0"?>
+<PassKit_API_Response>
+  <imageID>3YrwmjaWGrESOM5rVjd6dK</imageID>
+  <Icon>true</Icon>
+</PassKit_API_Response>
+}}}
+
+==== Response Parameters ====
+  * *<font color="blue">imageID</font>* <font color="green">_(string)_</font>
+    *_ The image ID requested in the API call
+  * *<font color="blue">background</font>* <font color="green">_(boolean)_</font>
+    *_ Will return true if image has been processed for use as a background image or be absent from the response if not
+  * *<font color="blue">footer</font>* <font color="green">_(boolean)_</font>
+    *_ Will return true if image has been processed for use as a footer image or be absent from the response if not
+  * *<font color="blue">logo</font>* <font color="green">_(boolean)_</font>
+    *_ Will return true if image has been processed for use as a logo image or be absent from the response if not
+  * *<font color="blue">icon</font>* <font color="green">_(boolean)_</font>
+    *_ Will return true if image has been processed for use as a icon image or be absent from the response if not  
+  * *<font color="blue">strip</font>* <font color="green">_(boolean)_</font>
+    *_ Will return true if image has been processed for use as a strip image or be absent from the response if not
+  * *<font color="blue">thumbnail</font>* <font color="green">_(boolean)_</font>
+    *_ Will return true if image has been processed for use as a thumbnail image or be absent from the response if not 
+ 
+----
+
+<table border="0">
+  <tr>
+    <td width="361"><g:plusone size="medium"></g:plusone></td>
+    <td width="353">[http://PassKit.com/ PassKit Home Page]</td>
+    <td width="128">[https://create.passkit.com Register with PassKit]</td>
+  </tr>
+</table>

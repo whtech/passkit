@@ -1,0 +1,28 @@
+#summary Image Methods
+
+= Image Methods =
+
+Image methods allow you to upload images for use in your passes or to get data about images that you have already uploaded.  The PassKit server automatically processes and optimizes your images for use with Passbook. You therefore only need to upload one image that ideally meets the minimum specified size for that image type and we'll take care of the rest.
+
+Images are stored and used as ImageIDs for use with template and pass methods.
+
+A single image can be used for multiple purposes (e.g. as a logo and an icon) provided that the image has been uploaded and processed for that purpose.
+
+----
+== Uploading Images ==
+
+  * [UploadImage Upload Image]
+----
+== Querying Images ==
+
+  * [GetImageData Get Image Data]
+
+----
+
+<table border="0">
+  <tr>
+    <td width="361"><g:plusone size="medium"></g:plusone></td>
+    <td width="353">[http://PassKit.com/ PassKit Home Page]</td>
+    <td width="128">[https://create.passkit.com Register with PassKit]</td>
+  </tr>
+</table>

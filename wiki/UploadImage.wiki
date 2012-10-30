@@ -1,0 +1,79 @@
+#summary Add Image Method
+
+= Upload Image =
+
+|| *URI* || `https://api.passkit.com/v1/image/add/`<font color="blue">{imageType}</font> <font color="grey">_/?format=xml (optional)_</font> ||
+|| *Verb* || POST ||
+|| *Auth* || No ||
+
+This method allows you to upload images for use with other methods such as template methods and pass methods.  Each image that is uploaded is assigned a unique ID, and is processed for use with Passbook, according to the <font color="blue">imageType</font> selected.
+
+Images of type `image/jpeg, image/png` and `image/gif` can be uploaded and an imageID is returned.
+
+A single image can be used for multiple purposes _(E.g. as a thumbnail and as an icon)_ but to do so, it must be uploaded twice.  Under these cases, a single imageID will be approved for use with multiple types.
+
+To see all the permitted usage types for a particular imageID, see the Get Image Details call.
+
+The same image can 
+
+== URL Parameters ==
+
+* <font color="blue">imageType</font> *<font color="green"> _(string)_</font> can be any one of the following:
+  * _background
+  * footer
+  * logo
+  * icon
+  * strip
+  * thumbnail_
+
+_*Note:* Image types, sizes and their role in each pass type is explained in more detail [PassImages here]_ 
+
+== Request Contents ==
+
+The request type must be `Content-Type multipart/form-data`, and the request must contain a field titled <font color="green">_*image*_</font> containing  a file of type `image/jpeg, image/png` or `image/gif` image. 
+
+==== cURL Syntax ====
+<code>
+curl -F "image=@{filename};type={MIME type}" -X POST "https://api.passkit.com/v1/image/add/{imageType}"</code>
+----
+== Responses ==
+
+A successful upload should receive the following response:
+
+==== JSON Format ====
+
+<code language="javascript">
+{
+    "success": true,
+    "imageID": "UPQCQqyzzLaJEvfq9X0pM",
+    "usage": "Thumbnail Image"
+}
+</code>
+
+==== XML Format ====
+
+{{{
+<?xml version="1.0"?>
+<PassKit_API_Response>
+    <success>1</success>
+    <imageID>UPQCQqyzzLaJEvfq9X0pM</imageID>
+    <usage>UPQCQqyzzLaJEvfq9X0pM</usage>
+</PassKit_API_Response>
+}}}
+
+=== Response Parameters ===
+  * *<font color="blue">success</font>* <font color="green">_(boolean)_</font>
+    *_ Will return true for a successful upload, or will not be present in the case of an error
+  * *<font color="blue">imageID</font>* <font color="green">_(string)_</font>
+    *_ imageID for use in other methods
+  * *<font color="blue">usage</font>* <font color="green">_(string)_</font>
+    *_ The usage type that image has been processed for
+----
+
+<table border="0">
+  <tr>
+    <td width="361"><g:plusone size="medium"></g:plusone></td>
+    <td width="353">[http://PassKit.com/ PassKit Home Page]</td>
+    <td width="128">[https://create.passkit.com Register with PassKit]</td>
+  </tr>
+</table>

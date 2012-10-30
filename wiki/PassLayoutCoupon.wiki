@@ -1,0 +1,29 @@
+#summary Layout of a Coupon Passbook Pass
+
+= Layout of a Coupon Pass =
+
+This pass style is appropriate for coupons, vouchers, special offers and other discounts.
+
+== Supported Images =
+
+  * Icon
+  * Logo
+  * Strip Image
+
+== Field constraints ==
+
+Up to 4 secondary and auxiliary fields
+
+== Pass Layout ==
+
+[http://passkit.googlecode.com/files/Pass-Layout-Coupon.png]
+
+----
+
+<table border="0">
+  <tr>
+    <td width="361"><g:plusone size="medium"></g:plusone></td>
+    <td width="353">[http://PassKit.com/ PassKit Home Page]</td>
+    <td width="128">[https://create.passkit.com Register with PassKit]</td>
+  </tr>
+</table>

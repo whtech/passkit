@@ -1,0 +1,21 @@
+#summary The lifecycle of a Pass
+
+= The Lifecycle of a Pass =
+
+This diagram illustrates the lifecycle of a Passbook Pass. Each process step is described in more detail within this wiki.
+
+[http://passkit.googlecode.com/files/Pass-Lifecycle-3.png]
+
+PassKit allows you to easily design, create, and update Passes for your customers.  Using PassKit analytics tools, you can quickly adjust or invent new campaigns to continually improve customer engagement.
+
+Start by [PassDesign Designing a Passbook Pass]
+
+----
+
+<table border="0">
+  <tr>
+    <td width="361"><g:plusone size="medium"></g:plusone></td>
+    <td width="353">[http://PassKit.com/ PassKit Home Page]</td>
+    <td width="128">[https://create.passkit.com Register with PassKit]</td>
+  </tr>
+</table>

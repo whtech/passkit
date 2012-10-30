@@ -1,0 +1,30 @@
+#summary What is Passbook?
+
+=What is Passbook?=
+
+Passbook is a native application for Apple iPhone and iPod devices running iOS6. It is single click application from the the iPhone and iPod home page to access your Passes.
+
+Apple describe Passes as follows: "Passes are a digital representation of information that might otherwise be printed on small pieces of paper or plastic. They let users take an action in the physical world".
+
+You can imagine Passbook as the smartphone equivalent of a wallet where you might store those small pieces of paper and plastic today. Now rather than clogging up your wallet with pieces of paper or plastic you can de-clutter your wallet by carrying Passes in your iPhone or iPod.
+
+Just like pieces of paper or plastic, you can design, brand, customise and add images and display information that will be of value to the person holding the pass. Unlike the pieces or paper and plastic, passes can be updated real time with information that is relevant and value to the individual.
+
+The technology supporting passbook is:
+  # A coding /package format for creating Passes
+  # A web based API to update passes
+  # An Objective-C API used by external apps to interact with the user's Pass Library
+
+Effectively PassK.it tools and methods takes care of all of this for you.
+
+[PassPackage Click here] to learn more about how a Pass is generated
+
+----
+
+<table border="0">
+  <tr>
+    <td width="361"><g:plusone size="medium"></g:plusone></td>
+    <td width="353">[http://PassKit.com/ PassKit Home Page]</td>
+    <td width="128">[https://create.passkit.com Register with PassKit]</td>
+  </tr>
+</table>

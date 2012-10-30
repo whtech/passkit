@@ -1,0 +1,29 @@
+#summary Designing a Passbook Pass
+
+= Designing a Passbook Pass =
+
+There are 5 easy keys steps to designing and creating a Passbook Pass.  With the [https://create.passkit.com PassKit Pass Designer] this is all made very easy via a GUI:
+
+  # Decide the purpose of the Pass and select the Pass Type
+  # Use the Pass Designer to choose your colours, and upload any images
+  # Fill in the rest of the text information
+  # Include any text or images to support other languages (if appropriate)
+  # Choose whether the Pass should be public or private, unlimited or limited
+
+Then save!
+
+Onced saved in the Pass Designer you will be presented with a Pass link (and associated QR Code) that you you can easily distribute.
+
+To see the Pass Designer in action check out [PassDesignerVideo this video]. It's less than 5 minutes but will give you a great feel for the simplistic process you can follow to quickly have great looking Passes.
+
+Then [PassType click here] for documentation to help you select which is the best Pass Type.
+
+----
+
+<table border="0">
+  <tr>
+    <td width="361"><g:plusone size="medium"></g:plusone></td>
+    <td width="353">[http://PassKit.com/ PassKit Home Page]</td>
+    <td width="128">[https://create.passkit.com Register with PassKit]</td>
+  </tr>
+</table>

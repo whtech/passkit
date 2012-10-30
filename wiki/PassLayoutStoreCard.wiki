@@ -1,0 +1,28 @@
+#summary Layout of a Store Card Passbook Pass
+
+= Layout of a Store Card Pass =
+
+Store Card Passes are appropriate to for loyalty cards, discount cards, points cards and gift cards. A Store Card Pass can be used to identify an account that the customer has with your company; and how that account can be used to make payments or receive discounts. When there is a balance, this should appear on the Pass.
+
+== Supported Images =
+
+  * Icon
+  * Logo
+  * Strip Image
+
+== Field constraints ==
+
+Up to 4 secondary fields
+
+== Pass Layout ==
+
+[http://passkit.googlecode.com/files/Pass-Layout-StoreCard.png]
+
+----
+<table border="0">
+  <tr>
+    <td width="361"><g:plusone size="medium"></g:plusone></td>
+    <td width="353">[http://PassKit.com/ PassKit Home Page]</td>
+    <td width="128">[https://create.passkit.com Register with PassKit]</td>
+  </tr>
+</table>

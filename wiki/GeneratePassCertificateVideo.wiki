@@ -1,0 +1,17 @@
+#summary How to generate and upload your own Pass Certificate - Video Tutorial
+
+=How to generate and upload your own Pass Certificate=
+
+==Video Tutorial==
+
+<wiki:video url="http://www.youtube.com/watch?v=pPXhlmPP5jY&hd=1" width="853" height="480"/>
+
+----
+
+<table border="0">
+  <tr>
+    <td width="361"><g:plusone size="medium"></g:plusone></td>
+    <td width="353">[http://PassKit.com/ PassKit Home Page]</td>
+    <td width="128">[https://create.passkit.com Register with PassKit]</td>
+  </tr>
+</table>

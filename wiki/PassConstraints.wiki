@@ -1,0 +1,54 @@
+#summary Constraints of each Pass Type
+
+= Constraints of each Pass Type =
+
+The way in which different Pass types look is determined by Apple.  The main constraints are the types and location of images that can be used and the number and location of the (text) fields.
+
+The [https://create.passkit.com Pass Designer] will only allow you to input the correct images and text, depending on what Pass Type you choose.
+
+For specific Pass Type examples and layout diagrams please visit the following pages:
+
+  * [PassLayoutTransport Transport]
+  * [PassLayoutCoupon Coupon]
+  * [PassLayoutStoreCard Store Card]
+  * [PassLayoutMembership Membership]
+  * [PassLayoutEvent Event Ticket]
+
+== Image Constraints ==
+
+The Pass Type determines which images can be used
+
+|| *Pass Type* || *Authorized Images* ||
+|| [PassLayoutTransport Transport] || Icon, Logo, Footer ||
+|| [PassLayoutCoupon Coupon] || Icon, Logo, Strip ||
+|| [PassLayoutStoreCard Store Card] || Icon, Logo, Strip ||
+|| [PassLayoutMembership Membership] || Icon, Logo, Thumbnail ||
+|| [PassLayoutEvent Event Ticket] (with background image) || Icon, Logo, Background, Thumbnail ||
+|| [PassLayoutEvent Event Ticket] (with strip image) || Icon, Logo, Strip ||
+
+== Field Constraints ==
+
+The Pass Type determines the maximum number of fields that can appear on the front of a Pass. In general, pass can have:
+  * Up to 3 header fields
+  * 1 primary field
+  * Up to 4 secondary fields
+  * Up to 4 auxiliary fields.
+
+Specifically there are differences as summarised below:
+
+|| *Pass Type* || * Field Constraints* ||
+|| [PassLayoutTransport Transport] || Up to 2 primary field and Up to 5 Auxiliary Fields||
+|| [PassLayoutCoupon Coupon] || Up to 4 secondary fields and 4 auxiliary fields ||
+|| [PassLayoutStoreCard Store Card] || Up to 4 secondary fields and 4 auxiliary fields ||
+|| [PassLayoutMembership Membership] || No auxiliary fields (when a square barcode) ||
+|| [PassLayoutEvent Event Ticket] || No auxiliary fields (with a background image) ||
+
+----
+
+<table border="0">
+  <tr>
+    <td width="361"><g:plusone size="medium"></g:plusone></td>
+    <td width="353">[http://PassKit.com/ PassKit Home Page]</td>
+    <td width="128">[https://create.passkit.com Register with PassKit]</td>
+  </tr>
+</table>

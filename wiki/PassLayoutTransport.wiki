@@ -1,0 +1,30 @@
+#summary Layout of a Transport Passbook Pass
+
+= Layout of a Transport Pass =
+
+Transport Passes is appropriate for passes used with transit systems such as train tickets, airlines boarding passes, ferry tickets, and other types of transit. Typically each Pass corresponds to a single trip with a specific starting and ending point.
+
+== Supported Images ==
+
+The Transport Pass supports the following images:
+  * Icon
+  * Logo
+  * Footer
+
+== Field Constraints == 
+
+Up to 2 Primary Fields and up to 5 Auxiliary Fields
+
+== Pass Layout ==
+
+[http://passkit.googlecode.com/files/Pass-Layouts-Transport.png]
+
+----
+
+<table border="0">
+  <tr>
+    <td width="361"><g:plusone size="medium"></g:plusone></td>
+    <td width="353">[http://PassKit.com/ PassKit Home Page]</td>
+    <td width="128">[https://create.passkit.com Register with PassKit]</td>
+  </tr>
+</table>

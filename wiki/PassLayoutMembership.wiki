@@ -1,0 +1,29 @@
+#summary Layout of a Membership Passbook Pass
+
+= Layout of a Membership Pass =
+
+Typically you use Membership Card Passes for Passes that are giving you access to somewhere. That could be access to a Gym, and replacing your plastic gym membership cards, or subway passes, that store value, or even used for bag check claim tickets.
+
+== Supported Images =
+
+  * Icon
+  * Logo
+  * Thumbnail
+
+== Field constraints ==
+
+No auxiliary fields when using a square barcode (Aztec or QR Code)
+
+== Pass Layout ==
+
+[http://passkit.googlecode.com/files/Pass-Layouts-Membership.png]
+
+----
+
+<table border="0">
+  <tr>
+    <td width="361"><g:plusone size="medium"></g:plusone></td>
+    <td width="353">[http://PassKit.com/ PassKit Home Page]</td>
+    <td width="128">[https://create.passkit.com Register with PassKit]</td>
+  </tr>
+</table>

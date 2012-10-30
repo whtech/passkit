@@ -1,0 +1,33 @@
+#summary API Keys
+
+= Obtaining your keys =
+
+For security,  API Keys are emailed automatically to all accounts when they sign up for one of our service plans.
+
+In certain circumstances we will issue keys to free accounts. However, since all of our plans come with a free 30 day trial period, such circumstances are exceptional.  If you are requesting a free API key, please provide as much information as possible about you business, how you intend to use the key and why a paid plan is not appropriate for you.
+
+== Key Format ==
+
+To access our API you will require an API Key and an API Secret.
+
+Your API Key is 32 character Hexadecimal string or a 20 character base62 string (depending on how early you signed requested your keys):
+
+<code>Example base16 API Key: ff0b04afe47feacd09a850d9a1dd91d0</code>
+<code>Example base62 API Key: B9gaEoDarsV7e1EgutQg</code>
+There is no difference in how these keys are used, just that the newer keys are shorter.
+
+Your API Secret is a longer base64 string than may contain periods and forward slashes:
+
+<code>Example API Secret: kFTlvlfrjU/djar.V3tO0uyvoF0svLGVhM7ccGN.ek80GdqcJNcju</code>
+
+These keys provide the ability to access, edit, update and delete templates and passes on your account.  They should be treated the same as your username and password, and should never be written down or shared.
+
+----
+
+<table border="0">
+  <tr>
+    <td width="361"><g:plusone size="medium"></g:plusone></td>
+    <td width="353">[http://PassKit.com/ PassKit Home Page]</td>
+    <td width="128">[https://create.passkit.com Register with PassKit]</td>
+  </tr>
+</table>

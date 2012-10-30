@@ -1,0 +1,29 @@
+#summary Template Methods
+
+= Template Methods =
+
+Template methods are designed for creating, updating or obtaining information about pass templates.
+----
+== Creating Templates ==
+
+  * Create Template
+----
+== Updating Templates ==
+
+  * Update Template
+  * Delete Template
+----
+== Querying Template ==
+
+  * [GetTemplateDetails Get Template Fields]
+  * Get Template Statistics
+
+----
+
+<table border="0">
+  <tr>
+    <td width="361"><g:plusone size="medium"></g:plusone></td>
+    <td width="353">[http://PassKit.com/ PassKit Home Page]</td>
+    <td width="128">[https://create.passkit.com Register with PassKit]</td>
+  </tr>
+</table>

@@ -1,0 +1,97 @@
+#summary Get Template Field Names
+
+= Get Template Field Names =
+
+|| *URI* || `https://api.passkit.com/v1/template/`<font color="blue">{templateName}</font>`/fieldnames `<font color="grey"> _/?format=xml_ (optional)</font> ||
+|| *Verb* || GET ||
+|| *Auth* || Yes ||
+
+This method returns the field names that can be used with the Issue Pass and Update Pass methods for a particular template.  It returns the names of all dynamic fields in the template, plus other variables such as barcode content, serial number or thumbnail image that can be set or updated.
+
+== URL Parameters ==
+
+  * <font color="blue">*templateName*</font> <font color="green">_(string)_</font> The name of the template
+
+=== cURL Syntax ===
+
+<code>curl --digest -u {APIKey}:{APISecret} "https://api.passkit.com/v1/template/{templateName}/fieldnames"</code>
+----
+  
+== Response Examples ==
+
+==== JSON Format ====
+
+<code language="json">
+{
+  "My Pass Template" : {
+    "Check In"                : "date",
+    "Check In_changeMessage"  : "text",
+    "Check Out"               : "date",
+    "Check Out_changeMessage" : "text",
+    "No Rooms"                : "number",
+    "No Guests"               : "number",
+    "Reservation Num"         : "text",
+    "Status"                  : "text",
+    "Status_changeMessage:"   : "text",	
+    "Guest Name"              : "text", 
+    "Hotel Name"              : "text",
+    "Hotel Address"           : "text",
+    "Hotel Telephone"         : "text",
+    "Nightly Rate"            : "currency",
+    "recoveryEmail"           : "text"
+  }
+}</code>
+
+==== XML Format ====
+
+_Note that for XML responses, spaces in tag names will be replaced by 'middle dot' (·).  If a tag starts with an invalid character (E.g. a Number), the tag will be prexied with two underscores (`__`_)_
+{{{
+<?xml version="1.0"?>
+<PassKit_API_Response>
+    <My·Pass·Template>
+        <Check·In>date</Check·In>
+        <Check·In_changeMessage>text</Check·In_changeMessage>
+        <Check·Out>date</Check·Out>
+        <Check·Out_changeMessage>text</Check·Out_changeMessage>
+        <Num·Rooms>number</Num.·Rooms>
+        <Num·Guests>number</Num.·Guests>
+        <Reservation·Num>text</Reservation·Num>
+        <Status>text</Status>
+        <Status_changeMessage>text</Status_changeMessage>
+        <Guest·Name>text</Guest·Name>
+        <Hotel·Name>text</Hotel·Name>
+        <Hotel·Address>text</Hotel·Address>
+        <Hotel·Telephone>text</Hotel·Telephone>
+        <Nightly·Rate>currency</Nightly·Rate>
+        <recoveryEmail>text</recoveryEmail>
+    </My·Pass·Template>
+</PassKit_API_Response>
+}}}
+
+=== Response Paramaters ===
+
+  * *<font color="blue">{fieldName}</font>* <font color="green">_(string)_</font>
+    *_Returns the name of each dynamic 'value' field, together with the type of data the field accepts. The type value will be either one of <font color="purple">text</font>, <font color="purple">number</font>,  <font color="purple">date</font>,  <font color="purple">datetime</font> or <font color="purple">currency</font>.
+  * *<font color="blue">{fieldName}`_`changeMessage</font>* <font color="green">_(string)_</font>
+    *_If a field (static or dynamic) has a change message set, this paramater will be returned with a value of <font color="purple">text</font>
+  * *<font color="blue">{fieldName>}`_`label</font>* <font color="green">_(string)_</font>
+    *_Returns the ID of a dynamic 'label' field with a value of <font color="purple">text</font>
+  * *<font color="blue">thumbnailImage</font>* <font color="green">_(string)_</font>
+    *_If the template accepts a thumbnail image, this parameter will be returned with a value of <font color="purple">text</font>
+  * *<font color="blue">serialNumber</font>* <font color="green">_(string)_</font>
+    *_If the template requires a serial to be provided at pass creation, this parameter will be returned with a value of <font color="purple">text</font>'
+  * *<font color="blue">recoveryEmail</font>* <font color="green">_(string)_</font>
+    *_All passes accept a recovery email address. This parameter will always be returned with a value of <font color="purple">text</font>. An invalid email address or an address domain with no mx records will return an error
+  * *<font color="blue">barcodeContent</font>* <font color="green">_(string)_</font>
+    *_If the template allows for the barcode encoded content to be changed, this parameter will be returned with a value of <font color="purple">text</font>
+  * *<font color="blue">barcodeAltContent</font>* <font color="green">_(string)_</font>
+    *_If the template allows for the barcode alternative content to be changed, this parameter will be returned with a value of <font color="purple">text</font>
+----
+
+<table border="0">
+  <tr>
+    <td width="361"><g:plusone size="medium"></g:plusone></td>
+    <td width="353">[http://PassKit.com/ PassKit Home Page]</td>
+    <td width="128">[https://create.passkit.com Register with PassKit]</td>
+  </tr>
+</table>

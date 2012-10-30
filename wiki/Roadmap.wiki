@@ -1,0 +1,36 @@
+#labels Roadmap,Passkit,Passbook,API,Phase-Design
+= Passk.it Roadmap =
+
+This page provides a Roadmap of development and enhancements to the Passk.it API, Pass Designer and Generator and non-Apple platform developments.
+
+For documentation of the PassKit concept, tools and methods please visit our [HomePage wiki]
+
+== Pass Designer and Generator =
+
+The Pass Designer will be available after iOS6 is released to the public (see this video for a preview: http://youtu.be/fsEJiwTFno0)
+
+  * Ability to design and create  your own passes via a GUI
+  * Ability to upload images
+  * Ability to use your own certificates
+  * Ability to utilise unique Passk.it certificates for testing and evaluation purposes (for users without an Apple developer account).
+
+What we can tell you will be delivered soon:
+
+== API ==
+
+  * Ability to modify Barcodes - delivered 7 July
+  * Ability to add and modify Location Data
+  * Ability to change and rotate through images
+  * Ability to use your own certificates
+  * PHP, JAVA, RUBY and .NET SDKs
+
+== Reporting  & Analytics ==
+
+  * Ability to access Pass delivery metrics
+  * Customer engagement reporting
+  * Offer effectiveness and profitability analysis
+  * Location reporting
+
+== Other Platforms ==
+
+We need to keep a little quiet on this, although we can say that we will be able to offer a fully integrated experience for other major mobile platform users than maintains the security and integrity of the framework provided by Apple.  If you are interested in learning more about this either as an investor or as a Pass provider who will be issuing >= 1 million passes a month, you are invited to contact us (note that a Non Disclosure Agreement may be required).

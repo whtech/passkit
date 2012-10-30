@@ -1,0 +1,30 @@
+#summary Uploading your images
+
+= Uploading your images =
+
+As summarized in Pass Constraints section, each Pass Type prescribes particular areas on the front of the pass for each image. Apple has prescribed a certain size of image dependent on the Pass Type.
+
+PassKit automatically scales these images to fit within each allotted space, preserving aspect ratio, but are cropped if the aspect ratio is different than their allotted space.
+
+== Pass Sizes ==
+
+|| Image Type || Position on the Pass || Other notes || Minimum Size (pixels) ||
+|| Background Image || Behind the entire front of the pass ||Available on the Event Pass Type. The image is cropped slightly on all sides and blurred || 360 x 440 ||
+|| Footer Image || Above the barcode || Available on the Transport Pass Type only || 572 x 30 ||
+|| Icon Image || On the lock screen and by apps like Mail when showing an attached Pass || A shine is automatically applied to the icon for you || 116 x 116 ||
+|| Logo Image || Displayed in the top left corner of the Pass || The allotted space is 320 x 100 but in most cases it should be narrower.  If you use the full 320 width note the you will not have room for any Logo Text, or Header fields || 320 x 100 ||
+|| Strip Image || Displayed behind the Primary Fields || A shine effect is applied by default but you can turn this off in the Pass Designer || Event Tickets: 624 x 168<br />Square Barcode: 624 x 220<br />All other cases: 624 x 246 ||
+
+Please note that your images do not have to be exactly these dimensions, as PassKit will automatically crop and scale them.  However, please check in the [https://create.passkit.com Pass Designer] that the images appear as you want them to.
+
+IMPORTANT: If you upload images that are smaller in size than the dimensions above they will not appear sharp. We strongly recommend you do not use small images.
+
+----
+
+<table border="0">
+  <tr>
+    <td width="361"><g:plusone size="medium"></g:plusone></td>
+    <td width="353">[http://PassKit.com/ PassKit Home Page]</td>
+    <td width="128">[https://create.passkit.com Register with PassKit]</td>
+  </tr>
+</table>
