@@ -7,14 +7,12 @@ For documentation of the PassKit concept, tools and methods please visit our [Ho
 
 == Pass Designer and Generator =
 
-The Pass Designer will be available after iOS6 is released to the public (see this video for a preview: http://youtu.be/fsEJiwTFno0)
+The Pass Designer is the only WYSIWYG online Pass Designer and Generator.  You can access it directly from http://create.passkit.com/
 
   * Ability to design and create  your own passes via a GUI
   * Ability to upload images
   * Ability to use your own certificates
   * Ability to utilise unique Passk.it certificates for testing and evaluation purposes (for users without an Apple developer account).
-
-What we can tell you will be delivered soon:
 
 == API ==
 
@@ -30,6 +28,18 @@ What we can tell you will be delivered soon:
   * Customer engagement reporting
   * Offer effectiveness and profitability analysis
   * Location reporting
+
+== Scanning Companion App ==
+
+Available in iTunes from mid December 2012
+
+  * Ability to scan Passbook Passes from iPhone and iPod Touch
+  * Ability to scan Passbook Passes from Android Phone
+  * Interface direct integration with PassKit API
+
+== PassCheckout  ==
+
+  * Web based tool to allow for easy redemption of Passbook Passes
 
 == Other Platforms ==
 
