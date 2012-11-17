@@ -1,5 +1,5 @@
 #labels Roadmap,Passkit,Passbook,API,Phase-Design
-= Passk.it Roadmap =
+= PassKit Roadmap =
 
 This page provides a Roadmap of development and enhancements to the Passk.it API, Pass Designer and Generator and non-Apple platform developments.
 
