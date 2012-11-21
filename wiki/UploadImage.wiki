@@ -35,7 +35,7 @@ The request type must be `Content-Type multipart/form-data`, and the request mus
 ==== cURL Syntax ====
 <code>
 curl --digest -u ff0b04afe47feacd09a850d9a1dd91d0:kFTlvlfrjU/djar.V3tO0uyvoF0svLGVhM7ccGN.ek80GdqcJNcju 
-       -F "image=@{filename};type={MIME type}" -X POST "https://api.passkit.com/v1/image/add/{imageType}"</code>
+     -F "image=@{filename};type={MIME type}" -X POST "https://api.passkit.com/v1/image/add/{imageType}"</code>
 ----
 == Responses ==
 
