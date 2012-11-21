@@ -4,15 +4,13 @@
 
 Admin methods are designed for managing your account and retrieving account related information.
 ----
-== Usage ==
+== Authenticate ==
 
-  * [GetUsage Get Usage]
+  * [Authenticate Authenticate]
 ----
 == Certificates ==
 
   * [ListCertificates List Certificates]
-  * [RequestCsr Request CSR]
-  * [UploadCertificate Upload Certificate]
 ----
 
 
