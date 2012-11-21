@@ -16,7 +16,6 @@ Template methods are designed for creating, updating or obtaining information ab
 == Querying Template ==
 
   * [GetTemplateDetails Get Template Fields]
-  * Get Template Statistics
 
 ----
 
