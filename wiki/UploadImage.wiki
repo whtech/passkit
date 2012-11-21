@@ -4,7 +4,7 @@
 
 || *URI* || `https://api.passkit.com/v1/image/add/`<font color="blue">{imageType}</font> <font color="grey">_/?format=xml (optional)_</font> ||
 || *Verb* || POST ||
-|| *Auth* || No ||
+|| *Auth* || Yes ||
 
 This method allows you to upload images for use with other methods such as template methods and pass methods.  Each image that is uploaded is assigned a unique ID, and is processed for use with Passbook, according to the <font color="blue">imageType</font> selected.
 
