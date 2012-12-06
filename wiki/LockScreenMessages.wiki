@@ -16,7 +16,7 @@ Pass Designer allows you to easily choose the appropriate location and time.
 
 == Up to 10 locations ==
 
-Each pass can contain a maximum of 10 locations.
+Each pass can contain a maximum of 10 locations. (note that this is an Apple Passbook constraint and not a PassKit constraint.  If Apple increases this limit then of course PassKit will allow you to add more locations).
 
 In cases where you have more than 10 stores you have to pick the best 10. There are a variety of ways to do this. 
   * Create a number of different Pass Templates for the various groups of customers.  i.e. For your rather than create one Pass Template for all your customers. You can create a Pass Template for your New York based customers and then copy the Template to create another one for your Florida based customers;
