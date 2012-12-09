@@ -2,7 +2,9 @@
 #labels passkit,api,php,class,Phase-Implementation
 
 = Introduction =
-Interacting with PassKit is really quite simple – especially when compared to interacting with Apple directly for Passbook passes. The following are some excerpts from a PassKit PHP class with explanations. (The full class with documentation is included as a download below.)
+Interacting with PassKit is really quite simple – especially when compared to interacting with Apple directly for Passbook passes. The following are some excerpts from a PassKit PHP class with explanations. (The full class with documentation is included as a download.)
+
+Nope: due to some wiki reformatting the code below has some strangeness here and there. See the php class in the download for the properly formatted version.
 
 The basic flow is as follows:
 
@@ -82,7 +84,7 @@ Note that the PassKit account ID and Secret are required and are stored in the c
       $this->pk_result = NULL;
      
       // Print error
-      $this->error('PassKit query error. Curl response: <pre>'.print_r($response,true).'</pre>',print_r(debug_backtrace(),true)); // debug the response;
+      $this->error('PassKit query error. Curl response: <pre>'.print_r($response,true).'< /pre>',print_r(debug_backtrace(),true)); // debug the response;
      
       // Return fail
       return false;
