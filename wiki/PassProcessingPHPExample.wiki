@@ -44,9 +44,9 @@ Note that the PassKit account ID and Secret are required and are stored in the c
         // Turn it into a string
         $post_string='';
         foreach($post as $key=>$value){
-          $post_string .= urlencode($key).'='.urlencode($value).'&amp;';
+          $post_string .= urlencode($key).'='.urlencode($value).'&';
         }
-        $post_string = rtrim($post_string,'&amp;');
+        $post_string = rtrim($post_string,'&');
      
         // Set cURL post options
         curl_setopt ($session, CURLOPT_POST, true);
@@ -70,7 +70,7 @@ Note that the PassKit account ID and Secret are required and are stored in the c
       $result = ($response ? json_decode($response) : false);
      
       // check if the success parameter is present and true
-      if(isset($result->success) &amp;&amp; $result->success) {
+      if(isset($result->success) && $result->success) {
         // Store the result object in the property
         $this->pk_result = $result;
      
