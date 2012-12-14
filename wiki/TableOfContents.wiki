@@ -30,6 +30,7 @@
   * [API PassKit API]
       * [API API Keys]
       * [Authentication Authentication and Access]
+            * [PassProcessingPHPExample PHP Example Class]
       * [Methods]
             * [Templates Template Methods]
                * [GetTemplateDetails Get Template Field Names]
