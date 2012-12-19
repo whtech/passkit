@@ -407,12 +407,14 @@ An example of how to bring this all together and execute it from your processing
     }
      
     // validate the pass with PassKit
+
     if(!$passKit->pass_validate()){
       echo 'This pass is not valid for this PassKit account.';
       exit;
     }
      
     // redeem the pass with PassKit
+
     if(!$passKit->pass_redeem($post_redeem)){
       echo 'This pass could not be redeemed.';
       exit;
