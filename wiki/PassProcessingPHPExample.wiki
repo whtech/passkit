@@ -424,6 +424,6 @@ An example of how to bring this all together and execute it from your processing
     echo 'Pass has been validated and redeemed.';
 </code>
 
-= PHP Class Download =
-[http://thomassmart.com/PassKit/PassKit.zip thomassmart.com/PassKit/PassKit.zip (61KB)]
+= PHP SDK Download =
+[http://code.google.com/p/passkit/downloads/detail?name=PassKit%20PHP%20SDK%20v0.1.22.zip&can=2&q= 867kb]
  
