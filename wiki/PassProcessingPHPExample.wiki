@@ -425,5 +425,5 @@ An example of how to bring this all together and execute it from your processing
 </code>
 
 = PHP SDK Download =
-[http://code.google.com/p/passkit/downloads/detail?name=PassKit%20PHP%20SDK%20v0.1.22.zip&can=2&q= 867kb]
+[http://code.google.com/p/passkit/downloads/detail?name=PassKit%20PHP%20SDK%20v0.1.22.zip&can=2&q= Download the PHP SDK (867kb)]
  
