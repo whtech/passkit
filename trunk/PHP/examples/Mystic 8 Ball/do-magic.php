@@ -1,7 +1,4 @@
 <?php
-// Include passkit api file
-require_once ('class-PassKit.php');
-
 // Check if passId is set
 $passId = null;
 if(isset($_REQUEST["pid"]))
@@ -15,9 +12,12 @@ else
 }
 
 // Set variables
-$apiKey = "1iFjRSwYILsnmNuKMhLHP"; // Add your PassKit API Key
-$apiSecret = "/Bjn5lQI2mZZDfiQHQr/me5y7cM.MYYvYhZdGmuOIMtx7M7YkDAG."; // Add your PassKit API Secret
+$apiKey = ""; // Add your PassKit API Key
+$apiSecret = ""; // Add your PassKit API Secret
 $absAnswerDirPath = dirname(__FILE__).DIRECTORY_SEPARATOR."img".DIRECTORY_SEPARATOR."answers";
+
+// Include passkit api file
+require_once realpath(dirname(__FILE__)  . '/../../SDK/class-PassKit.php');
 
 // Set template name
 $template_name = "Mystic 8 Ball"; // Must match the template name in your PassKit account
