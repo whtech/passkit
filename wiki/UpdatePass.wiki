@@ -38,6 +38,12 @@ A successful submission will return the deviceID of each device updated and and 
     *_ For templates that allow the barcode alternative content to be changed.  Using %@ in the string will insert the pass serial number into the message. 
   * *<font color="blue">relevantDate</font>* <font color="green">_(date)_</font> <font color="grey">_optional_</font>
     *_ For Pass types that support a relevant date, a date in ISO 8601 format can be provided. More information on the behavior of the relevant date can be found [LockScreenMessages here]. 
+  * *<font color="blue">labelColor / labelColour</font>* <font color="green">_(string)_</font> <font color="grey">_optional_</font>
+    *_ To change the label color. Accepts a 6 digit HEX color code. 
+  * *<font color="blue">foregroundColor / foregroundColour</font>* <font color="green">_(string)_</font> <font color="grey">_optional_</font>
+    *_ To change the foreground color. Accepts a 6 digit HEX color code.
+  * *<font color="blue">backgroundColor / backgroundColour</font>* <font color="green">_(string)_</font> <font color="grey">_optional_</font>
+    *_ To change the background color. Accepts a 6 digit HEX color code.
 
 ==== Location Parameters ====
 Optionally, each pass can hold up to 10 locations. When submitting locations, the address, latitude, longitude and locationAlert parameters are all required. More information on the behavior of locations can be found [LockScreenMessages here]. 
