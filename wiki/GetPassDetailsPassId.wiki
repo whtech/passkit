@@ -66,10 +66,10 @@ _Note that for XML responses, spaces in tag names will be replaced by 'middle do
             <shareID>shareId</shareID>
         </passMeta>
         <passData>
-            <StudentÂ·name>Test student</StudentÂ·name>
+            <Student·name>Test student</Student·name>
             <Balance>8</Balance>
-            <IssueÂ·date>2013-02-10</IssueÂ·date>
-            <ExpiryÂ·date>2014-02-10</ExpiryÂ·date>
+            <Issue·date>2013-02-10</Issue·date>
+            <Expiry·date>2014-02-10</Expiry·date>
             <barcodeContent>barcodeContent</barcodeContent>
         </passData>
     </passRecord>
