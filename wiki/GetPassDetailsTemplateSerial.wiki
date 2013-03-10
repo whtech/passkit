@@ -1,6 +1,6 @@
-#summary GetPassDetailsTemplateSerial
+#summary Get Pass Details (by template & serial)
 
-= Get Pass Details (via template & serial) =
+= Get Pass Details (by template & serial) =
 
 || *URI* || `https://api.passkit.com/v1/pass/get/template/`<font color="blue">{templateName}</font>`/serial/`<font color="blue">{serial number}</font>` `<font color="grey"> _/?format=xml_ (optional)</font> ||
 || *Verb* || GET ||
