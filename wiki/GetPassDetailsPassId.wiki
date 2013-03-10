@@ -2,15 +2,19 @@
 
 = Get Pass Details (by pass id) =
 
-|| *URI* || `https://api.passkit.com/v1/pass/get/passid/`<font color="blue">{pass id}</font>` `<font color="grey"> _/?format=xml_ (optional)</font> ||
+|| *URI* || `https://api.passkit.com/v1/pass/get/passid/`<font color="blue">{passId}</font>` `<font color="grey"> _/?format=xml_ (optional)</font> ||
 || *Verb* || GET ||
 || *Auth* || Yes ||
 
 Gets the pass details based on the pass id. The function returns a result of pass meta -and field data.
 
+== URI Parameters ==
+
+  * <font color="blue">*passId*</font> <font color="green">_(string)_</font> The unqiue id of the pass.
+
 === cURL Syntax ===
 
-<code>curl --digest -u {APIKey}:{APISecret} "https://api.passkit.com/v1/pass/get/passid/{pass id}"</code>
+<code>curl --digest -u {APIKey}:{APISecret} "https://api.passkit.com/v1/pass/get/passid/{passId}"</code>
 ----
   
 == Response Examples ==
