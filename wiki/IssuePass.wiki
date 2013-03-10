@@ -40,15 +40,15 @@ A successful submission will return the serial number and URL of the created pas
 ==== Colour Parameters ====
 
   * *<font color="blue">labelColor / labelColour</font>* <font color="green">_(string)_</font> <font color="grey">_optional_</font>
-    *_ To change the label color. Accepts a 6 digit HEX color code. 
+    *_ To set the label color. Accepts a 6 digit HEX color code. 
   * *<font color="blue">foregroundColor / foregroundColour</font>* <font color="green">_(string)_</font> <font color="grey">_optional_</font>
-    *_ To change the foreground color. Accepts a 6 digit HEX color code.
+    *_ To set the foreground color. Accepts a 6 digit HEX color code.
   * *<font color="blue">backgroundColor / backgroundColour</font>* <font color="green">_(string)_</font> <font color="grey">_optional_</font>
-    *_ To change the background color. Accepts a 6 digit HEX color code.
+    *_ To set the background color. Accepts a 6 digit HEX color code.
 
 ==== Image Parameters ====
 
-The images on each pass can be changed by using the image parameters.
+The images on each pass can be set by using the image parameters.
   * *<font color="blue">thumbnailImage</font>* <font color="green">_(imageID)_</font> <font color="grey">_optional_</font>
     *_ For templates that accept a thumbnail image. Accepts the thumbnail imageID as returned by the [UploadImage Upload Image] method.  ImageIDs, can be checked with the [GetImageData Get Image Data] method.
   * *<font color="blue">stripImage</font>* <font color="green">_(imageID)_</font> <font color="grey">_optional_</font>
@@ -64,7 +64,7 @@ The images on each pass can be changed by using the image parameters.
 
 ==== Install location parameters ====
 
-Optionally, you can update the parameters related to latitude and longitude of where the device was when the pass was installed. If you don't set these parameters, they will default to the values of the server making the API call.
+Optionally, you can set the parameters related to latitude and longitude of where the device was when the pass was installed. If you don't set these parameters, they will default to the values of the server making the API call.
 
   * *<font color="blue">installLatitude</font>* <font color="green">_(float)_</font> <font color="grey">_optional_</font>
     *_ The latitude of the location.
