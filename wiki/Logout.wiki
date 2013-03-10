@@ -10,5 +10,5 @@ Does a logout.
 
 === cURL Syntax ===
 
-<code>curl --digest -u {APIKey}:{APISecret} "https://api.passkit.com/v1/logout"</code>
+<code>curl "https://api.passkit.com/v1/logout"</code>
 ----
