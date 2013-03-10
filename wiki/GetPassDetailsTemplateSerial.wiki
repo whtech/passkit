@@ -1,0 +1,74 @@
+#summary GetPassDetailsTemplateSerial
+
+= Get Pass Details (via template & serial) =
+
+|| *URI* || `https://api.passkit.com/v1/pass/get/template/`<font color="blue">{templateName}</font>`/serial/`<font color="blue">{serial number}</font>` `<font color="grey"> _/?format=xml_ (optional)</font> ||
+|| *Verb* || GET ||
+|| *Auth* || Yes ||
+
+Gets the pass details based on the template name and serial of the pass. It returns a quite extensive result of pass meta -and field data.
+
+=== cURL Syntax ===
+
+<code>curl --digest -u {APIKey}:{APISecret} "https://api.passkit.com/v1/pass/get/template/{templateName}/serial/{serial number}"</code>
+----
+  
+== Response Examples ==
+
+A successful authentication should receive the following response:
+
+==== JSON Format ====
+
+<code language="json">
+{
+    "success":true,
+    "serialNumber":"serialNumber",
+    "templateName":"Lesson package",
+    "uniqueID":"uniqueID",
+    "templateLastUpdated":"2013-02-08T01:02:55+00:00",
+    "totalPasses":1,
+    "passRecords":
+    {
+        "pass_1":
+        {
+            "passMeta":
+            {
+                "passStatus":"Active",
+                "installIP":"123.123.123.123",
+                "registrationIP":"123.123.123.123",
+                "installIPCountry":"HK",
+                "installIPCity":"Central District",
+                "registrationIPCountry":"HK",
+                "registrationIPCity":"Central District",
+                "recoveryURL":"recoveryUrl",
+                "issueDate":"2013-02-10T08:19:30+00:00",
+                "registeredDate":"2013-03-02T04:56:44+00:00",
+                "lastDataChange":"2013-03-02T04:56:47+00:00",
+                "lastPushRefresh":"2013-02-10T14:45:08+00:00",
+                "lastManualRefresh":"2013-03-02T04:57:09+00:00",
+                "deviceIsCurrent":true,
+                "passExpires":"2013-03-02T04:57:09+00:00",
+                "passbookSerial":"passbookSerial"
+            },
+           "passData":
+           {
+                "Student name":"Test student",
+                "Balance":"8",
+                "Issue date":"2013-02-10",
+                "Expiry date":"2014-02-10",         
+                "barcodeContent":"barcodeContent"
+           }
+        }
+    }
+}
+</code>
+
+==== XML Format ====
+
+_Note that for XML responses, spaces in tag names will be replaced by 'middle dot' (·).  If a tag starts with an invalid character (E.g. a Number), the tag will be prexied with two underscores (`__`_)_
+{{{
+<?xml version="1.0"?>
+<PassKit_API_Response>
+     <success>1</success>
+</PassKit_API_Response>
+}}}
