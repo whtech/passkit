@@ -2,7 +2,7 @@
 
 = Get Pass Details (by pass id) =
 
-|| *URI* || `https://api.passkit.com/v1/pass/get/passid/`<font color="blue">{passid}</font>` `<font color="grey"> _/?format=xml_ (optional)</font> ||
+|| *URI* || `https://api.passkit.com/v1/pass/get/passid/`<font color="blue">{pass id}</font>` `<font color="grey"> _/?format=xml_ (optional)</font> ||
 || *Verb* || GET ||
 || *Auth* || Yes ||
 
