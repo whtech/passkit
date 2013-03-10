@@ -41,8 +41,6 @@
                * [BatchIssuePass Batch Issue Pass]
                * [UpdatePass Update Pass]
                * [InvalidatePass Invalidate Pass]
-               * [GetPassDetailsTemplateSerial Get Pass Details - via template and serial]
-* [GetPassDetailsPassId Get Pass Details - via pass id]
             * [Admin Admin Methods]
                * [Authenticate Authenticate]
                * [Logout Logout]
