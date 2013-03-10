@@ -16,7 +16,7 @@ Pass methods are designed for issuing, updating or obtaining information about i
 ----
 == Querying Passes ==
 
-  * [GetPassDetailsTemplateSerial Get Pass Details (via template & serial)]
+  * [GetPassDetailsTemplateSerial Get Pass Details (by template & serial)]
   * Batch Get Pass Details
 
 ----
