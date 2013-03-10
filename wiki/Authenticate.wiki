@@ -6,7 +6,7 @@
 || *Verb* || GET ||
 || *Auth* || Yes ||
 
-Authenticates access to the API. Returns true (bool) on successful authentication.
+Authenticates access to the API. Returns true (bool) on successful authentication, or error message on unsuccessful authentication.
 
 === cURL Syntax ===
 
