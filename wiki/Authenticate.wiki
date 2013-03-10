@@ -1,0 +1,35 @@
+#summary Authenticate
+
+= Authenticate =
+
+|| *URI* || `https://api.passkit.com/v1/template/authenticate `<font color="grey"> _/?format=xml_ (optional)</font> ||
+|| *Verb* || GET ||
+|| *Auth* || Yes ||
+
+Authenticates access to the API. Returns true (bool) on successful authentication.
+
+=== cURL Syntax ===
+
+<code>curl --digest -u {APIKey}:{APISecret} "https://api.passkit.com/v1/template/authenticate"</code>
+----
+  
+== Response Examples ==
+
+A successful authentication should receive the following response:
+
+==== JSON Format ====
+
+<code language="json">
+{
+  "success": true
+}</code>
+
+==== XML Format ====
+
+_Note that for XML responses, spaces in tag names will be replaced by 'middle dot' (·).  If a tag starts with an invalid character (E.g. a Number), the tag will be prexied with two underscores (`__`_)_
+{{{
+<?xml version="1.0"?>
+<PassKit_API_Response>
+     <success>1</success>
+</PassKit_API_Response>
+}}}
