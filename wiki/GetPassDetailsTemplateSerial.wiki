@@ -6,7 +6,7 @@
 || *Verb* || GET ||
 || *Auth* || Yes ||
 
-Gets the pass details based on the template name and serial of the pass. It returns a quite extensive result of pass meta -and field data.
+Gets the pass details based on the template name and serial of the pass. The function returns a quite extensive result of pass meta -and field data.
 
 === cURL Syntax ===
 
@@ -69,40 +69,40 @@ _Note that for XML responses, spaces in tag names will be replaced by 'middle do
 {{{
 <?xml version="1.0"?>
 <PassKit_API_Response>
-<success>1</success>
-<serialNumber>serialNumber</serialNumber>
-<templateName>Lesson package</templateName>
-<uniqueID>uniqueId</uniqueID>
-<templateLastUpdated>2013-02-08T01:02:55+00:00</templateLastUpdated>
-<totalPasses>1</totalPasses>
-<passRecords>
-<pass_1>
-<passMeta>
-<passStatus>Active</passStatus>
-<installIP>123.123.123.123</installIP>
-<registrationIP>123.123.123.123</registrationIP>
-<installIPCountry>HK</installIPCountry>
-<installIPCity>Central District</installIPCity>
-<registrationIPCountry>HK</registrationIPCountry>
-<registrationIPCity>Central District</registrationIPCity>
-<recoveryURL>recoveryUrl</recoveryURL>
-<issueDate>2013-02-10T08:19:30+00:00</issueDate>
-<registeredDate>2013-03-02T04:56:44+00:00</registeredDate>
-<lastDataChange>2013-03-02T04:56:47+00:00</lastDataChange>
-<lastPushRefresh>2013-02-10T14:45:08+00:00</lastPushRefresh>
-<lastManualRefresh>2013-03-02T04:57:09+00:00</lastManualRefresh>
-<deviceIsCurrent>1</deviceIsCurrent>
-<passExpires>2013-03-02T04:57:09+00:00</passExpires>
-<passbookSerial>passbookSerial</passbookSerial>
-</passMeta>
-<passData>
-<StudentÂ·name>Test student</StudentÂ·name>
-<Balance>8</Balance>
-<IssueÂ·date>2013-02-10</IssueÂ·date>
-<ExpiryÂ·date>2014-02-10</ExpiryÂ·date>
-<barcodeContent>barcodeContent</barcodeContent>
-</passData>
-</pass_1>
-</passRecords>
+    <success>1</success>
+    <serialNumber>serialNumber</serialNumber>
+    <templateName>Lesson package</templateName>
+    <uniqueID>uniqueId</uniqueID>
+    <templateLastUpdated>2013-02-08T01:02:55+00:00</templateLastUpdated>
+    <totalPasses>1</totalPasses>
+    <passRecords>
+        <pass_1>
+            <passMeta>
+                <passStatus>Active</passStatus>
+                <installIP>123.123.123.123</installIP>
+                <registrationIP>123.123.123.123</registrationIP>
+                <installIPCountry>HK</installIPCountry>
+                <installIPCity>Central District</installIPCity>
+                <registrationIPCountry>HK</registrationIPCountry>
+                <registrationIPCity>Central District</registrationIPCity>
+                <recoveryURL>recoveryUrl</recoveryURL>
+                <issueDate>2013-02-10T08:19:30+00:00</issueDate>
+                <registeredDate>2013-03-02T04:56:44+00:00</registeredDate>
+                <lastDataChange>2013-03-02T04:56:47+00:00</lastDataChange>
+                <lastPushRefresh>2013-02-10T14:45:08+00:00</lastPushRefresh>
+                <lastManualRefresh>2013-03-02T04:57:09+00:00</lastManualRefresh>
+                <deviceIsCurrent>1</deviceIsCurrent>
+                <passExpires>2013-03-02T04:57:09+00:00</passExpires>
+                <passbookSerial>passbookSerial</passbookSerial>
+            </passMeta>
+            <passData>
+                <Student·name>Test student</Student·name>
+                <Balance>8</Balance>
+                <Issue·date>2013-02-10</Issue·date>
+                <Expiry·date>2014-02-10</Expiry·date>
+                <barcodeContent>barcodeContent</barcodeContent>
+            </passData>
+        </pass_1>
+    </passRecords>
 </PassKit_API_Response>
 }}}
