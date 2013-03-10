@@ -1,0 +1,78 @@
+#summary Get Pass Details (by pass id)
+
+= Get Pass Details (by pass id) =
+
+|| *URI* || `https://api.passkit.com/v1/pass/get/passid/`<font color="blue">{passid}</font>` `<font color="grey"> _/?format=xml_ (optional)</font> ||
+|| *Verb* || GET ||
+|| *Auth* || Yes ||
+
+Gets the pass details based on the pass id. The function returns a result of pass meta -and field data.
+
+=== cURL Syntax ===
+
+<code>curl --digest -u {APIKey}:{APISecret} "https://api.passkit.com/v1/pass/get/passid/{pass id}"</code>
+----
+  
+== Response Examples ==
+
+A successful request should receive the following response:
+
+==== JSON Format ====
+
+<code language="json">
+{
+    "success":true,
+    "serialNumber":"serialNumber",
+    "templateName":"Lesson package",
+    "templateLastUpdated":"2013-02-08T01:02:55+00:00",
+    "passID":"passId",
+    "passRecord":
+    {
+        "passMeta":
+        {
+            "passStatus":"Active",
+            "issueDate":"2013-02-10T08:19:30+00:00",
+            "passbookSerial":"passbookSerial",
+            "shareID":"shareId"
+        },
+        "passData":
+        {
+            "Student name":"Test student",
+            "Balance":"8",
+            "Issue date":"2013-02-10",
+            "Expiry date":"2014-02-10",
+            "barcodeContent":"barcodeContent"
+        }
+    }
+}
+</code>
+
+==== XML Format ====
+
+_Note that for XML responses, spaces in tag names will be replaced by 'middle dot' (·).  If a tag starts with an invalid character (E.g. a Number), the tag will be prexied with two underscores (`__`_)_
+{{{
+<?xml version="1.0"?>
+<PassKit_API_Response>
+    <success>1</success>
+    <serialNumber>serialNumber</serialNumber>
+    <templateName>Lesson package</templateName>
+    <templateLastUpdated>2013-02-08T01:02:55+00:00</templateLastUpdated>
+    <passID>passId</passID>
+    <passRecord>
+        <passMeta>
+            <passStatus>Active</passStatus>
+            <issueDate>2013-02-10T08:19:30+00:00</issueDate>
+            <passbookSerial>passbookSerial</passbookSerial>
+            <shareID>shareId</shareID>
+        </passMeta>
+        <passData>
+            <StudentÂ·name>Test student</StudentÂ·name>
+            <Balance>8</Balance>
+            <IssueÂ·date>2013-02-10</IssueÂ·date>
+            <ExpiryÂ·date>2014-02-10</ExpiryÂ·date>
+            <barcodeContent>barcodeContent</barcodeContent>
+        </passData>
+    </passRecord>
+</PassKit_API_Response>
+
+}}}
