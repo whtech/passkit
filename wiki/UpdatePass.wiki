@@ -50,7 +50,7 @@ A successful submission will return the deviceID of each device updated and and 
 
 ==== Image Parameters ====
 
-The images on each oass can be changed by using the image parameters.
+The images on each pass can be changed by using the image parameters.
   * *<font color="blue">thumbnailImage</font>* <font color="green">_(imageID)_</font> <font color="grey">_optional_</font>
     *_ For templates that accept a thumbnail image. Accepts the thumbnail imageID as returned by the [UploadImage Upload Image] method.  ImageIDs, can be checked with the [GetImageData Get Image Data] method.
   * *<font color="blue">stripImage</font>* <font color="green">_(imageID)_</font> <font color="grey">_optional_</font>
