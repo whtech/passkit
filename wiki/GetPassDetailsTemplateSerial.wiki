@@ -2,7 +2,7 @@
 
 = Get Pass Details (by template & serial) =
 
-|| *URI* || `https://api.passkit.com/v1/pass/get/template/`<font color="blue">{templateName}</font>`/serial/`<font color="blue">{serial number}</font>` `<font color="grey"> _/?format=xml_ (optional)</font> ||
+|| *URI* || `https://api.passkit.com/v1/pass/get/template/`<font color="blue">{templateName}</font>`/serial/`<font color="blue">{serialNumber}</font>` `<font color="grey"> _/?format=xml_ (optional)</font> ||
 || *Verb* || GET ||
 || *Auth* || Yes ||
 
@@ -11,12 +11,12 @@ Gets the pass details based on the template name and serial of the pass. The fun
 == URI Parameters ==
 
   * <font color="blue">*templateName*</font> <font color="green">_(string)_</font> The name of the template that the pass is created from
-  * <font color="blue">*serial*</font> <font color="green">_(string)_</font> The serial of the pass
+  * <font color="blue">*serialNumber*</font> <font color="green">_(string)_</font> The serial number of the pass
 
 
 === cURL Syntax ===
 
-<code>curl --digest -u {APIKey}:{APISecret} "https://api.passkit.com/v1/pass/get/template/{templateName}/serial/{serial number}"</code>
+<code>curl --digest -u {APIKey}:{APISecret} "https://api.passkit.com/v1/pass/get/template/{templateName}/serial/{serialNumber}"</code>
 ----
   
 == Response Examples ==
