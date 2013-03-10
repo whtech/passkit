@@ -43,4 +43,5 @@
                * [InvalidatePass Invalidate Pass]
             * [Admin Admin Methods]
                * [Authenticate Authenticate]
+               * [Logout Logout]
       * [PassProcessingPHPExample PHP Example Class]
