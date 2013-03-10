@@ -64,6 +64,19 @@ The images on each oass can be changed by using the image parameters.
   * *<font color="blue">iconImage</font>* <font color="green">_(imageID)_</font> <font color="grey">_optional_</font>
     *_ For templates that accept a icon image. Accepts the icon imageID as returned by the [UploadImage Upload Image] method. ImageIDs, can be checked with the [GetImageData Get Image Data] method.
 
+==== Install location parameters ====
+
+Optionally, you can update the parameters related to latitude and longitude of where the device was when the pass was installed. If you don't set these parameters, they will default to the values of the server making the API call.
+
+  * *<font color="blue">installLatitude</font>* <font color="green">_(float)_</font> <font color="grey">_optional_</font>
+    *_ The latitude of the location.
+  * *<font color="blue">installLongitude</font>* <font color="green">_(float)_</font> <font color="grey">_optional_</font>
+    *_ The longitude of the location.
+  * *<font color="blue">locationDeclined</font>* <font color="green">_(bool)_</font> <font color="grey">_optional_</font>
+    *_ Only used and set to true if the user declined to give their location data when installing a pass.
+  * *<font color="blue">installIP</font>* <font color="green">_(string)_</font> <font color="grey">_optional_</font>
+    *_ The IP address of the device.
+
 ==== Location Parameters ====
 
 Optionally, each pass can hold up to 10 locations. When submitting locations, the address, latitude, longitude and locationAlert parameters are all required. More information on the behavior of locations can be found [LockScreenMessages here]. 
