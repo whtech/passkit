@@ -16,7 +16,7 @@ Pass methods are designed for issuing, updating or obtaining information about i
 ----
 == Querying Passes ==
 
-  * Get Pass Details
+  * [GetPassDetails Get Pass Details]
   * Batch Get Pass Details
 
 ----
