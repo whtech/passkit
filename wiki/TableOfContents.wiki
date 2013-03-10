@@ -42,4 +42,5 @@
                * [UpdatePass Update Pass]
                * [InvalidatePass Invalidate Pass]
             * [Admin Admin Methods]
+               * [Authenticate Authenticate]
       * [PassProcessingPHPExample PHP Example Class]
