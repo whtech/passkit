@@ -8,6 +8,12 @@
 
 Gets the pass details based on the template name and serial of the pass. The function returns a quite extensive result of pass meta -and field data.
 
+== URI Parameters ==
+
+  * <font color="blue">*templateName*</font> <font color="green">_(string)_</font> The name of the template that the pass is created from
+  * <font color="blue">*serial*</font> <font color="green">_(string)_</font> The serial of the pass
+
+
 === cURL Syntax ===
 
 <code>curl --digest -u {APIKey}:{APISecret} "https://api.passkit.com/v1/pass/get/template/{templateName}/serial/{serial number}"</code>
