@@ -7,6 +7,7 @@ Admin methods are designed for managing your account and retrieving account rela
 == Authenticate ==
 
   * [Authenticate Authenticate]
+  * [Logout Logout]
 ----
 == Certificates ==
 
