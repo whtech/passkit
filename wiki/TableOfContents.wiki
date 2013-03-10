@@ -41,7 +41,10 @@
                * [BatchIssuePass Batch Issue Pass]
                * [UpdatePass Update Pass]
                * [InvalidatePass Invalidate Pass]
+               * [GetPassDetailsTemplateSerial Get Pass Details (by template & serial)]
+               * [GetPassDetailsPassId Get Pass Details (by pass id)]
             * [Admin Admin Methods]
                * [Authenticate Authenticate]
                * [Logout Logout]
+
       * [PassProcessingPHPExample PHP Example Class]
