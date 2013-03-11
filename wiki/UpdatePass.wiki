@@ -2,11 +2,11 @@
 
 = Update Pass =
 
-|| *URI* || By template & serial: <br/>`https://api.passkit.com/v1/pass/update/template/`<font color="blue">{templateName}</font>`/serial/`<font color="blue">{serialNumber}</font><font color="grey"> _/push (optional) /?format=xml_ (optional)</font> <br/>By pass-id: <br/> `https://api.passkit.com/v1/pass/update/passid/`<font color="blue">{passId}</font><font color="grey"> _/push (optional) /?format=xml_ (optional)</font> ||
+|| *URI* || *By template & serial:* <br/>`https://api.passkit.com/v1/pass/update/template/`<font color="blue">{templateName}</font>`/serial/`<font color="blue">{serialNumber}</font><font color="grey"> _/push (optional) /?format=xml_ (optional)</font> <br/>*-or by pass-id:* <br/> `https://api.passkit.com/v1/pass/update/passid/`<font color="blue">{passId}</font><font color="grey"> _/push (optional) /?format=xml_ (optional)</font> ||
 || *Verb* || GET, POST, PUT ||
 || *Auth* || Yes ||
 
-This method is used for updating a pass. It accepts the parameters returned by the [GetTemplateDetails Get Template Field Names] method, plus relevance fields for date and for up to 10 locations.
+This method is used for updating a pass. It accepts the parameters returned by the [GetTemplateDetails Get Template Field Names] method, plus relevance fields for date and for up to 10 locations. To identify the correct pass, you can either call the method with template & serial, or with pass-id.
 
 If you wish for the update to be immediately pushed to all all devices with an active pass bearing the serial number, include `push` as the last segment of the URI. 
 
@@ -19,6 +19,10 @@ A successful submission will return the deviceID of each device updated and and 
   * <font color="blue">*templateName*</font> <font color="green">_(string)_</font> The name of the template for the pass to be updated
 
   * <font color="blue">*serialNumber*</font> <font color="green">_(string)_</font> The serial number of the pass to be updated
+
+Or:
+
+  * <font color="blue">*passId*</font> <font color="green">_(string)_</font> The unique id of the pass to be updated
 
 == Request Parameters ==
 
