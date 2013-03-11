@@ -2,7 +2,7 @@
 
 = Update Pass =
 
-|| *URI* || *By template & serial:* <br/>`https://api.passkit.com/v1/pass/update/template/`<font color="blue">{templateName}</font>`/serial/`<font color="blue">{serialNumber}</font><font color="grey"> _/push (optional) /?format=xml_ (optional)</font> <br/>*-or by pass-id:* <br/> `https://api.passkit.com/v1/pass/update/passid/`<font color="blue">{passId}</font><font color="grey"> _/push (optional) /?format=xml_ (optional)</font> ||
+|| *URI* || _By template & serial:_ <br/>`https://api.passkit.com/v1/pass/update/template/`<font color="blue">{templateName}</font>`/serial/`<font color="blue">{serialNumber}</font><font color="grey"> _/push (optional) /?format=xml_ (optional)</font> <br/>_-or by pass-id:_ <br/> `https://api.passkit.com/v1/pass/update/passid/`<font color="blue">{passId}</font><font color="grey"> _/push (optional) /?format=xml_ (optional)</font> ||
 || *Verb* || GET, POST, PUT ||
 || *Auth* || Yes ||
 
@@ -136,16 +136,33 @@ _Note that for XML requests, spaces in tag names must be replaced by 'middle dot
 === cURL Syntax ===
 
 ==== GET Request ====
+By template & serial:
 <code>curl --digest -u {APIKey}:{APISecret} 
     "https://api.passkit.com/v1/pass/update/template/{templateName}/serial/{serialNumber}/push?{parameter}={value}&{parameter}={value}"</code>
 
+By pass-id:
+<code>curl --digest -u {APIKey}:{APISecret} 
+    "https://api.passkit.com/v1/pass/update/passId/{passId}/push?{parameter}={value}&{parameter}={value}"</code>
+
 ==== POST Request ====
+By template & serial:
 <code>curl --digest -u {APIKey}:{APISecret} -d "{parameter}={value};{parameter}={value}"
     "https://api.passkit.com/v1/pass/update/template/{templateName}/serial/{serialNumber}/push"</code>
 
+By pass-id:
+<code>curl --digest -u {APIKey}:{APISecret} -d "{parameter}={value};{parameter}={value}"
+
+"https://api.passkit.com/v1/pass/update/passId/{passId}/push"</code>
+
 ==== PUT Request ====
+By template & serial:
 <code>curl --digest -u {APIKey}:{APISecret} -d @{filename} -X PUT
     "https://api.passkit.com/v1/pass/update/template/{templateName}/serial/{serialNumber}/push"</code>
+
+By pass-id:
+<code>curl --digest -u {APIKey}:{APISecret} -d @{filename} -X PUT
+    "https://api.passkit.com/v1/pass/update/passId/{passId}/push"</code>
+
 ----
   
 == Response Examples ==
