@@ -8,13 +8,21 @@
 
 This method returns the field names that can be used with the Issue Pass and Update Pass methods for a particular template.  It returns the names of all dynamic fields in the template, plus other variables such as barcode content, serial number or thumbnail image that can be set or updated.
 
+You can add "/full" after "/fieldnames". This will result in the method also returning the field information re. fields on the back of the pass.
+
 == URL Parameters ==
 
   * <font color="blue">*templateName*</font> <font color="green">_(string)_</font> The name of the template
 
 === cURL Syntax ===
 
+Normal request:
+
 <code>curl --digest -u {APIKey}:{APISecret} "https://api.passkit.com/v1/template/{templateName}/fieldnames"</code>
+
+With full parameter:
+
+<code>curl --digest -u {APIKey}:{APISecret} "https://api.passkit.com/v1/template/{templateName}/fieldnames/full"</code>
 ----
   
 == Response Examples ==
