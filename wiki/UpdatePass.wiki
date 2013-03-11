@@ -151,10 +151,12 @@ _By pass-id:_
 
 ==== PUT Request ====
 _By template & serial:_
-<code>curl --digest -u {APIKey}:{APISecret} -d @{filename} -X PUT "https://api.passkit.com/v1/pass/update/template/{templateName}/serial/{serialNumber}/push"</code>
+<code>curl --digest -u {APIKey}:{APISecret} -d @{filename} -X PUT 
+"https://api.passkit.com/v1/pass/update/template/{templateName}/serial/{serialNumber}/push"</code>
 
 _By pass-id:_
-<code>curl --digest -u {APIKey}:{APISecret} -d @{filename} -X PUT "https://api.passkit.com/v1/pass/update/passId/{passId}/push"</code>
+<code>curl --digest -u {APIKey}:{APISecret} -d @{filename} -X PUT 
+"https://api.passkit.com/v1/pass/update/passId/{passId}/push"</code>
 
 ----
   
