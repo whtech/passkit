@@ -137,31 +137,24 @@ _Note that for XML requests, spaces in tag names must be replaced by 'middle dot
 
 ==== GET Request ====
 _By template & serial:_
-<code>curl --digest -u {APIKey}:{APISecret} 
-    "https://api.passkit.com/v1/pass/update/template/{templateName}/serial/{serialNumber}/push?{parameter}={value}&{parameter}={value}"</code>
+<code>curl --digest -u {APIKey}:{APISecret} "https://api.passkit.com/v1/pass/update/template/{templateName}/serial/{serialNumber}/push?{parameter}={value}&{parameter}={value}"</code>
 
 _By pass-id:_
-<code>curl --digest -u {APIKey}:{APISecret} 
-
-"https://api.passkit.com/v1/pass/update/passId/{passId}/push?{parameter}={value}&{parameter}={value}"</code>
+<code>curl --digest -u {APIKey}:{APISecret} "https://api.passkit.com/v1/pass/update/passId/{passId}/push?{parameter}={value}&{parameter}={value}"</code>
 
 ==== POST Request ====
 _By template & serial:_
-<code>curl --digest -u {APIKey}:{APISecret} -d "{parameter}={value};{parameter}={value}"
-    "https://api.passkit.com/v1/pass/update/template/{templateName}/serial/{serialNumber}/push"</code>
+<code>curl --digest -u {APIKey}:{APISecret} -d "{parameter}={value};{parameter}={value}" "https://api.passkit.com/v1/pass/update/template/{templateName}/serial/{serialNumber}/push"</code>
 
 _By pass-id:_
-<code>curl --digest -u {APIKey}:{APISecret} -d "{parameter}={value};{parameter}={value}"
-
-"https://api.passkit.com/v1/pass/update/passId/{passId}/push"</code>
+<code>curl --digest -u {APIKey}:{APISecret} -d "{parameter}={value};{parameter}={value}" "https://api.passkit.com/v1/pass/update/passId/{passId}/push"</code>
 
 ==== PUT Request ====
 _By template & serial:_
-<code>curl --digest -u {APIKey}:{APISecret} -d @{filename} -X PUT
-    "https://api.passkit.com/v1/pass/update/template/{templateName}/serial/{serialNumber}/push"</code>
+<code>curl --digest -u {APIKey}:{APISecret} -d @{filename} -X PUT "https://api.passkit.com/v1/pass/update/template/{templateName}/serial/{serialNumber}/push"</code>
 
 _By pass-id:_
-<code>curl --digest -u {APIKey}:{APISecret} -d @{filename} -X PUT    "https://api.passkit.com/v1/pass/update/passId/{passId}/push"</code>
+<code>curl --digest -u {APIKey}:{APISecret} -d @{filename} -X PUT "https://api.passkit.com/v1/pass/update/passId/{passId}/push"</code>
 
 ----
   
