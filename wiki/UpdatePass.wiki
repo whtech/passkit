@@ -2,11 +2,8 @@
 
 = Update Pass =
 
-|| *URI* || 
-By template & serial:
-`https://api.passkit.com/v1/pass/update/template/`<font color="blue">{templateName}</font>`/serial/`<font color="blue">{serialNumber}</font><font color="grey"> _/push (optional) /?format=xml_ (optional)</font>
-By pass-id:
-`https://api.passkit.com/v1/pass/update/template/`<font color="blue">{templateName}</font>`/serial/`<font color="blue">{serialNumber}</font><font color="grey"> _/push (optional) /?format=xml_ (optional)</font>||
+|| *URI* || By template & serial: `https://api.passkit.com/v1/pass/update/template/`<font color="blue">{templateName}</font>`/serial/`<font color="blue">{serialNumber}</font><font color="grey"> _/push (optional) /?format=xml_ (optional)</font>
+By pass-id: `https://api.passkit.com/v1/pass/update/template/`<font color="blue">{templateName}</font>`/serial/`<font color="blue">{serialNumber}</font><font color="grey"> _/push (optional) /?format=xml_ (optional)</font>||
 || *Verb* || GET, POST, PUT ||
 || *Auth* || Yes ||
 
