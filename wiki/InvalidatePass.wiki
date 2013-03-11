@@ -2,10 +2,7 @@
 
 = Invalidate Pass =
 
-|| *URI* || _By template & serial:_<br/>
-`https://api.passkit.com/v1/pass/invalidate/template/`<font color="blue">{templateName}</font>`/serial/`<font color="blue">{serialNumber}</font><font color="grey"> _/?format=xml_ (optional)</font><br/>
-_-or by pass-id:_<br/>
-`https://api.passkit.com/v1/pass/invalidate/passid/`<font color="blue">{passId}</font>`<font color="grey"> _/?format=xml_ (optional)</font> ||
+|| *URI* || _By template & serial:_<br/>`https://api.passkit.com/v1/pass/invalidate/template/`<font color="blue">{templateName}</font>`/serial/`<font color="blue">{serialNumber}</font><font color="grey"> _/?format=xml_ (optional)</font><br/>_-or by pass-id:_<br/>`https://api.passkit.com/v1/pass/invalidate/passid/`<font color="blue">{passId}</font>`<font color="grey"> _/?format=xml_ (optional)</font> ||
 || *Verb* || GET, POST, PUT ||
 || *Auth* || Yes ||
 
