@@ -22,8 +22,6 @@ A successful submission will return the serial number and URL for each pass crea
     *_ The text of the notification message that will be displayed when the field value changes.  Include %@ in the string to include the new value in the notification.
   * *<font color="blue">{fieldName}`_`label</font>* <font color="green">_(string)_</font> <font color="grey">_optional_</font>
     *_ The value of a dynamic label field. Label values are always treated as text. 
-  * *<font color="blue">thumbnailImage</font>* <font color="green">_(imageID)_</font> <font color="grey">_optional_</font>
-    *_ For templates that accept a thumbnail image, the thumbnail imageID as returned by the [UploadImage Upload Image] method.  ImageIDs, can be checked with the [GetImageData Get Image Data] method.
   * *<font color="blue">serialNumber</font>* <font color="green">_(string)_</font> <font color="grey">_optional_</font>
     *_ For templates that require a serial number to be provided at pass creation. The serial provided must be unique within the template.
   * *<font color="blue">recoveryEmail</font>* <font color="green">_(string)_</font> <font color="grey">_optional_</font>
@@ -35,7 +33,46 @@ A successful submission will return the serial number and URL for each pass crea
   * *<font color="blue">relevantDate</font>* <font color="green">_(date)_</font> <font color="grey">_optional_</font>
     *_ For Pass types that support a relevant date, a date in ISO 8601 format can be provided. More information on the behavior of the relevant date can be found [LockScreenMessages here]. 
 
+==== Colour Parameters ====
+
+  * *<font color="blue">labelColor / labelColour</font>* <font color="green">_(string)_</font> <font color="grey">_optional_</font>
+    *_ To set the label color. Accepts a 6 digit HEX color code. 
+  * *<font color="blue">foregroundColor / foregroundColour</font>* <font color="green">_(string)_</font> <font color="grey">_optional_</font>
+    *_ To set the foreground color. Accepts a 6 digit HEX color code.
+  * *<font color="blue">backgroundColor / backgroundColour</font>* <font color="green">_(string)_</font> <font color="grey">_optional_</font>
+    *_ To set the background color. Accepts a 6 digit HEX color code.
+
+==== Image Parameters ====
+
+The images on each pass can be set by using the image parameters.
+  * *<font color="blue">thumbnailImage</font>* <font color="green">_(imageID)_</font> <font color="grey">_optional_</font>
+    *_ For templates that accept a thumbnail image. Accepts the thumbnail imageID as returned by the [UploadImage Upload Image] method.  ImageIDs, can be checked with the [GetImageData Get Image Data] method.
+  * *<font color="blue">stripImage</font>* <font color="green">_(imageID)_</font> <font color="grey">_optional_</font>
+    *_ For templates that accept a strip image. Accepts the strip imageID as returned by the [UploadImage Upload Image] method. ImageIDs, can be checked with the [GetImageData Get Image Data] method.
+  * *<font color="blue">logoImage</font>* <font color="green">_(imageID)_</font> <font color="grey">_optional_</font>
+    *_ For templates that accept a logo image. Accepts the logo imageID as returned by the [UploadImage Upload Image] method. ImageIDs, can be checked with the [GetImageData Get Image Data] method.
+  * *<font color="blue">footerImage</font>* <font color="green">_(imageID)_</font> <font color="grey">_optional_</font>
+    *_ For templates that accept a footer image. Accepts the footer imageID as returned by the [UploadImage Upload Image] method. ImageIDs, can be checked with the [GetImageData Get Image Data] method.
+  * *<font color="blue">backgroundImage</font>* <font color="green">_(imageID)_</font> <font color="grey">_optional_</font>
+    *_ For templates that accept a background image. Accepts the background imageID as returned by the [UploadImage Upload Image] method. ImageIDs, can be checked with the [GetImageData Get Image Data] method.
+  * *<font color="blue">iconImage</font>* <font color="green">_(imageID)_</font> <font color="grey">_optional_</font>
+    *_ For templates that accept a icon image. Accepts the icon imageID as returned by the [UploadImage Upload Image] method. ImageIDs, can be checked with the [GetImageData Get Image Data] method.
+
+==== Install location parameters ====
+
+Optionally, you can set the parameters related to latitude and longitude of where the device was when the pass was installed. If you don't set these parameters, they will default to the values of the server making the API call.
+
+  * *<font color="blue">installLatitude</font>* <font color="green">_(float)_</font> <font color="grey">_optional_</font>
+    *_ The latitude of the location.
+  * *<font color="blue">installLongitude</font>* <font color="green">_(float)_</font> <font color="grey">_optional_</font>
+    *_ The longitude of the location.
+  * *<font color="blue">locationDeclined</font>* <font color="green">_(bool)_</font> <font color="grey">_optional_</font>
+    *_ Only used and set to true if the user declined to give their location data when installing a pass.
+  * *<font color="blue">installIP</font>* <font color="green">_(string)_</font> <font color="grey">_optional_</font>
+    *_ The IP address of the device.
+
 ==== Location Parameters ====
+
 Optionally, each pass can hold up to 10 locations. When submitting locations, the address, latitude, longitude and locationAlert parameters are all required. More information on the behavior of locations can be found [LockScreenMessages here]. 
   * *<font color="blue">location_{number}_address</font>* <font color="green">_(string)_</font> <font color="grey">_required_</font>
     *_ An address or other meaningful text that will help you identify the location. 
