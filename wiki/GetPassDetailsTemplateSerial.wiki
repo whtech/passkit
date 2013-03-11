@@ -6,7 +6,7 @@
 || *Verb* || GET ||
 || *Auth* || Yes ||
 
-Gets the pass details based on the template name and serial of the pass. The function returns a quite extensive result of pass meta -and field data.
+Gets the pass details based on the template name and serial of the pass. The function returns an extensive result of pass meta -and field data.
 
 == URI Parameters ==
 
