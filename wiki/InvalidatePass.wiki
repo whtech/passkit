@@ -2,11 +2,14 @@
 
 = Invalidate Pass =
 
-|| *URI* || `https://api.passkit.com/v1/pass/invalidate/template/`<font color="blue">{templateName}</font>`/serial/`<font color="blue">{serialNumber}</font><font color="grey"> _/?format=xml_ (optional)</font> ||
+|| *URI* || _By template & serial:_<br/>
+`https://api.passkit.com/v1/pass/invalidate/template/`<font color="blue">{templateName}</font>`/serial/`<font color="blue">{serialNumber}</font><font color="grey"> _/?format=xml_ (optional)</font><br/>
+_-or by pass-id:_<br/>
+`https://api.passkit.com/v1/pass/invalidate/passid/`<font color="blue">{passId}</font>`<font color="grey"> _/?format=xml_ (optional)</font> ||
 || *Verb* || GET, POST, PUT ||
 || *Auth* || Yes ||
 
-This method is used for invalidating a pass. It accepts the parameters returned by the [GetTemplateDetails Get Template Field Names] method, plus relevance fields for date and for up to 10 locations.
+This method is used for invalidating a pass. It accepts the parameters returned by the [GetTemplateDetails Get Template Field Names] method, plus relevance fields for date and for up to 10 locations. To identify the correct pass, you can either call the method with template & serial, or with pass-id.
 
 Invalidating a pass, performs two functions in a single call.  Firstly, it serves as a update, allowing you to change the content of an invalidated pass and secondly, it removes the pass from circulation, preventing it from being updated or manually refreshed.
 
@@ -27,6 +30,10 @@ A successful submission will return the deviceID of each device updated and and 
   * <font color="blue">*templateName*</font> <font color="green">_(string)_</font> The name of the template for the pass to be updated
 
   * <font color="blue">*serialNumber*</font> <font color="green">_(string)_</font> The serial number of the pass to be updated
+
+Or:
+
+  * <font color="blue">*passId*</font> <font color="green">_(string)_</font> The unique id of the pass to be updated
 
 == Request Parameters ==
 
@@ -115,16 +122,32 @@ _Note that for XML requests, spaces in tag names must be replaced by 'middle dot
 === cURL Syntax ===
 
 ==== GET Request ====
+_By template & serial:_
 <code>curl --digest -u {APIKey}:{APISecret} 
-    "https://api.passkit.com/v1/pass/invalidate/template/{templateName}/serial/{serialNumber}/push?{parameter}={value}&{parameter}={value}"</code>
+"https://api.passkit.com/v1/pass/invalidate/template/{templateName}/serial/{serialNumber}/push?{parameter}={value}&{parameter}={value}"</code>
+
+_By pass-id:_
+<code>curl --digest -u {APIKey}:{APISecret} 
+"https://api.passkit.com/v1/pass/invalidate/passid/{passId}/push?{parameter}={value}&{parameter}={value}"</code>
 
 ==== POST Request ====
-<code>curl --digest -u {APIKey}:{APISecret} -d "{parameter}={value};{parameter}={value}"
-    "https://api.passkit.com/v1/pass/invalidate/template/{templateName}/serial/{serialNumber}/push"</code>
+_By template & serial:_
+<code>curl --digest -u {APIKey}:{APISecret} -d "{parameter}={value};{parameter}={value}" 
+"https://api.passkit.com/v1/pass/invalidate/template/{templateName}/serial/{serialNumber}/push"</code>
+
+_By pass-id:_
+<code>curl --digest -u {APIKey}:{APISecret} -d "{parameter}={value};{parameter}={value}" 
+"https://api.passkit.com/v1/pass/invalidate/passid/{passId}/push"</code>
 
 ==== PUT Request ====
-<code>curl --digest -u {APIKey}:{APISecret} -d @{filename} -X PUT
-    "https://api.passkit.com/v1/pass/invalidate/template/{templateName}/serial/{serialNumber}/push"</code>
+_By template & serial:_
+<code>curl --digest -u {APIKey}:{APISecret} -d @{filename} -X PUT 
+"https://api.passkit.com/v1/pass/invalidate/template/{templateName}/serial/{serialNumber}/push"</code>
+
+_By pass-id:_
+<code>curl --digest -u {APIKey}:{APISecret} -d @{filename} -X PUT 
+"https://api.passkit.com/v1/pass/invalidate/passid/{passId}/push"</code>
+
 ----
   
 == Response Examples ==
