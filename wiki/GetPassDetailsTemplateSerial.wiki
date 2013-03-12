@@ -112,3 +112,11 @@ _Note that for XML responses, spaces in tag names will be replaced by 'middle do
     </passRecords>
 </PassKit_API_Response>
 }}}
+
+<table border="0">
+  <tr>
+    <td width="361"><g:plusone size="medium"></g:plusone></td>
+    <td width="353">[http://PassKit.com/ PassKit Home Page]</td>
+    <td width="128">[https://create.passkit.com Register with PassKit]</td>
+  </tr>
+</table>
