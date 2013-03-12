@@ -62,7 +62,7 @@ The images on each pass can be set by using the image parameters.
   * *<font color="blue">iconImage</font>* <font color="green">_(imageID)_</font> <font color="grey">_optional_</font>
     *_ For templates that accept a icon image. Accepts the icon imageID as returned by the [UploadImage Upload Image] method. ImageIDs, can be checked with the [GetImageData Get Image Data] method.
 
-==== Install location parameters ====
+==== Install passthru parameters ====
 
 Optionally, you can set the parameters related to latitude and longitude of where the device was when the pass was installed. If you don't set these parameters, they will default to the values of the server making the API call.
 
