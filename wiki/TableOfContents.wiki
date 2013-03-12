@@ -45,5 +45,4 @@
                * [GetPassDetailsPassId Get Pass Details (by pass id)]
             * [Admin Admin Methods]
                * [Authenticate Authenticate]
- 
       * [PassProcessingPHPExample PHP Example Class]
