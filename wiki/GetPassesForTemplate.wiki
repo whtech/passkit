@@ -23,6 +23,64 @@ This method returns some basic template information and all the passes (pass met
 ==== JSON Format ====
 
 <code language="json">
+{
+    "success": "1",
+    "templateName": "My template",
+    "templateLastUpdated": "2013-02-08T01:02:55+00:00",
+    "totalPasses": "2",
+    "passrecords": {
+      "pass_1": {
+        "passMeta": {
+          "passStatus": "Active",
+          "installIP": "123.123.123.123",
+          "installIPCountry": "HK",
+          "installIPCity": "Central District",
+          "recoveryURL": "http://recoveryUrl.com",
+          "issueDate": "2013-02-10T08:19:30+00:00",
+          "lastDataChange": "2013-03-02T04:56:47+00:00",
+          "lastPushRefresh": "2013-02-10T14:45:08+00:00",
+          "lastManualRefresh": "2013-03-02T04:57:09+00:00",
+          "passExpires": "2013-03-02T04:57:09+00:00",
+          "passbookSerial": "uniqueSerial",
+          "uniqueID": "uniqueId",
+          "serialNumber": "serialNumber",
+          "shareID": "shareid"
+        },
+        "passData": {
+          "Student·name": "Test student",
+          "Balance": "8",
+          "Issue·date": "2013-02-10",
+          "Expiry·date": "2014-02-10",
+          "barcodeContent": "content"
+        }
+      },
+      "pass_2": {
+        "passMeta": {
+          "passStatus": "Active",
+          "installIP": "123.123.123.123",
+          "installIPCountry": "HK",
+          "installIPCity": "Central District",
+          "recoveryURL": "http://recoveryUrl.com",
+          "issueDate": "2013-02-10T08:19:30+00:00",
+          "lastDataChange": "2013-03-02T04:56:47+00:00",
+          "lastPushRefresh": "2013-02-10T14:45:08+00:00",
+          "lastManualRefresh": "2013-03-02T04:57:09+00:00",
+          "passExpires": "2013-03-02T04:57:09+00:00",
+          "passbookSerial": "uniqueSerial",
+          "uniqueID": "uniqueId",
+          "serialNumber": "serialNumber",
+          "shareID": "shareid"
+        },
+        "passData": {
+          "Student·name": "Test student 2",
+          "Balance": "8",
+          "Issue·date": "2013-02-10",
+          "Expiry·date": "2014-02-10",
+          "barcodeContent": "content"
+        }
+      }
+    }
+}
 </code>
 
 ==== XML Format ====
