@@ -10,7 +10,7 @@ Template methods are designed for creating, updating or obtaining information ab
 ----
 == Updating Templates ==
 
-  * Update Template
+  * [UpdateTemplate Update Template]
   * [ResetTemplate Reset Template]
   * Delete Template
 ----
