@@ -18,6 +18,7 @@ Pass methods are designed for issuing, updating or obtaining information about i
 
   * [GetPassDetailsTemplateSerial Get Pass Details (by template & serial)]
   * [GetPassDetailsPassId Get Pass Details (by pass id)]
+  * [GetUniqueIdByShareId Get Unique Pass Id (by share id)]
   * Batch Get Pass Details
 
 ----
