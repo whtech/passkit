@@ -1,0 +1,96 @@
+#summary Get Passes For Template
+
+= Get Passes For Template =
+
+|| *URI* || `https://api.passkit.com/v1/template/`<font color="blue">{templateName}</font>`/passes` <font color="grey"> _/?format=xml_ (optional)</font> ||
+|| *Verb* || GET ||
+|| *Auth* || Yes ||
+
+This method returns some basic template information and all the passes (pass meta -and field data) that were issued for the given template with <font color="blue">{templateName}</font>.
+
+== URL Parameters ==
+
+  * <font color="blue">*templateName*</font> <font color="green">_(string)_</font> The name of the template
+
+=== cURL Syntax ===
+
+<code>curl --digest -u {APIKey}:{APISecret} "https://api.passkit.com/v1/template/{templateName}/passes"</code>
+
+----
+  
+== Response Examples ==
+
+==== JSON Format ====
+
+<code language="json">
+</code>
+
+==== XML Format ====
+
+_Note that for XML responses, spaces in tag names will be replaced by 'middle dot' (·).  If a tag starts with an invalid character (E.g. a Number), the tag will be prexied with two underscores (`__`_)_
+{{{
+
+}}}
+
+=== Response Parameters ===
+
+==== Template parameters ====
+
+  * *<font color="blue">success</font>* <font color="green">_(string)_</font>
+    *_ Will return <font color="purple">true</font> for a successful submission, or will not be present in the case of an error.
+  * *<font color="blue">templateName</font>* <font color="green">_(string)_</font>
+    *_ The name of the template.
+  * *<font color="blue">templateLastUpdated</font>* <font color="green">_(date)_</font>
+    *_ The date when the template was last updated.
+  * *<font color="blue">totalPasses</font>* <font color="green">_(int)_</font>
+    *_ The total amount of issued passes.
+  * *<font color="blue">passRecords</font>* <font color="green">_(array)_</font>
+    *_ An array of all the pass records.
+  
+==== Pass meta-data parameters ====
+
+  * *<font color="blue">passStatus</font>* <font color="green">_(string)_</font>
+    *_ The status of the pass.
+  * *<font color="blue">installIp</font>* <font color="green">_(string)_</font>
+    *_ The installation IP address of the device when the pass was installed.
+  * *<font color="blue">installIPCountry</font>* <font color="green">_(string)_</font>
+    *_ The country that the device was in when the pass was installed.
+  * *<font color="blue">installIPCity</font>* <font color="green">_(string)_</font>
+    *_ The city that the device was in when the pass installed.
+  * *<font color="blue">recoveryURL</font>* <font color="green">_(string)_</font>
+    *_ The recovery URL of the pass.
+  * *<font color="blue">issueDate</font>* <font color="green">_(date)_</font>
+    *_ The issue date of the pass.
+  * *<font color="blue">lastDataChange</font>* <font color="green">_(date)_</font>
+    *_ The time when data was last changed on the pass.
+  * *<font color="blue">lastPushRefresh</font>* <font color="green">_(date)_</font>
+    *_ The time when data was pushed last to the pass.
+  * *<font color="blue">lastManualRefresh</font>* <font color="green">_(date)_</font>
+    *_ The last time the user did a manual refresh.
+  * *<font color="blue">passExpires</font>* <font color="green">_(date)_</font>
+    *_ The expiry date of the pass.
+  * *<font color="blue">passbookSerial</font>* <font color="green">_(string)_</font>
+    *_ The PassBook serial of the pass.
+  * *<font color="blue">uniqueID</font>* <font color="green">_(string)_</font>
+    *_ The unique pass-id of the the pass.
+  * *<font color="blue">serialNumber</font>* <font color="green">_(string)_</font>
+    *_ The serial number of the pass.
+  * *<font color="blue">shareID</font>* <font color="green">_(string)_</font>
+    *_ The share-id of the pass.
+
+==== Pass field-data parameters ====
+
+  * *<font color="blue">{fieldName}</font>* <font color="green">_(string)_</font>
+    *_Returns the name of each dynamic 'value' field, together with the type of data the field accepts. The type value will be either one of <font color="purple">text</font>, <font color="purple">number</font>,  <font color="purple">date</font>,  <font color="purple">datetime</font> or <font color="purple">currency</font>.
+  * *<font color="blue">barcodeContent</font>* <font color="green">_(string)_</font>
+    *_If the template allows for the barcode encoded content to be changed, this parameter will be returned with a value of <font color="purple">text</font>
+
+----
+
+<table border="0">
+  <tr>
+    <td width="361"><g:plusone size="medium"></g:plusone></td>
+    <td width="353">[http://PassKit.com/ PassKit Home Page]</td>
+    <td width="128">[https://create.passkit.com Register with PassKit]</td>
+  </tr>
+</table>
