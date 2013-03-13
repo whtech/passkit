@@ -2,7 +2,7 @@
 
 = Upload Image =
 
-|| *URI* || `https://api.passkit.com/v1/image/add/`<font color="blue">{imageType}</font> <font color="grey">_/url (optional)_</font><font color="grey">_/?format=xml (optional)_</font> ||
+|| *URI* || `https://api.passkit.com/v1/image/add/`<font color="blue">{imageType}</font> <font color="grey">_/url={url} (optional)_</font><font color="grey"> _/?format=xml (optional)_</font> ||
 || *Verb* || POST ||
 || *Auth* || Yes ||
 
@@ -27,6 +27,8 @@ The same image can
   * thumbnail_
 
 _*Note:* Image types, sizes and their role in each pass type is explained in more detail [PassImages here]_ 
+
+* <font color="blue">url</font> *<font color="green"> _(string)_</font> <font color="grey"> _optional_</font> The url for an image already hosted online (instead of uploading one).
 
 == Request Contents ==
 
