@@ -1,0 +1,80 @@
+#summary Update Template
+
+= Update Template =
+
+|| *URI* || `https://api.passkit.com/v1/template/update/`<font color="blue">{templateName}</font> <font color="grey"> _/push_ (optional)</font> <font color="grey"> _/?format=xml_ (optional)</font> ||
+|| *Verb* || GET, POST, PUT ||
+|| *Auth* || Yes ||
+
+This method allows for static fields of default values of dynamic fields of templates to be changed (and potentially pushed) to all passes.
+
+If you wish for the update to be immediately pushed to all devices with an active pass, include push as the last segment of the URL.
+
+== URL Parameters ==
+
+  * <font color="blue">*templateName*</font> <font color="green">_(string)_</font> The name of the template for the pass records to be reset.
+
+== Request Parameters ==
+
+  * *<font color="blue">{fieldName}</font>* <font color="green">_(mixed)_</font> <font color="grey">_optional_</font>
+    *_ The default value for a dynamic field within the template. The submitted data type must match the data type of the field, as specified in the template. Date values must be in ISO 8601 format.
+
+=== cURL Syntax ===
+
+==== GET Request ====
+
+<code>curl --digest -u {APIKey}:{APISecret} 
+"https://api.passkit.com/v1/template/update/{templateName}/push?{parameter}={value}&{parameter}={value}"</code>
+
+==== POST Request ====
+
+<code>curl --digest -u {APIKey}:{APISecret} -d "{parameter}={value};{parameter}={value}" 
+"https://api.passkit.com/v1/template/update/{templateName}/push"</code>
+
+==== PUT Request ====
+
+<code>curl --digest -u {APIKey}:{APISecret} -d @{filename} -X PUT 
+"https://api.passkit.com/v1/template/update/{templateName}/push"</code>
+
+----
+    
+== Response Examples ==
+
+==== JSON Format ====
+
+<code language="json">
+{
+  "success":true,
+  "devices": {
+    "device_1": "a7fc7ff20ef26c95808ab820e2aa797e0c590df760febd974051287779ec69f5"
+     }
+}</code>
+
+==== XML Format ====
+
+_Note that for XML responses, spaces in tag names will be replaced by 'middle dot' (·).  If a tag starts with an invalid character (E.g. a Number), the tag will be prexied with two underscores (`__`_)_
+{{{
+<?xml version="1.0"?>
+<PassKit_API_Response>
+    <success>1</success>
+    <devices>
+        <device_1>a7fc7ff20ef26c95808ab820e2aa797e0c590df760febd974051287779ec69f5</device_1>
+    </devices>
+</PassKit_API_Response>
+}}}
+
+=== Response Parameters === 
+  * *<font color="blue">success</font>* <font color="green">_(string)_</font>
+    *_ Will return <font color="purple">true</font> for a successful submission, or will not be present in the case of an error.
+  * *<font color="blue">devices</font>* <font color="green">_(array)_</font>
+    *_ A list of the deviceIDs for which a push request has been dispatched to Apple.
+
+----
+
+<table border="0">
+  <tr>
+    <td width="361"><g:plusone size="medium"></g:plusone></td>
+    <td width="353">[http://PassKit.com/ PassKit Home Page]</td>
+    <td width="128">[https://create.passkit.com Register with PassKit]</td>
+  </tr>
+</table>
