@@ -6,13 +6,13 @@
 || *Verb* || GET ||
 || *Auth* || Yes ||
 
-This method performs a look-up based upon the share-id of the pass. The share-id is another unique identifier for the pass that is used to determine parent/child relationships between passes.
+This method performs a look-up based upon the share ID of the pass. The share ID is another unique identifier for the pass that is used to determine parent/child relationships between passes.
 
-The method returns the unique pass id for the base if it finds the record with <font color="blue">{shareId}</font>.
+The method returns the unique pass ID for the pass if it finds the record with <font color="blue">{shareId}</font>.
 
 == URL Parameters ==
 
-  * <font color="blue">*shareId*</font> <font color="green">_(string)_</font> The share-id of the pass.
+  * <font color="blue">*shareId*</font> <font color="green">_(string)_</font> The share ID of the pass.
 
 === cURL Syntax ===
 
@@ -46,7 +46,7 @@ _Note that for XML responses, spaces in tag names will be replaced by 'middle do
   * *<font color="blue">success</font>* <font color="green">_(string)_</font>
     *_ Will return <font color="purple">true</font> for a successful submission, or will not be present in the case of an error.
   * *<font color="blue">uniqueId</font>* <font color="green">_(array)_</font>
-    *_ The unique pass id of the pass.
+    *_ The unique pass ID of the pass.
 
 ----
 
