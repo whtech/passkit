@@ -35,6 +35,7 @@
                * [GetTemplateDetails Get Template Field Names]
                * [GetPassesForTemplate Get Passes For Template]
                * [ListTemplates List Templates]
+               * [UpdateTemplate Update Template]
                * [ResetTemplate Reset Template]
             * [Images Image Methods]
                * [UploadImage Upload Image]
