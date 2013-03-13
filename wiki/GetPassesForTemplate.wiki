@@ -24,10 +24,10 @@ This method returns some basic template information and all the passes (pass met
 
 <code language="json">
 {
-    "success": "1",
+    "success": true,
     "templateName": "My template",
     "templateLastUpdated": "2013-02-08T01:02:55+00:00",
-    "totalPasses": "2",
+    "totalPasses": 2,
     "passrecords": {
       "pass_1": {
         "passMeta": {
