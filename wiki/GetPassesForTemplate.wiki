@@ -29,7 +29,65 @@ This method returns some basic template information and all the passes (pass met
 
 _Note that for XML responses, spaces in tag names will be replaced by 'middle dot' (·).  If a tag starts with an invalid character (E.g. a Number), the tag will be prexied with two underscores (`__`_)_
 {{{
-
+<?xml version="1.0"?>
+<PassKit_API_Response>
+    <success>1</success>
+    <templateName>My template</templateName>
+    <templateLastUpdated>2013-02-08T01:02:55+00:00</templateLastUpdated>
+    <totalPasses>2</totalPasses>
+    <passrecords>
+        <pass_1>
+            <passMeta>
+                <passStatus>Active</passStatus>
+                <installIP>123.123.123.123</installIP>
+                <installIPCountry>HK</installIPCountry>
+                <installIPCity>Central District</installIPCity>
+                <recoveryURL>http://recoveryUrl.com</recoveryURL>
+                <issueDate>2013-02-10T08:19:30+00:00</issueDate>
+                <lastDataChange>2013-03-02T04:56:47+00:00</lastDataChange>
+                <lastPushRefresh>2013-02-10T14:45:08+00:00</lastPushRefresh>
+                <lastManualRefresh>2013-03-02T04:57:09+00:00</lastManualRefresh>
+                <passExpires>2013-03-02T04:57:09+00:00</passExpires>
+                <passbookSerial>uniqueSerial</passbookSerial>
+                <uniqueID>uniqueId</uniqueID>
+                <serialNumber>serialNumber</serialNumber>
+                <shareID>shareid</shareID>
+            </passMeta>
+            <passData>
+                <Student·name>Test student</Student·name>
+                <Balance>8</Balance>
+                <Issue·date>2013-02-10</Issue·date>
+                <Expiry·date>2014-02-10</Expiry·date>
+                <barcodeContent>content</barcodeContent>
+            </passData>
+        </pass_1>
+	<pass_2>
+            <passMeta>
+                <passStatus>Active</passStatus>
+                <installIP>123.123.123.123</installIP>
+                <installIPCountry>HK</installIPCountry>
+                <installIPCity>Central District</installIPCity>
+                <recoveryURL>http://recoveryUrl.com</recoveryURL>
+                <issueDate>2013-02-10T08:19:30+00:00</issueDate>
+                <lastDataChange>2013-03-02T04:56:47+00:00</lastDataChange>
+                <lastPushRefresh>2013-02-10T14:45:08+00:00</lastPushRefresh>
+                <lastManualRefresh>2013-03-02T04:57:09+00:00</lastManualRefresh>
+                <passExpires>2013-03-02T04:57:09+00:00</passExpires>
+                <passbookSerial>uniqueSerial</passbookSerial>
+                <uniqueID>uniqueId</uniqueID>
+                <serialNumber>serialNumber</serialNumber>
+                <shareID>shareid</shareID>
+            </passMeta>
+            <passData>
+                <Student·name>Test student 2</Student·name>
+                <Balance>8</Balance>
+                <Issue·date>2013-02-10</Issue·date>
+                <Expiry·date>2014-02-10</Expiry·date>
+                <barcodeContent>content</barcodeContent>
+            </passData>
+        </pass_2>
+    </passrecords>
+</PassKit_API_Response>
 }}}
 
 === Response Parameters ===
