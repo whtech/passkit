@@ -2,7 +2,7 @@
 
 = Upload Image =
 
-|| *URI* || `https://api.passkit.com/v1/image/add/`<font color="blue">{imageType}</font> <font color="grey">_/?format=xml (optional)_</font> ||
+|| *URI* || `https://api.passkit.com/v1/image/add/`<font color="blue">{imageType}</font> <font color="grey">_/url (optional)_</font><font color="grey">_/?format=xml (optional)_</font> ||
 || *Verb* || POST ||
 || *Auth* || Yes ||
 
