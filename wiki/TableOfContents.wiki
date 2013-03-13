@@ -33,7 +33,7 @@
       * [Methods]
             * [Templates Template Methods]
                * [GetTemplateDetails Get Template Field Names]
-               * [ListTemplates] List Templates]
+               * [ListTemplates List Templates]
             * [Images Image Methods]
                * [UploadImage Upload Image]
                * [GetImageData Get Image Data]
