@@ -1,0 +1,66 @@
+#summary Reset Template
+
+= Reset Template =
+
+|| *URI* || `https://api.passkit.com/v1/template/`<font color="blue">{templateName}</font>`/reset` <font color="grey"> _/push_ (optional)</font> <font color="grey"> _/?format=xml_ (optional)</font> ||
+|| *Verb* || GET, POST, PUT ||
+|| *Auth* || Yes ||
+
+This method resets each pass record to the default values. This only affects values that the user cannot edit - it also removes all data- fields from each pass record. 
+
+Each pass can have an unlimited number of fields that start with data-. These fields do not show up on the pass, but are attached to the pass record and thus returned with every request for pass data.
+
+If you wish for the update to be immediately pushed to all all devices with an active pass bearing the serial number, include push as the last segment of the URI.
+
+== URL Parameters ==
+
+  * <font color="blue">*templateName*</font> <font color="green">_(string)_</font> The name of the template for the pass to be updated
+
+=== cURL Syntax ===
+
+*Get request:*
+
+<code>curl --digest -u {APIKey}:{APISecret} "https://api.passkit.com/v1/template/{templateName}/reset/push"</code>
+
+----
+  
+== Response Examples ==
+
+==== JSON Format ====
+
+<code language="json">
+{
+  "success":true,
+  "devices": {
+    "device_1": "a7fc7ff20ef26c95808ab820e2aa797e0c590df760febd974051287779ec69f5"
+     },
+}</code>
+
+==== XML Format ====
+
+_Note that for XML responses, spaces in tag names will be replaced by 'middle dot' (·).  If a tag starts with an invalid character (E.g. a Number), the tag will be prexied with two underscores (`__`_)_
+{{{
+<?xml version="1.0"?>
+<PassKit_API_Response>
+    <success>1</success>
+    <devices>
+   <device_1>a7fc7ff20ef26c95808ab820e2aa797e0c590df760febd974051287779ec69f5</device_1>
+    </devices>
+</PassKit_API_Response>
+}}}
+
+=== Response Parameters === 
+  * *<font color="blue">success</font>* <font color="green">_(string)_</font>
+    *_ Will return <font color="purple">true</font> for a successful submission, or will not be present in the case of an error.
+  * *<font color="blue">templates</font>* <font color="green">_(array)_</font>
+    *_ A list of the template names for the user account.
+
+----
+
+<table border="0">
+  <tr>
+    <td width="361"><g:plusone size="medium"></g:plusone></td>
+    <td width="353">[http://PassKit.com/ PassKit Home Page]</td>
+    <td width="128">[https://create.passkit.com Register with PassKit]</td>
+  </tr>
+</table>
