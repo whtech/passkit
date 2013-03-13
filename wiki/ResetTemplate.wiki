@@ -33,7 +33,7 @@ If you wish for the update to be immediately pushed to all devices with an activ
   "success":true,
   "devices": {
     "device_1": "a7fc7ff20ef26c95808ab820e2aa797e0c590df760febd974051287779ec69f5"
-     },
+     }
 }</code>
 
 ==== XML Format ====
