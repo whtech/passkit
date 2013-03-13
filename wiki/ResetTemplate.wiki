@@ -10,7 +10,7 @@ This method resets each pass record to the default values. This only affects val
 
 Each pass can have an unlimited number of fields that start with "data-". These fields do not show up on the pass, but are attached to the pass record and thus returned with every request for pass data.
 
-If you wish for the update to be immediately pushed to all devices with an active, include push as the last segment of the URL.
+If you wish for the reset to be immediately pushed to all devices with an active, include push as the last segment of the URL.
 
 == URL Parameters ==
 
