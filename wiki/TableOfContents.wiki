@@ -45,6 +45,7 @@
                * [InvalidatePass Invalidate Pass]
                * [GetPassDetailsTemplateSerial Get Pass Details (by template & serial)]
                * [GetPassDetailsPassId Get Pass Details (by pass id)]
+               * [GetPassIdByShareId Get Unique Pass Id (by share id)]
             * [Admin Admin Methods]
                * [Authenticate Authenticate]
       * [PassProcessingPHPExample PHP Example Class]
