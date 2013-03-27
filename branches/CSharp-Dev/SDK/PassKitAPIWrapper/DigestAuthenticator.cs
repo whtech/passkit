@@ -13,15 +13,32 @@ namespace RestSharp.Authenticators
     /// </summary>
     public class DigestAuthenticator : IAuthenticator
     {
+        /// <summary>
+        /// User string
+        /// </summary>
         private readonly string _user;
+
+        /// <summary>
+        /// Password string
+        /// </summary>
         private readonly string _pass;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="user">User string</param>
+        /// <param name="pass">Password string</param>
         public DigestAuthenticator(string user, string pass)
         {
             _user = user;
             _pass = pass;
         }
 
+        /// <summary>
+        /// Authenticate function
+        /// </summary>
+        /// <param name="client">IRestClient client</param>
+        /// <param name="request">IRestRequest request</param>
         public void Authenticate(
             IRestClient client, IRestRequest request)
         {

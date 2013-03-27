@@ -16,7 +16,7 @@ namespace PassKitWebDemo
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.getPassesForTemplate();
+            this.updateTemplate();
         }
 
         public void listTemplates()
@@ -54,6 +54,36 @@ namespace PassKitWebDemo
         {
             PassKit pk = new PassKit(apiAccount, apiSecret);
             PassKitResponse result = pk.GetPasses("Lesson package");
+        }
+
+        public void updatePassTemplateSerial()
+        {
+            // Create Dictionary with pass fields
+            Dictionary<string, string> fields = new Dictionary<string, string>();
+            fields["Balance"] = "5";
+            
+            PassKit pk = new PassKit(apiAccount, apiSecret);
+            PassKitResponse result = pk.UpdatePass("Lesson package", "4756935660433049", fields);
+        }
+
+        public void updatePassPassId()
+        {
+            // Create Dictionary with pass fields
+            Dictionary<string, string> fields = new Dictionary<string, string>();
+            fields["Balance"] = "2";
+
+            PassKit pk = new PassKit(apiAccount, apiSecret);
+            PassKitResponse result = pk.UpdatePass("JCecLhBk9mmC", fields);
+        }
+
+        public void updateTemplate()
+        {
+            // Create Dictionary with template fields
+            Dictionary<string, string> fields = new Dictionary<string, string>();
+            fields["Terms_label"] = "Terms & Sausages";
+
+            PassKit pk = new PassKit(apiAccount, apiSecret);
+            PassKitResponse result = pk.UpdateTemplate("Lesson package", fields);
         }
     }
 }
