@@ -1,0 +1,7 @@
+c:\users\patrick\documents\visual studio 2012\Projects\PassKit\PassKitAPIWrapper\bin\Debug\PassKitAPIWrapper.dll
+c:\users\patrick\documents\visual studio 2012\Projects\PassKit\PassKitAPIWrapper\bin\Debug\PassKitAPIWrapper.pdb
+c:\users\patrick\documents\visual studio 2012\Projects\PassKit\PassKitAPIWrapper\obj\Debug\PassKitAPIWrapper.dll
+c:\users\patrick\documents\visual studio 2012\Projects\PassKit\PassKitAPIWrapper\obj\Debug\PassKitAPIWrapper.pdb
+C:\Users\Patrick\documents\visual studio 2012\Projects\PassKit\PassKitAPIWrapper\bin\Debug\RestSharp.dll
+C:\Users\Patrick\documents\visual studio 2012\Projects\PassKit\PassKitAPIWrapper\bin\Debug\RestSharp.xml
+C:\Users\Patrick\documents\visual studio 2012\Projects\PassKit\PassKitAPIWrapper\obj\Debug\PassKitAPIWrapper.csprojResolveAssemblyReference.cache
