@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassKitAPIWrapper", "PassKitAPIWrapper\PassKitAPIWrapper.csproj", "{4A24C460-2FE8-409C-8616-396BCBDFBA0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassKitWebDemo", "PassKitWebDemo\PassKitWebDemo.csproj", "{CEBE01EB-6AFB-4865-80E2-E6E2330429EA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4A24C460-2FE8-409C-8616-396BCBDFBA0A} = {4A24C460-2FE8-409C-8616-396BCBDFBA0A}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A24C460-2FE8-409C-8616-396BCBDFBA0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A24C460-2FE8-409C-8616-396BCBDFBA0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A24C460-2FE8-409C-8616-396BCBDFBA0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A24C460-2FE8-409C-8616-396BCBDFBA0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEBE01EB-6AFB-4865-80E2-E6E2330429EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEBE01EB-6AFB-4865-80E2-E6E2330429EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEBE01EB-6AFB-4865-80E2-E6E2330429EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEBE01EB-6AFB-4865-80E2-E6E2330429EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
