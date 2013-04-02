@@ -6,17 +6,19 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using PassKitAPIWrapper;
 using System.ComponentModel;
+using System.Text;
+using System.Reflection;
 
 namespace PassKitWebDemo
 {
     public partial class Default : System.Web.UI.Page
     {
-        private string apiAccount = "apiAccount";
-        private string apiSecret = "apiSecret";
+        private string apiAccount = "account";
+        private string apiSecret = "secret";
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.updateTemplate();
+            this.uploadImageAndGetDetails();
         }
 
         public void listTemplates()
@@ -84,6 +86,29 @@ namespace PassKitWebDemo
 
             PassKit pk = new PassKit(apiAccount, apiSecret);
             PassKitResponse result = pk.UpdateTemplate("Lesson package", fields);
+        }
+
+        public void getTemplateFieldNames()
+        {
+            PassKit pk = new PassKit(apiAccount, apiSecret);
+            PassKitResponse result = pk.GetTemplateFieldNames("Lesson package");
+        }
+
+        public void resetTemplate()
+        {
+            PassKit pk = new PassKit(apiAccount, apiSecret);
+            PassKitResponse result = pk.ResetTemplate("Lesson package");
+        }
+
+        public void uploadImageAndGetDetails()
+        {
+            PassKit pk = new PassKit(apiAccount, apiSecret);
+
+            // Upload the image
+            PassKitResponse result = pk.UploadImage(@"C:\wamp\www\passkit\mystic_8_ball\img\mystic8ballicon.png", PassKitImageType.icon);
+
+            // Get the information for the returned imageID by using the GetImageData call
+            PassKitResponse imageResponse = pk.GetImageData(result.response["imageID"]);
         }
     }
 }
