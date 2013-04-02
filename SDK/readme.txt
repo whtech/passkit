@@ -8,6 +8,7 @@ Template methods:
 - List templates;
 - Get passes for template;
 - Update template;
+- ** NEW ** Reset template;
 
 Pass methods:
 - Issue pass;
@@ -15,3 +16,7 @@ Pass methods:
 - Get pass details (via template & serial);
 - Update pass (via pass-id);
 - Update pass (via template & serial);
+
+Image methods:
+- ** NEW ** Upload image;
+- ** NEW ** Get image data;

@@ -30,8 +30,8 @@ namespace RestSharp.Authenticators
         /// <param name="pass">Password string</param>
         public DigestAuthenticator(string user, string pass)
         {
-            _user = user;
-            _pass = pass;
+            this._user = user;
+            this._pass = pass;
         }
 
         /// <summary>
