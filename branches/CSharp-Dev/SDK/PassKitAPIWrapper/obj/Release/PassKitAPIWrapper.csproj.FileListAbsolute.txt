@@ -1,8 +1,0 @@
-C:\Users\Patrick\Documents\Visual Studio 2012\Projects\Passkit_SVN\PassKitAPIWrapper\bin\Release\PassKitAPIWrapper.dll
-C:\Users\Patrick\Documents\Visual Studio 2012\Projects\Passkit_SVN\PassKitAPIWrapper\bin\Release\PassKitAPIWrapper.pdb
-C:\Users\Patrick\Documents\Visual Studio 2012\Projects\Passkit_SVN\PassKitAPIWrapper\bin\Release\RestSharp.dll
-C:\Users\Patrick\Documents\Visual Studio 2012\Projects\Passkit_SVN\PassKitAPIWrapper\bin\Release\RestSharp.xml
-C:\Users\Patrick\Documents\Visual Studio 2012\Projects\Passkit_SVN\PassKitAPIWrapper\obj\Release\PassKitAPIWrapper.dll
-C:\Users\Patrick\Documents\Visual Studio 2012\Projects\Passkit_SVN\PassKitAPIWrapper\obj\Release\PassKitAPIWrapper.pdb
-C:\Users\Patrick\Documents\Visual Studio 2012\Projects\Passkit_SVN\PassKitAPIWrapper\bin\Release\PassKitAPIWrapper.XML
-C:\Users\Patrick\Documents\Visual Studio 2012\Projects\Passkit_SVN\PassKitAPIWrapper\obj\Release\PassKitAPIWrapper.csprojResolveAssemblyReference.cache

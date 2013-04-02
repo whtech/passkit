@@ -40,6 +40,37 @@ namespace PassKitAPIWrapper
     }
 
     /// <summary>
+    /// Allow uses for uploaded images.
+    /// </summary>
+    public enum PassKitImageType
+    {
+        /// <summary>
+        /// For background use
+        /// </summary>
+        background,
+        /// <summary>
+        /// For footer use
+        /// </summary>
+        footer,
+        /// <summary>
+        /// For logo use
+        /// </summary>
+        logo,
+        /// <summary>
+        /// For icon use
+        /// </summary>
+        icon,
+        /// <summary>
+        /// For strip use
+        /// </summary>
+        strip,
+        /// <summary>
+        /// For thumbnail use
+        /// </summary>
+        thumbnail
+    }
+
+    /// <summary>
     /// Main PassKit API wrapper class
     /// </summary>
     public class PassKit
@@ -88,6 +119,25 @@ namespace PassKitAPIWrapper
             return new PassKitResponse(response.StatusCode, response.Data);
         }
 
+        #region Template methods
+
+        /// <summary>
+        /// Gets the passes for a given template.
+        /// <see href="https://code.google.com/p/passkit/wiki/GetPassesForTemplate">More info</see>  
+        /// </summary>
+        /// <param name="templateName">The template name</param>
+        /// <returns>PassKitResponse object, with on success the pass meta &amp; field data (for all the passes with templateName).</returns>
+        public PassKitResponse GetPasses(string templateName)
+        {
+            // Setup the request
+            var request = new RestRequest();
+            request.Resource = "template/{templateName}/passes";
+            request.AddParameter("templateName", templateName, ParameterType.UrlSegment);
+
+            PassKitResponse result = this.Execute(request);
+            return result;
+        }
+
         /// <summary>
         /// Requests a list of templates for the current API account.
         /// <see href="https://code.google.com/p/passkit/wiki/ListTemplates">More info</see>
@@ -102,6 +152,89 @@ namespace PassKitAPIWrapper
             PassKitResponse result = this.Execute(request);
             return result;
         }
+
+        /// <summary>
+        /// This method returns the field names that can be used with the Issue Pass and Update Pass methods for a particular template. 
+        /// It returns the names of all dynamic fields in the template, plus other variables such as barcode content, serial number or thumbnail 
+        /// image that can be set or updated.
+        /// <see href="https://code.google.com/p/passkit/wiki/GetTemplateDetails">More info</see>
+        /// </summary>
+        /// <param name="templateName">The name of the template</param>
+        /// <param name="full">Boolean, if true the method will also return information re. the fields on the back of the template</param>
+        /// <returns>PassKitResponse, with on success a list of template details.</returns>
+        public PassKitResponse GetTemplateFieldNames(string templateName, bool full = false)
+        {
+            // Setup the request
+            var request = new RestRequest();
+            string fullString = string.Empty;
+            if (full)
+            {
+                fullString = "/full";
+            }
+            request.Resource = "template/{templateName}/fieldnames" + fullString;
+            request.AddParameter("templateName", templateName, ParameterType.UrlSegment);
+
+            PassKitResponse result = this.Execute(request);
+            return result;
+        }
+
+        /// <summary>
+        /// Updates the template. Causes all the passes of the template to be updated as well.
+        /// <see href="https://code.google.com/p/passkit/wiki/UpdatePass">More info</see>  
+        /// </summary>
+        /// <param name="templateName">The template name</param>
+        /// <param name="fields">A dictionary of field-names and their values</param>
+        /// <param name="push">Indicates if the update should be pushed to all devices with an active pass</param>
+        /// <returns>PassKitResponse object, with on success a list of device id's for which pushes were dispatched to Apple.</returns>
+        public PassKitResponse UpdateTemplate(string templateName, Dictionary<string, string> fields, bool push = true)
+        {
+            // Setup the request
+            var request = new RestRequest();
+            string pushString = string.Empty;
+            if (push)
+            {
+                pushString = "/push";
+            }
+            request.Resource = "template/update/{templateName}" + pushString;
+            request.AddParameter("templateName", templateName, ParameterType.UrlSegment);
+
+            // Add the fields as parameters
+            foreach (KeyValuePair<String, String> entry in fields)
+            {
+                request.AddParameter(entry.Key, entry.Value, ParameterType.GetOrPost);
+            }
+
+            PassKitResponse result = this.Execute(request);
+            return result;
+        }
+
+        /// <summary>
+        /// This method resets each pass record to the default values. This only affects values that the user cannot edit. 
+        /// The method also removes all data-fields from each pass record.
+        /// <see href="https://code.google.com/p/passkit/wiki/ResetTemplate">More info</see>
+        /// </summary>
+        /// <param name="templateName">The name of the template</param>
+        /// <param name="push">Indicates if the update should be pushed to all devices with an active pass</param>
+        /// <returns>PassKitResponse object, with on success a list of device id's for which pushes were dispatched to Apple.</returns>
+        public PassKitResponse ResetTemplate(string templateName, bool push = true)
+        {
+            // Setup the request
+            var request = new RestRequest();
+            string pushString = string.Empty;
+            if (push)
+            {
+                pushString = "/push";
+            }
+            request.Resource = "template/{templateName}/reset" + pushString;
+            request.AddParameter("templateName", templateName, ParameterType.UrlSegment);
+
+            PassKitResponse result = this.Execute(request);
+            return result;
+        }
+
+        #endregion
+
+        #region Pass methods
 
         /// <summary>
         /// Issues a new PassKit pass for template with 'templateName', with the data provided in the 'fields' dictionary.
@@ -123,61 +256,6 @@ namespace PassKitAPIWrapper
             {
                 request.AddParameter(entry.Key, entry.Value, ParameterType.GetOrPost);
             }
-
-            PassKitResponse result = this.Execute(request);
-            return result;
-        }
-
-        /// <summary>
-        /// Gets the details for a pass identified by the given unique pass-id. Returns the details for one unique pass only.
-        /// <see href="https://code.google.com/p/passkit/wiki/GetPassDetailsPassId">More info</see>
-        /// </summary>
-        /// <param name="passId">The unique pass id for the pass</param>
-        /// <returns>PassKitResponse object, with on success the pass meta &amp; field data.</returns>
-        public PassKitResponse GetPassDetails(string passId)
-        {
-            // Setup the request
-            var request = new RestRequest();
-            request.Resource = "pass/get/passid/{passId}";
-            request.AddParameter("passId", passId, ParameterType.UrlSegment);
-
-            PassKitResponse result = this.Execute(request);
-            return result;
-        }
-
-        /// <summary>
-        /// Gets the details for a pass identified by the given template name and serial number. Serial number is not unique
-        /// in case the user decided to use the same serial for multiple passes in the pass designer. In that case the response
-        /// can contain information for multiple passes.
-        /// <see href="https://code.google.com/p/passkit/wiki/GetPassDetailsTemplateSerial">More info</see> 
-        /// </summary>
-        /// <param name="templateName">The template name of the pass</param>
-        /// <param name="serialNumber">The serial number pf the pass</param>
-        /// <returns>PassKitResponse object, with on success the pass meta &amp; field data in the PassKitResponse.response.</returns>
-        public PassKitResponse GetPassDetails(string templateName, string serialNumber)
-        {
-            // Setup the request
-            var request = new RestRequest();
-            request.Resource = "pass/get/template/{templateName}/serial/{serialNumber}";
-            request.AddParameter("templateName", templateName, ParameterType.UrlSegment);
-            request.AddParameter("serialNumber", serialNumber, ParameterType.UrlSegment);
-
-            PassKitResponse result = this.Execute(request);
-            return result;
-        }
-
-        /// <summary>
-        /// Gets the passes for a given template.
-        /// <see href="https://code.google.com/p/passkit/wiki/GetPassesForTemplate">More info</see>  
-        /// </summary>
-        /// <param name="templateName">The template name</param>
-        /// <returns>PassKitResponse object, with on success the pass meta &amp; field data (for all the passes with templateName).</returns>
-        public PassKitResponse GetPasses(string templateName)
-        {
-            // Setup the request
-            var request = new RestRequest();
-            request.Resource = "template/{templateName}/passes";
-            request.AddParameter("templateName", templateName, ParameterType.UrlSegment);
 
             PassKitResponse result = this.Execute(request);
             return result;
@@ -247,33 +325,127 @@ namespace PassKitAPIWrapper
         }
 
         /// <summary>
-        /// Updates the template. Causes all the passes of the template to be updated as well.
-        /// <see href="https://code.google.com/p/passkit/wiki/UpdatePass">More info</see>  
+        /// Gets the details for a pass identified by the given unique pass-id. Returns the details for one unique pass only.
+        /// <see href="https://code.google.com/p/passkit/wiki/GetPassDetailsPassId">More info</see>
         /// </summary>
-        /// <param name="templateName">The template name</param>
-        /// <param name="fields">A dictionary of field-names and their values</param>
-        /// <param name="push">Indicates if the update should be pushed to all devices with an active pass</param>
-        /// <returns>PassKitResponse object, with on success a list of device id's for which pushes were dispatched to Apple.</returns>
-        public PassKitResponse UpdateTemplate(string templateName, Dictionary<string, string> fields, bool push = true)
+        /// <param name="passId">The unique pass id for the pass</param>
+        /// <returns>PassKitResponse object, with on success the pass meta &amp; field data.</returns>
+        public PassKitResponse GetPassDetails(string passId)
         {
             // Setup the request
             var request = new RestRequest();
-            string pushString = string.Empty;
-            if (push)
-            {
-                pushString = "/push";
-            }
-            request.Resource = "template/update/{templateName}" + pushString;
-            request.AddParameter("templateName", templateName, ParameterType.UrlSegment);
-
-            // Add the fields as parameters
-            foreach (KeyValuePair<String, String> entry in fields)
-            {
-                request.AddParameter(entry.Key, entry.Value, ParameterType.GetOrPost);
-            }
+            request.Resource = "pass/get/passid/{passId}";
+            request.AddParameter("passId", passId, ParameterType.UrlSegment);
 
             PassKitResponse result = this.Execute(request);
             return result;
         }
+
+        /// <summary>
+        /// Gets the details for a pass identified by the given template name and serial number. Serial number is not unique
+        /// in case the user decided to use the same serial for multiple passes in the pass designer. In that case the response
+        /// can contain information for multiple passes.
+        /// <see href="https://code.google.com/p/passkit/wiki/GetPassDetailsTemplateSerial">More info</see> 
+        /// </summary>
+        /// <param name="templateName">The template name of the pass</param>
+        /// <param name="serialNumber">The serial number pf the pass</param>
+        /// <returns>PassKitResponse object, with on success the pass meta &amp; field data in the PassKitResponse.response.</returns>
+        public PassKitResponse GetPassDetails(string templateName, string serialNumber)
+        {
+            // Setup the request
+            var request = new RestRequest();
+            request.Resource = "pass/get/template/{templateName}/serial/{serialNumber}";
+            request.AddParameter("templateName", templateName, ParameterType.UrlSegment);
+            request.AddParameter("serialNumber", serialNumber, ParameterType.UrlSegment);
+
+            PassKitResponse result = this.Execute(request);
+            return result;
+        }
+
+        #endregion
+
+        #region Image methods
+
+        /// <summary>
+        /// This method allows you to upload images for use with other methods such as template methods and pass methods. 
+        /// Each image that is uploaded is assigned a unique ID, and is processed for use with Passbook, 
+        /// according to the imageType selected.
+        /// </summary>
+        /// <param name="pathToLocalFile">The path to the local filename (make sure that you have read access to the file)</param>
+        /// <param name="imageType">The image type of the file (according to PassKitImageType enum)</param>
+        /// <returns>PassKitResponse object, with on success the image ID and the usage.</returns>
+        public PassKitResponse UploadImage(string pathToLocalFile, PassKitImageType imageType)
+        {
+            // Check if the file exists
+            FileInfo file;
+            if (File.Exists(pathToLocalFile))
+            {
+                file = new FileInfo(pathToLocalFile);
+            }
+            else{
+                throw new FileNotFoundException("File cannot be found.", pathToLocalFile);
+            }
+
+            // Check if image and set mimetype of image
+            string ext = file.Extension.ToLower();
+
+            string type = "image/";
+            if (ext.Equals(".jpg") || ext.Equals(".jpeg"))
+            {
+                type += "jpg";
+            }
+            else if (ext.Equals(".gif"))
+            {
+                type += "gif";
+            }
+            else if (ext.Equals(".png"))
+            {
+                type += "png";
+            }
+            else
+            {
+                // Throw not supported error
+                throw new NotSupportedException("Image-type not supported. Method only supports image/jpg, image/gif or image/png");
+            }
+
+            // Check the filesize. If bigger then 1.5MB throw a not supported exception
+            if (file.Length > 1572864)
+            {
+                throw new NotSupportedException("The file-lenght is too big. Image files bigger then 1.5MB are not supported.");
+            }
+
+            // Setup the request
+            var request = new RestRequest();
+            request.Resource = "image/add/{imageType}";
+            // Specifically set method to POST
+            request.Method = Method.POST;
+            // Set imageType (thumbnail, icon, etc)
+            request.AddParameter("imageType", imageType.ToString(), ParameterType.UrlSegment);
+            // Set image MIME type: image/jpg, image/gif or image/png are supported
+            request.AddParameter("type", type, ParameterType.GetOrPost);
+            // Add the actual image file
+            request.AddFile("image", File.ReadAllBytes(pathToLocalFile), file.Name, type);
+            
+            PassKitResponse result = this.Execute(request);
+            return result;
+        }
+
+        /// <summary>
+        /// Method returns information about the image with imageId.
+        /// </summary>
+        /// <param name="imageId">The unique ID of the image</param>
+        /// <returns>PassKitResponse object, with on success the information for the image.</returns>
+        public PassKitResponse GetImageData(string imageId)
+        {
+            // Setup the request
+            var request = new RestRequest();
+            request.Resource = "image/{imageID}";
+            request.AddParameter("imageID", imageId, ParameterType.UrlSegment);
+            
+            PassKitResponse result = this.Execute(request);
+            return result;
+        }
+
+        #endregion
     }
 }
