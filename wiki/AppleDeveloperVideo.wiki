@@ -6,7 +6,7 @@ All passes need to be signed with an Apple-issued certificate to be recognized b
 
 It should be obvious to users who the originator of the pass is based on the branding on the front of the pass, and that branding should be consistent with the Pass 'signature'.
 
-PassKit's Pass Designer and API takes care of all the heavy lifting for you. But before we can do this you need to get a Pass Certificate and currently the only way Apple allow you to acquire this certificate is by enrolling on the Apple Developer Program. You may not be a developer, but don't worry; just follow the video below to open an Apple Developer Account - and then you can [UploadingCertificates create and upload Pass certificates] easily and upload them to your PassKit account.
+PassKit's Pass Designer and API takes care of all the heavy lifting for you - i.e. we securely store your private certificate and sign each Pass correctly at the time of issue. But before we can do this you need to get a Pass Certificate from Apple.  Currently, the only way Apple allow you to acquire this certificate is by enrolling on the Apple Developer Program. You may not be a developer - but don't worry - just follow the video below to open an Apple Developer Account. You can then easily [UploadingCertificates create and upload Pass certificates] to your PassKit account.
 
 ==Video Tutorial==
 
