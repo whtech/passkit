@@ -2,6 +2,12 @@
 
 =Enrolling for an Apple Developer Account=
 
+All passes need to be signed with an Apple-issued certificate to be recognized by Passbook. Passes should only be signed by the entity that will be distributing the pass under its own name, trademark, or brand, and that entity’s information should match the information on the back of the pass.
+
+It should be obvious to users who the originator of the pass is based on the branding on the front of the pass, and that branding should be consistent with the contact information on the back of the pass.
+
+PassKit's Pass Designer and API takes care of all the heavy lifting for you. But before we can do this you need to get a Pass Certificate and currently the only way Apple allow you to acquire this certificate is by enrolling on the Apple Developer Program. You may not be a developer, but don't worry; just follow the video below to open an Apple Developer Account - and then you can create Pass certificates easily and upload them to your PassKit account.
+
 ==Video Tutorial==
 
 <wiki:video url="http://www.youtube.com/watch?v=Er1y6vp9VfM&hd=1" width="853" height="480"/>
