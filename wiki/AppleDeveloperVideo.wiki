@@ -6,6 +6,14 @@
 
 <wiki:video url="http://www.youtube.com/watch?v=Er1y6vp9VfM&hd=1" width="853" height="480"/>
 
+==Getting your D-U-N-S number==
+
+If you are applying for an Apple Developer Account as a business you will need your D-U-N-S number.  If you don't already know your D-U-N-S number then fortunately Apple Inc. have recently streamlined the process of getting one - making it much smoother.
+
+You can check with the [https://developer.apple.com/support/ios/D-U-N-S.html FAQ page of D-U-N-S ® Numbers - iOS Developer Program - Support - Apple Developer] and find the information there. 
+
+In summary you can use the [https://developer.apple.com/ios/enroll/dunsLookupForm.action D‑U‑N ‑S Number look up tool] and check to see if you have an existing DUNS number. If not then following the instruction to apply for a new DUNS number. The D&B local office will contact you to follow up. This is the negotiated process between Apple and D&B to facilitate this free service in an efficient way. 
+
 ----
 
 <table border="0">
