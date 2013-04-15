@@ -37,6 +37,7 @@ And lastly, if you simply don't have the time to read the documentation, or have
   * [DistributingPassbookPasses Distributing Passbook Passes]
   * [AddtoPassbook Adding a Pass to the Device]
   * [PassCertificates Pass ID and Certificates]
+    * [AppleDeveloperVideo Opening an Apple Developer Account]
     * [UploadingCertificates Uploading Certificates]
       * [GeneratePassCertificateVideo Uploading Certificates Video Tutorial]
   * [API PassKit API]
