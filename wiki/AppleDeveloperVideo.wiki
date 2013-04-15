@@ -1,6 +1,6 @@
-#summary How to get an Apple Developer Account - Video Tutorial
+#summary Enrolling for an Apple Developer Account
 
-=How to get an Apple Developer Account=
+=Enrolling for an Apple Developer Account=
 
 ==Video Tutorial==
 
