@@ -79,10 +79,10 @@ $api_secret = "apiSecret"; // Add your PassKit API Secret
 $pk = new PassKit($apiKey, $apiSecret);
 
 // Execute API call via get_templates function
-$template_details = $pk->get_templates();
+$templates = $pk->get_templates();
 
 // Print results
-print_r($template_details);
+print_r($templates);
 ?>
 }}}
 
@@ -111,15 +111,11 @@ namespace PassKitWebDemo
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Set template name
-            string template_name = "My template name";
-
             // Initialize new instance of PassKit API wrapper
             PassKit pk = new PassKit(apiAccount, apiSecret);
             // GetTemplates will return the information for all templates for this account
             PassKitResponse result = pk.GetTemplates();
 
-    
             // Do something with result
         }
     }
