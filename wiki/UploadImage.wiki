@@ -139,15 +139,36 @@ namespace PassKitWebDemo
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Set template name
-            string template_name = "My template name";
+            // Set the template name
+            string template_name = "My template";
+            // Set the image path
+            string image_path = @"home/my_image.jpg";
 
             // Initialize new instance of PassKit API wrapper
             PassKit pk = new PassKit(apiAccount, apiSecret);
-            // GetTemplateFieldNames will get the template details for template_name
-            PassKitResponse result = pk.GetTemplateFieldNames(template_name);
-    
-            // Do something with result
+            // Upload the image (image type has to be one of the types in the PassKitImageType enum)
+            PassKitResponse uploadResult = pk.UploadImage(image_path, PassKitImageType.strip);
+
+            // Get the image ID from the result
+            if (uploadResult.response["success"])
+            {
+                string image_id = (string)uploadResult.response["imageID"];
+                
+                // Use the image id to issue a pass
+                // Create the data array
+                Dictionary<string, string> data = new Dictionary<string, string>();
+                // Set the image field in the data array, the image field can be: thumbnailImage, stripImage, logoImage, footerImage, backgroundImage or iconImage 
+                // (depending on the purpose that you want to use the image for).
+                data["stripImage"] = image_id;
+                // Set other data fields
+                data["field1"] = "Field 1 data";
+                data["field2"] = "Field 2 data";
+                   
+                // Issue new pass
+                PassKitResponse issueResponse = pk.IssuePass(template_name, data);
+
+                // Do something with response
+            }
         }
     }
 }
