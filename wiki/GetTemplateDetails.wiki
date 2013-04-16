@@ -100,7 +100,7 @@ _Note that for XML responses, spaces in tag names will be replaced by 'middle do
 
 ==== PHP Implementation =====
 
-<code language="php">
+{{{
 <?php
 /**
 * Example: Get template field names
@@ -124,7 +124,7 @@ $template_details = $pk->get_template_details($template_name);
 // Print results
 print_r($template_details);
 ?>
-</code>
+}}}
 
 
 <table border="0">
