@@ -214,7 +214,8 @@ $data["field3"] = "field 3 data";
 
 // Now issue the pass with this data
 $pk->pk_issue_pass($template_name, $data);
-?>}}}
+?>
+}}}
 
 ==== C# Implementation ====
 {{{
