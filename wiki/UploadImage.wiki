@@ -93,7 +93,7 @@ require_once ('class-PassKit.php');
 $api_key = "apiKey"; // Add your PassKit API Key
 $api_secret = "apiSecret"; // Add your PassKit API Secret
 $template_name = "My template"; // Add your template name here
-$path_to_image_file = "var/home/www/my_image.jpg"; // Set this to your image path. 
+$path_to_image_file = "home/my_image.jpg"; // Set this to your image path. 
 
 // Create new PassKit instance
 $pk = new PassKit($apiKey, $apiSecret);
