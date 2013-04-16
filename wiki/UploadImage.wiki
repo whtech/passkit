@@ -73,6 +73,86 @@ A successful upload should receive the following response:
     *_ The usage type that image has been processed for
 ----
 
+== Implementation examples ==
+
+Download latest PassKit PHP -and/or C# SDK: https://code.google.com/p/passkit/downloads/list
+
+==== PHP Implementation =====
+
+{{{
+<?php
+/**
+* Example: Upload image
+* URI: https://api.passkit.com/v1/image/add/{imageType}
+*/
+
+// Include passkit api file
+require_once ('class-PassKit.php');
+
+// Set variables
+$api_key = "apiKey"; // Add your PassKit API Key
+$api_secret = "apiSecret"; // Add your PassKit API Secret
+$template_name = "My template"; // Add your template name here
+$path_to_image_file = "var/home/www/my_image.jpg"; // Set this to your image path. 
+
+// Create new PassKit instance
+$pk = new PassKit($apiKey, $apiSecret);
+
+// Upload the image. Image-type has to be has to be: thumbnail, strip, logo, footer, background or icon
+$pk_image_id = $pk->pk_image_upload("strip", $path_to_image_file);
+
+// After upload, $pk_image_id contains the image id for the image. We use this data id in the data array (when issuing or updating a pass).
+// The data array can be: thumbnailImage, stripImage, logoImage, footerImage, backgroundImage or iconImage (depending on the purpose
+// that you want to use the image for.
+$data["stripImage"] = $pk_image_id;
+// Set other data parameters
+$data["field1"] = "field 1 data";
+$data["field2"] = "field 2 data";
+
+// Now issue or update the pass with this data, and the image will be set
+$pk->pk_issue_pass($template_name, $data);
+?>
+}}}
+
+==== C# Implementation ====
+{{{
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.ComponentModel;
+using System.Text;
+using System.Reflection;
+// Make sure to include PassKitAPIWrapper class (takes care of all communication with the API)
+using PassKitAPIWrapper;
+
+namespace PassKitWebDemo
+{
+    public partial class Default : System.Web.UI.Page
+    {
+        // Set API Account (set with your API account)
+        private string apiAccount = "apiAccount";
+        // Set API secret (set with your API secret)
+        private string apiSecret = "apiSecret";
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            // Set template name
+            string template_name = "My template name";
+
+            // Initialize new instance of PassKit API wrapper
+            PassKit pk = new PassKit(apiAccount, apiSecret);
+            // GetTemplateFieldNames will get the template details for template_name
+            PassKitResponse result = pk.GetTemplateFieldNames(template_name);
+    
+            // Do something with result
+        }
+    }
+}
+}}}
+
 <table border="0">
   <tr>
     <td width="361"><g:plusone size="medium"></g:plusone></td>
