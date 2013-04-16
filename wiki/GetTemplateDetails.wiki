@@ -98,7 +98,7 @@ _Note that for XML responses, spaces in tag names will be replaced by 'middle do
 
 == Implementation examples ==
 
-=== PHP Implementation ====
+==== PHP Implementation =====
 
 <code language="php">
 <?php
