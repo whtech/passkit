@@ -96,6 +96,37 @@ _Note that for XML responses, spaces in tag names will be replaced by 'middle do
     *_If the template allows for the barcode alternative content to be changed, this parameter will be returned with a value of <font color="purple">text</font>
 ----
 
+== Implementation examples ==
+
+=== PHP Implementation ====
+
+<code language="php">
+<?php
+/**
+* Example: Get template field names
+* URI: https://api.passkit.com/v1/template/{templateName}/fieldnames
+*/
+
+// Include passkit api file
+require_once ('class-PassKit.php');
+
+// Set variables
+$api_key = "apiKey"; // Add your PassKit API Key
+$api_secret = "apiSecret"; // Add your PassKit API Secret
+$template_name = "myTemplateName"; // Add your template name
+
+// Create new PassKit instance
+$pk = new PassKit($apiKey, $apiSecret);
+
+// Execute API call via get_template_details function
+$template_details = $pk->get_template_details($template_name);
+
+// Print results
+print_r($template_details);
+?>
+</code>
+
+
 <table border="0">
   <tr>
     <td width="361"><g:plusone size="medium"></g:plusone></td>
