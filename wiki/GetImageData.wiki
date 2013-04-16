@@ -63,6 +63,48 @@ A successful upload should receive the following response:
  
 ----
 
+== Implementation examples ==
+
+Download latest PassKit PHP -and/or C# SDK: https://code.google.com/p/passkit/downloads/list
+
+==== C# Implementation ====
+{{{
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.ComponentModel;
+using System.Text;
+using System.Reflection;
+// Make sure to include PassKitAPIWrapper class (takes care of all communication with the API)
+using PassKitAPIWrapper;
+
+namespace PassKitWebDemo
+{
+    public partial class Default : System.Web.UI.Page
+    {
+        // Set API Account (set with your API account)
+        private string apiAccount = "apiAccount";
+        // Set API secret (set with your API secret)
+        private string apiSecret = "apiSecret";
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            // Set template name
+            string template_name = "My template name";
+
+            // Initialize new instance of PassKit API wrapper
+            PassKit pk = new PassKit(apiAccount, apiSecret);
+            // GetPasses will get the passes for the template_name
+            PassKitResponse result = pk.GetPasses(template_name);    
+            // Do something with result
+        }
+    }
+}
+}}}
+
 <table border="0">
   <tr>
     <td width="361"><g:plusone size="medium"></g:plusone></td>
