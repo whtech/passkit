@@ -92,13 +92,14 @@ namespace PassKitWebDemo
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Set template name
-            string template_name = "My template name";
+            // Set the image id
+            string image_id = "image ID";
 
             // Initialize new instance of PassKit API wrapper
             PassKit pk = new PassKit(apiAccount, apiSecret);
-            // GetPasses will get the passes for the template_name
-            PassKitResponse result = pk.GetPasses(template_name);    
+            // Get the image data
+            PassKitResponse result = pk.GetImageData(image_id);
+
             // Do something with result
         }
     }
