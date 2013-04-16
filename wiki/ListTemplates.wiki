@@ -55,6 +55,77 @@ _Note that for XML responses, spaces in tag names will be replaced by 'middle do
 
 ----
 
+== Implementation examples ==
+
+Download latest PassKit PHP -and/or C# SDK: https://code.google.com/p/passkit/downloads/list
+
+==== PHP Implementation =====
+
+{{{
+<?php
+/**
+* Example: List templates
+* URI: https://api.passkit.com/v1/template/list
+*/
+
+// Include passkit api file
+require_once ('class-PassKit.php');
+
+// Set variables
+$api_key = "apiKey"; // Add your PassKit API Key
+$api_secret = "apiSecret"; // Add your PassKit API Secret
+
+// Create new PassKit instance
+$pk = new PassKit($apiKey, $apiSecret);
+
+// Execute API call via get_templates function
+$template_details = $pk->get_templates();
+
+// Print results
+print_r($template_details);
+?>
+}}}
+
+==== C# Implementation ====
+{{{
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.ComponentModel;
+using System.Text;
+using System.Reflection;
+// Make sure to include PassKitAPIWrapper class (takes care of all communication with the API)
+using PassKitAPIWrapper;
+
+namespace PassKitWebDemo
+{
+    public partial class Default : System.Web.UI.Page
+    {
+        // Set API Account (set with your API account)
+        private string apiAccount = "apiAccount";
+        // Set API secret (set with your API secret)
+        private string apiSecret = "apiSecret";
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            // Set template name
+            string template_name = "My template name";
+
+            // Initialize new instance of PassKit API wrapper
+            PassKit pk = new PassKit(apiAccount, apiSecret);
+            // GetTemplates will return the information for all templates for this account
+            PassKitResponse result = pk.GetTemplates();
+
+    
+            // Do something with result
+        }
+    }
+}
+}}}
+
 <table border="0">
   <tr>
     <td width="361"><g:plusone size="medium"></g:plusone></td>
