@@ -100,6 +100,9 @@ _Note that for XML responses, spaces in tag names will be replaced by 'middle do
 
 ==== PHP Implementation =====
 
+Download latest PassKit PHP SDK: https://code.google.com/p/passkit/downloads/list
+Download latest PassKit C# SDK: https://code.google.com/p/passkit/downloads/list
+
 {{{
 <?php
 /**
