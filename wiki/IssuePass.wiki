@@ -192,8 +192,8 @@ Download latest PassKit PHP -and/or C# SDK: https://code.google.com/p/passkit/do
 {{{
 <?php
 /**
-* Example: Get template field names
-* URI: https://api.passkit.com/v1/template/{templateName}/fieldnames
+* Example: Issue pass
+* URI: https://api.passkit.com/v1/pass/issue/template/{templateName}
 */
 
 // Include passkit api file
@@ -202,18 +202,19 @@ require_once ('class-PassKit.php');
 // Set variables
 $api_key = "apiKey"; // Add your PassKit API Key
 $api_secret = "apiSecret"; // Add your PassKit API Secret
-$template_name = "myTemplateName"; // Add your template name
+$template_name = "My template"; // Add your template name here
 
 // Create new PassKit instance
 $pk = new PassKit($apiKey, $apiSecret);
 
-// Execute API call via get_template_details function
-$template_details = $pk->get_template_details($template_name);
+// Set the data array
+$data["field1"] = "field 1 data";
+$data["field2"] = "field 2 data";
+$data["field3"] = "field 3 data";
 
-// Print results
-print_r($template_details);
-?>
-}}}
+// Now issue the pass with this data
+$pk->pk_issue_pass($template_name, $data);
+?>}}}
 
 ==== C# Implementation ====
 {{{
