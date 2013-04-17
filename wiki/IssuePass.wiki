@@ -236,21 +236,21 @@ namespace PassKitWebDemo
     public partial class Default : System.Web.UI.Page
     {
         // Set the image template
-            string template_name = "My template";
+        string template_name = "My template";
 
-            // Initialize new instance of PassKit API wrapper
-            PassKit pk = new PassKit(apiAccount, apiSecret);
+        // Initialize new instance of PassKit API wrapper
+        PassKit pk = new PassKit(apiAccount, apiSecret);
 
-            // Set the data dictionary
-            Dictionary<string, string> data = new Dictionary<string, string>();
-            data["field 1"] = "Field 1 data";
-            data["field 2"] = "Field 2 data";
-            data["field 3"] = "Field 3 data";
+        // Set the data dictionary
+        Dictionary<string, string> data = new Dictionary<string, string>();
+        data["field 1"] = "Field 1 data";
+        data["field 2"] = "Field 2 data";
+        data["field 3"] = "Field 3 data";
 
-            // Issue a new pass with the data array
-            PassKitResponse result = pk.IssuePass(template_name, data);
+        // Issue a new pass with the data array
+        PassKitResponse result = pk.IssuePass(template_name, data);
 
-            // Do something with result
+        // Do something with result
     }
 }
 }}}
