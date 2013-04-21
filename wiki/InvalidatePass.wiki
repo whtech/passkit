@@ -241,10 +241,16 @@ $data["removeRelevantDate"] = 1;
 
 // Example 1: this example shows you how to set the pass via the combination of template_name & pass_serial, and then invalidate
 $pk->set_pass_serial($pass_serial, $template_name);
+// Validate pass (otherwise invalidate pass doesn't work)
+$pk->pass_validate();
+// Invalidate pass
 $pk->pass_invalidate($data);
 
 // Example 2: this example shows you how to set the pass via the unqiue pass id, and then invalidate the pass (use either example 1 or 2)
 $pk->set_pass_id($unique_pass_id);
+// Validate pass (otherwise invalidate pass doesn't work)
+$pk->pass_validate();
+// Invalidate pass
 $pk->pass_invalidate($data);
 ?>
 }}}
