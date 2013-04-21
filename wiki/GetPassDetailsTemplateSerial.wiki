@@ -135,16 +135,8 @@ $unique_pass_id = "Unique pass id"; // Add your unique pass id here
 // Create new PassKit instance
 $pk = new PassKit($apiKey, $apiSecret);
 
-// Example 1: this example shows you how to get the pass details by pass serial and template name
+// Get the pass details by pass serial and template name
 $pk->set_pass_serial($pass_serial, $template_name);
-// Need to call pass_validate before get_pass_details
-$pk->pass_validate();
-$pass_details = $pk->get_pass_details();
-// Print results
-print_r($pass_details);
-
-// Example 2: this example shows you how to get the pass details via the unique pass id
-$pk->set_pass_id($unique_pass_id);
 // Need to call pass_validate before get_pass_details
 $pk->pass_validate();
 $pass_details = $pk->get_pass_details();
