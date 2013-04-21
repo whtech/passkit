@@ -232,10 +232,16 @@ $data["field3"] = "field 3 data";
 
 // Example 1: this example shows you how to set the pass via the combination of template_name & pass_serial, and then update the pass data
 $pk->set_pass_serial($pass_serial, $template_name);
+// Validate pass
+$pk->validate_pass();
+// Update pass
 $pk->pass_update($data);
 
 // Example 2: this example shows you how to set the pass via the unqiue pass id, and then update the pass data (use either example 1 or 2)
 $pk->set_pass_id($unique_pass_id);
+// Validate pass
+$pk->validate_pass();
+// Update pass
 $pk->pass_update($data);
 ?>
 }}}
