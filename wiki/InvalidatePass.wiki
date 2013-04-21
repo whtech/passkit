@@ -208,6 +208,10 @@ _By pass-id:_
     *_ The number of issued passes updated in the database.
 ----
 
+== Implementation examples ==
+
+Download latest PassKit PHP -and/or C# SDK: https://code.google.com/p/passkit/downloads/list
+
 ==== PHP Implementation =====
 
 {{{
