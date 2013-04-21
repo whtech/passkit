@@ -181,14 +181,8 @@ namespace PassKitWebDemo
         // Initialize new instance of PassKit API wrapper
         PassKit pk = new PassKit(apiAccount, apiSecret);
 
-        // There are 2 ways to get the pass details, via template & serial combination, or via unique pass id.
-
-        // Example 1: this example shows you how to get the pass details via the combination of template_name & pass_serial
+        // Get the pass details via the combination of template_name & pass_serial
         PassKitResponse result = pk.GetPassDetails(template_name, pass_serial);
-        // Do something with result
-
-        // Example 2: this example shows you how to get the pass details via the unqiue pass id
-        PassKitResponse result2 = pk.GetPassDetails(unique_pass_id);
         // Do something with result
     }
 }
