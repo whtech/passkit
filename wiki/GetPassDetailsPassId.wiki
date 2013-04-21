@@ -81,6 +81,73 @@ _Note that for XML responses, spaces in tag names will be replaced by 'middle do
 
 }}}
 
+==== PHP Implementation =====
+
+{{{
+<?php
+/**
+* Example: Get pass details
+* URI: https://code.google.com/p/passkit/wiki/GetPassDetailsTemplateSerial
+*/
+
+// Include passkit api file
+require_once ('class-PassKit.php');
+
+// Set variables
+$api_key = "apiKey"; // Add your PassKit API Key
+$api_secret = "apiSecret"; // Add your PassKit API Secret
+$template_name = "My template"; // Add your template name here
+$pass_serial = "Pass serial"; // Add your pass serial here
+$unique_pass_id = "Unique pass id"; // Add your unique pass id here
+
+// Create new PassKit instance
+$pk = new PassKit($apiKey, $apiSecret);
+
+// Get the pass details via the unique pass id
+$pk->set_pass_id($unique_pass_id);
+// Need to call pass_validate before get_pass_details
+$pk->pass_validate();
+$pass_details = $pk->get_pass_details();
+// Print results
+print_r($pass_details);
+?>
+}}}
+
+==== C# Implementation ====
+{{{
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.ComponentModel;
+using System.Text;
+using System.Reflection;
+// Make sure to include PassKitAPIWrapper class (takes care of all communication with the API)
+using PassKitAPIWrapper;
+
+namespace PassKitWebDemo
+{
+    public partial class Default : System.Web.UI.Page
+    {
+        // Set the image template
+        string template_name = "My template";
+        // Set the pass serial
+        string pass_serial = "Pass serial";
+        // Set the unique pass id
+        string unique_pass_id = "Unique pass id";
+
+        // Initialize new instance of PassKit API wrapper
+        PassKit pk = new PassKit(apiAccount, apiSecret);
+
+        // Get the pass details via the unqiue pass id
+        PassKitResponse result = pk.GetPassDetails(unique_pass_id);
+        // Do something with result
+    }
+}
+}}}
+
 <table border="0">
   <tr>
     <td width="361"><g:plusone size="medium"></g:plusone></td>
