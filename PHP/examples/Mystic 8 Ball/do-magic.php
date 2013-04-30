@@ -11,16 +11,20 @@ else
 	die;
 }
 
-// Set variables
-$apiKey = ""; // Add your PassKit API Key
-$apiSecret = ""; // Add your PassKit API Secret
-$absAnswerDirPath = dirname(__FILE__).DIRECTORY_SEPARATOR."img".DIRECTORY_SEPARATOR."answers";
+// Include config file
+require_once realpath(dirname(__FILE__)  . '/../config.php');
+ 
+// Set some variables
+$apiKey = $api_key; // Add your API key in /../config.php
+$apiSecret = $api_secret; // Add your API secret in /../config.php
+
+$absAnswerDirPath = realpath(dirname(__FILE__)).DIRECTORY_SEPARATOR."img".DIRECTORY_SEPARATOR."answers";
 
 // Include passkit api file
 require_once realpath(dirname(__FILE__)  . '/../../SDK/class-PassKit.php');
 
-// Set template name
-$template_name = "Mystic 8 Ball"; // Must match the template name in your PassKit account
+// You can add the template for this pass to you PassKit account at https://create.passkit.com/loader/?t=1BugjAB7MGyAOrIpWw2Cw&c=1
+$template_name = $mystic8ball_template; // Must match the template name in your PassKit account
 
 // Create a new PassKit Object
 $pk = new PassKit($apiKey, $apiSecret);

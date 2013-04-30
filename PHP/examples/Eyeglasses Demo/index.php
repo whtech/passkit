@@ -13,13 +13,16 @@
  */
 
 
+// Include config file
+require_once realpath(dirname(__FILE__)  . '/../config.php');
+ 
 // Set some variables
-$apiKey = ""; // Add your PassKit API Key
-$apiSecret = ""; // Add your PassKit API Secret
+$apiKey = $api_key; // Add your API key in /../config.php
+$apiSecret = $api_secret; // Add your API secret in /../config.php
 
 
-// You can add the tempalte for this pass to you PassKit account at https://create.passkit.com/loader/?t=FmmoS0hpZ17T9hIGG16G&c=1
-$template_name = "Spectacle-Prescription-Card"; // Must match the template name in your PassKit account
+// You can add the template for this pass to you PassKit account at https://create.passkit.com/loader/?t=FmmoS0hpZ17T9hIGG16G&c=1
+$template_name = $eyeglass_template; // Must match the template name in your PassKit account
 
 $pass_name = "PassKit Demo Pass"; // A friendly name to be shown at the top of the page
 
