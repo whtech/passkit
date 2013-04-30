@@ -726,6 +726,40 @@
 		}
 		// }}}
 
+		// {{{ get_passes_for_template()
+		/**
+		 * Get passes for template
+		 *
+		 * Returns all the passes for the template
+		 *
+		 * @author Patrick Kosterman <patrick*passkit*c0m>
+		 * @category Validation and Retrieval
+		 * @access public
+		 * @param String $template name of the template to retrieve the passes for
+		 * @return Array passes
+		*/
+		public function get_passes_for_template($template) {
+			// template is required
+			if ($template == '') {
+				// Print error
+				$this->error('Valid template name required.',debug_backtrace());
+
+				// Return fail
+				return false;
+			}
+
+			// Query passkit for template details for the provided template name.
+			// Convert to array for consistancy and cleaning
+			$q = $this->pk_query('template/'.urlencode($template).'/passes');
+			if($q && isset($this->pk_result->templateName) && $this->pk_result->templateName == $template ) {
+				$passes = $this->object2array($this->pk_result);
+			}else{
+				$passes = array();
+			}
+
+			return $passes;
+		}
+		// }}}
 
 		/*************************************************************/
 		/*	Pass Interaction										 */
