@@ -362,6 +362,60 @@ namespace PassKitAPIWrapper
             return result;
         }
 
+        /// <summary>
+        /// This method is used for invalidating a pass. It accepts the parameters returned by the Get Template Field Names method, plus relevance fields for date and for up to 10 locations. 
+        /// Invalidating a pass, performs two functions in a single call. Firstly, it serves as a update, allowing you to change the content of an invalidated pass and secondly, it removes the pass from circulation, 
+        /// preventing it from being updated or manually refreshed.
+        /// </summary>
+        /// <see href="https://code.google.com/p/passkit/wiki/InvalidatePass">More info</see>
+        /// <param name="templateName">The template name of the pass</param>
+        /// <param name="serialNumber">The serial number pf the pass</param>
+        /// <param name="fields">A dictionary of field-names and their values</param>
+        /// <returns>PassKitResponse, with on success a list of devices that were updated &amp; invalidated.</returns>
+        public PassKitResponse InvalidatePass(string templateName, string serialNumber, Dictionary<string, string> fields)
+        {
+            // Setup the request
+            var request = new RestRequest();
+            request.Resource = "pass/invalidate/template/{templateName}/serial/{serialNumber}";
+            request.AddParameter("templateName", templateName, ParameterType.UrlSegment);
+            request.AddParameter("serialNumber", serialNumber, ParameterType.UrlSegment);
+
+            // Add the fields as parameters
+            foreach (KeyValuePair<String, String> entry in fields)
+            {
+                request.AddParameter(entry.Key, entry.Value, ParameterType.GetOrPost);
+            }
+
+            PassKitResponse result = this.Execute(request);
+            return result;
+        }
+
+        /// <summary>
+        /// This method is used for invalidating a pass. It accepts the parameters returned by the Get Template Field Names method, plus relevance fields for date and for up to 10 locations. 
+        /// Invalidating a pass, performs two functions in a single call. Firstly, it serves as a update, allowing you to change the content of an invalidated pass and secondly, it removes the pass from circulation, 
+        /// preventing it from being updated or manually refreshed.
+        /// </summary>
+        /// <see href="https://code.google.com/p/passkit/wiki/InvalidatePass">More info</see>
+        /// <param name="passId">The unique pass id</param>
+        /// <param name="fields">A dictionary of field-names and their values</param>
+        /// <returns>PassKitResponse, with on success a list of devices that were updated &amp; invalidated.</returns>
+        public PassKitResponse InvalidatePass(string passId, Dictionary<string, string> fields)
+        {
+            // Setup the request
+            var request = new RestRequest();
+            request.Resource = "pass/invalidate/passid/{passId}";
+            request.AddParameter("passId", passId, ParameterType.UrlSegment);
+
+            // Add the fields as parameters
+            foreach (KeyValuePair<String, String> entry in fields)
+            {
+                request.AddParameter(entry.Key, entry.Value, ParameterType.GetOrPost);
+            }
+
+            PassKitResponse result = this.Execute(request);
+            return result;
+        }
+
         #endregion
 
         #region Image methods
@@ -371,6 +425,7 @@ namespace PassKitAPIWrapper
         /// Each image that is uploaded is assigned a unique ID, and is processed for use with Passbook, 
         /// according to the imageType selected.
         /// </summary>
+        /// <see href="https://code.google.com/p/passkit/wiki/UploadImage">More info</see>
         /// <param name="pathToLocalFile">The path to the local filename (make sure that you have read access to the file)</param>
         /// <param name="imageType">The image type of the file (according to PassKitImageType enum)</param>
         /// <returns>PassKitResponse object, with on success the image ID and the usage.</returns>
@@ -433,6 +488,7 @@ namespace PassKitAPIWrapper
         /// <summary>
         /// Method returns information about the image with imageId.
         /// </summary>
+        /// <see href="https://code.google.com/p/passkit/wiki/GetImageData">More info</see>
         /// <param name="imageId">The unique ID of the image</param>
         /// <returns>PassKitResponse object, with on success the information for the image.</returns>
         public PassKitResponse GetImageData(string imageId)
