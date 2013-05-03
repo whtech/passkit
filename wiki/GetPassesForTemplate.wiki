@@ -28,7 +28,7 @@ This method returns some basic template information and all the passes (pass met
     "templateName": "My template",
     "templateLastUpdated": "2013-02-08T01:02:55+00:00",
     "totalPasses": 2,
-    "passrecords": {
+    "passRecords": {
       "pass_1": {
         "passMeta": {
           "passStatus": "Active",
@@ -93,7 +93,7 @@ _Note that for XML responses, spaces in tag names will be replaced by 'middle do
     <templateName>My template</templateName>
     <templateLastUpdated>2013-02-08T01:02:55+00:00</templateLastUpdated>
     <totalPasses>2</totalPasses>
-    <passrecords>
+    <passRecords>
         <pass_1>
             <passMeta>
                 <passStatus>Active</passStatus>
