@@ -747,6 +747,9 @@
 				// Return fail
 				return false;
 			}
+			
+			// Sanitize template
+			$template = $this->sanitize($template);
 
 			// Query passkit for template details for the provided template name.
 			// Convert to array for consistancy and cleaning
