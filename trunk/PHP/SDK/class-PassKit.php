@@ -172,6 +172,9 @@
 			// Full URL to use for the query
 			$api_url =  $this->api_url.$path;
 
+      // Replace spaces in the URL with %20
+			$api_url = str_replace(" ", "%20", $api_url);
+
 			// initiate curl
 			$session = curl_init($api_url);
 
