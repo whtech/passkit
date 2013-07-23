@@ -693,6 +693,29 @@
 		}
 		// }}}
 
+    public function get_template_details_raw($template) {
+			// pass details are required
+			if ($template == '') {
+				// Print error
+				$this->error('Valid template name required.',debug_backtrace());
+
+				// Return fail
+				return false;
+			}
+
+			// Query passkit for template details for the provided template name.
+			// Convert to array for consistancy and cleaning
+			$q = $this->pk_query('template/'.urlencode($template).'/fieldnames/full');
+
+			if($q && isset($this->pk_result->{$template} )) {
+				$template_details = $this->object2array($this->pk_result);
+			}else{
+				$template_details = array();
+			}
+
+			return $template_details;
+		}
+
 
 		/**
 		 * Get dynamic template fields
