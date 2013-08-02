@@ -10,7 +10,7 @@ Authenticates access to the API. Returns true (bool) on successful authenticatio
 
 === cURL Syntax ===
 
-<code>curl --digest -u {APIKey}:{APISecret} "https://api.passkit.com/v1/template/authenticate"</code>
+<code>curl --digest -u {APIKey}:{APISecret} "https://api.passkit.com/v1/authenticate"</code>
 ----
   
 == Response Examples ==
