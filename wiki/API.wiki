@@ -10,7 +10,7 @@ In certain circumstances we will issue keys to free accounts. However, since all
 
 To access our API you will require an API Key and an API Secret.
 
-Your API Key is 32 character Hexadecimal string or a 20 character base62 string (depending on how early you signed requested your keys):
+Your API Key is 32 character Hexadecimal string or a 20 character base62 string (depending on how early you requested your keys):
 
 <code>Example base16 API Key: ff0b04afe47feacd09a850d9a1dd91d0</code>
 <code>Example base62 API Key: B9gaEoDarsV7e1EgutQg</code>
