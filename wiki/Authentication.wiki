@@ -2,7 +2,7 @@
 
 == Authentication & Access ==
 
-Our API user HTTP Digest authentication.  This means that your API secret never leaves your machine.
+Our API uses HTTP Digest authentication.  This means that your API secret never leaves your machine.
 
 HTTP Digest is compatible with all modern web browsers which provides an option to use simple HTML forms to POST or GET to and from the API.
 
