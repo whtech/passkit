@@ -286,62 +286,8 @@
 
 			// max filesize is 1.5mb
 			if(filesize($filename) > 1572864){
-
-				// try to resize the image first, note that both the file and the directory it is in should be writeable by PHP
-				// an uploaded file in /tmp/ would typically be fine
-				$resized = false;
-
-				// test imagick module
-				if(extension_loaded('imagick')){
-					// resize
-					$image = new Imagick($filename);
-					$resized = $image->resizeImage(1000,1000, imagick::FILTER_LANCZOS, 0.9, true);
-					$image->writeImage($filename);
-					$image->clear();
-					$image->destroy();
-				}
-
-				// test imagick exe
-				if(!$resized){
-					exec("/usr/bin/convert -version", $out, $rcode);
-					if($rcode===0){
-						putenv("MAGICK_THREAD_LIMIT=1");
-						exec("/usr/bin/convert $filename -resize '1000x1000>' /tmp/output.jpg; mv -f /tmp/output.jpg $filename; rm -rf /tmp/output.jpg");
-						if(filesize($filename) < 1572864){
-							$resized = true;
-						}
-					}
-				}
-
-				// test GD
-				if(!$resized && extension_loaded('gd') && function_exists('gd_info')){
-					// resize
-					if($filetype=='gif'){		$img_src=imagecreatefromgif($filename);	}else
-					if($filetype=='jpeg'){	$img_src=imagecreatefromjpeg($filename); }else
-					if($filetype=='png'){		$img_src = imagecreatefrompng($filename);}
-					if(isset($img_src)){
-						$owidth = imagesx($img_src);
-						$oheight = imagesy($img_src);
-						$ratio = $owidth / $oheight;
-						$twidth = $theight = min(1000, max($owidth, $oheight));
-						if($ratio < 1){ $twidth  = $theight * $ratio; }
-											else{	$theight = $twidth / $ratio; }
-
-						$img_des = imagecreatetruecolor($twidth,$theight);
-						imagecopyresampled($img_des, $img_src, 0, 0, 0, 0, $twidth, $theight, $owidth, $oheight);
-						imagepng($img_des,$filename);
-						if(filesize($filename) < 1572864){
-							$filetype = 'png';
-							$resized = true;
-						}
-					}
-				}
-
-				// alas, no resizing software, return error
-				if(!$resized){
-					$this->error('Image size too large, max size is 1572864 bytes (1.5mb)',debug_backtrace());
-					return false;
-				}
+				$this->error('Image size too large, max size is 1572864 bytes (1.5mb)',debug_backtrace());
+				return false;
 			}
 
 			// all is well, upload to passkit
