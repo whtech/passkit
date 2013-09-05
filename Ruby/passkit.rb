@@ -37,9 +37,9 @@ class PassKit
   end
 
   def authenticate
-    puts get('authenticate')
+    get('authenticate')
   end
   def template_list
-    puts get('template/list')
+    get('template/list')
   end
 end
