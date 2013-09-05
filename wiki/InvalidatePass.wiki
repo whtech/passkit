@@ -12,7 +12,7 @@ Invalidating a pass, performs two functions in a single call.  Firstly, it serve
 
 Relevance alerts (Location and date) will continue to function on the pass holder's device, unless specifically deactivated by specifying the removeLocations and the removeRelevantDate parameters.  Alternatively, you may decide for marketing or client engagement purposes to use this to your advantage and specify new dates, locations and location alert messages that may engage the pass holder. 
 
-For additional security, there is request a paramater that will remove the barcode from the face of the pass to prevent it from being presented.
+For additional security, there is a request parameter that will remove the barcode from the face of the pass to prevent it from being presented.
 
 Invalidated passes remain in the database for analytics purposes but once invalidated, they cannot be reactivated.
 
@@ -50,7 +50,7 @@ Or:
     *_ For templates that allow the barcode encoded content to be changed.  Using %@ in the string will insert the pass serial number into the encoded content. 
   * *<font color="blue">barcodeAltContent</font>* <font color="green">_(string)_</font> <font color="grey">_optional_</font>
     *_ For templates that allow the barcode alternative content to be changed.  Using %@ in the string will insert the pass serial number into the message. 
-  * *<font color="blue">removeRelaventDate</font>* <font color="green">_(boolean)_</font> <font color="grey">_optional_</font>
+  * *<font color="blue">removeRelevantDate</font>* <font color="green">_(boolean)_</font> <font color="grey">_optional_</font>
     *_ If set to true, the relevantDate will be removed from the pass. The pass holder will no longer receive time based alerts.
   * *<font color="blue">relevantDate</font>* <font color="green">_(date)_</font> <font color="grey">_optional_</font>
     *_ For Pass types that support a relevant date, a date in ISO 8601 format can be provided. More information on the behavior of the relevant date can be found [LockScreenMessages here]. 
@@ -121,7 +121,7 @@ Optionally, each pass can hold up to 10 locations. When submitting locations, th
 </code>
 
 ==== XML Format ====
-_Note that for XML requests, spaces in tag names must be replaced by 'middle dot' (·).  If a tag starts with an invalid character (E.g. a Number), the tag should be prexied with two underscores (`__`_)_
+_Note that for XML requests, spaces in tag names must be replaced by 'middle dot' (·).  If a tag starts with an invalid character (E.g. a Number), the tag should be prefixed with two underscores (`__`_)_
 {{{
 <?xml version="1.0" encoding="UTF-8" ?>
 <PassKit_API_Request>
@@ -137,7 +137,7 @@ _Note that for XML requests, spaces in tag names must be replaced by 'middle dot
 	<Hotel·Telephone>+852 2810 8366</Hotel·Telephone>
 	<Nightly·Rate>HK$ 3,315</Nightly·Rate>
         <removeBarcode>1</removeBarcode>
-        <removeRelevantDate>1</removeRelavantDate>
+        <removeRelevantDate>1</removeRelevantDate>
         <removeLocations>1</removeLocations>
 </PassKit_API_Request>
 }}}
@@ -250,7 +250,7 @@ $pk->pass_validate();
 // Invalidate pass
 $pk->pass_invalidate($data);
 
-// Example 2: this example shows you how to set the pass via the unqiue pass id, and then invalidate the pass (use either example 1 or 2)
+// Example 2: this example shows you how to set the pass via the unique pass id, and then invalidate the pass (use either example 1 or 2)
 $pk->set_pass_id($unique_pass_id);
 // Validate pass (otherwise invalidate pass doesn't work)
 $pk->pass_validate();
@@ -297,13 +297,13 @@ namespace PassKitWebDemo
         data["removeLocations"] = "1";
         data["removeRelevantDate"] = "1";
 
-        // There are 2 ways to invalidate a pass, via templat1 & serial combination, or via unique pass id.
+        // There are 2 ways to invalidate a pass, via template & serial combination, or via unique pass id.
 
         // Example 1: this example shows you how to invalidate the pass via the combination of template_name & pass_serial
         PassKitResponse result = pk.InvalidatePass(template_name, pass_serial, data);
         // Do something with result
 
-        // Example 2: this example shows you how to invalidate the pass via the unqiue pass id
+        // Example 2: this example shows you how to invalidate the pass via the unique pass id
         PassKitResponse result2 = pk.InvalidatePass(unique_pass_id, data);
         // Do something with result
     }
