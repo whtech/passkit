@@ -129,7 +129,7 @@ Requests should be submitted as an array of passes, each with a unique key (E.g.
 </code>
 
 ==== XML Format ====
-_Note that for XML requests, spaces in tag names must be replaced by 'middle dot' (·).  If a tag starts with an invalid character (E.g. a Number), the tag should be prexied with two underscores (`__`_)_
+_Note that for XML requests, spaces in tag names must be replaced by 'middle dot' (·).  If a tag starts with an invalid character (E.g. a Number), the tag should be prefixed with two underscores (`__`_)_
 {{{
 <?xml version="1.0" encoding="UTF-8" ?>
 <PassKit_API_Request>

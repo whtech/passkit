@@ -10,7 +10,7 @@ Gets the pass details based on the pass id. The function returns a result of pas
 
 == URI Parameters ==
 
-  * <font color="blue">*passId*</font> <font color="green">_(string)_</font> The unqiue id of the pass.
+  * <font color="blue">*passId*</font> <font color="green">_(string)_</font> The unique id of the pass.
 
 === cURL Syntax ===
 
@@ -53,7 +53,7 @@ A successful request should receive the following response:
 
 ==== XML Format ====
 
-_Note that for XML responses, spaces in tag names will be replaced by 'middle dot' (·).  If a tag starts with an invalid character (E.g. a Number), the tag will be prexied with two underscores (`__`_)_
+_Note that for XML responses, spaces in tag names will be replaced by 'middle dot' (·).  If a tag starts with an invalid character (E.g. a Number), the tag will be prefixed with two underscores (`__`_)_
 {{{
 <?xml version="1.0"?>
 <PassKit_API_Response>
@@ -145,7 +145,7 @@ namespace PassKitWebDemo
         // Initialize new instance of PassKit API wrapper
         PassKit pk = new PassKit(apiAccount, apiSecret);
 
-        // Get the pass details via the unqiue pass id
+        // Get the pass details via the unique pass id
         PassKitResponse result = pk.GetPassDetails(unique_pass_id);
         // Do something with result
     }

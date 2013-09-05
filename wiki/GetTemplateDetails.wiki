@@ -52,7 +52,7 @@ With full parameter:
 
 ==== XML Format ====
 
-_Note that for XML responses, spaces in tag names will be replaced by 'middle dot' (·).  If a tag starts with an invalid character (E.g. a Number), the tag will be prexied with two underscores (`__`_)_
+_Note that for XML responses, spaces in tag names will be replaced by 'middle dot' (·).  If a tag starts with an invalid character (E.g. a Number), the tag will be prefixed with two underscores (`__`_)_
 {{{
 <?xml version="1.0"?>
 <PassKit_API_Response>
@@ -81,7 +81,7 @@ _Note that for XML responses, spaces in tag names will be replaced by 'middle do
   * *<font color="blue">{fieldName}</font>* <font color="green">_(string)_</font>
     *_Returns the name of each dynamic 'value' field, together with the type of data the field accepts. The type value will be either one of <font color="purple">text</font>, <font color="purple">number</font>,  <font color="purple">date</font>,  <font color="purple">datetime</font> or <font color="purple">currency</font>.
   * *<font color="blue">{fieldName}`_`changeMessage</font>* <font color="green">_(string)_</font>
-    *_If a field (static or dynamic) has a change message set, this paramater will be returned with a value of <font color="purple">text</font>
+    *_If a field (static or dynamic) has a change message set, this parameter will be returned with a value of <font color="purple">text</font>
   * *<font color="blue">{fieldName>}`_`label</font>* <font color="green">_(string)_</font>
     *_Returns the ID of a dynamic 'label' field with a value of <font color="purple">text</font>
   * *<font color="blue">thumbnailImage</font>* <font color="green">_(string)_</font>

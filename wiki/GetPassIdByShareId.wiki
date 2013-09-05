@@ -32,7 +32,7 @@ The method returns the unique pass ID for the pass if it finds the record with <
 
 ==== XML Format ====
 
-_Note that for XML responses, spaces in tag names will be replaced by 'middle dot' (·).  If a tag starts with an invalid character (E.g. a Number), the tag will be prexied with two underscores (`__`_)_
+_Note that for XML responses, spaces in tag names will be replaced by 'middle dot' (·).  If a tag starts with an invalid character (E.g. a Number), the tag will be prefixed with two underscores (`__`_)_
 {{{
 
 <?xml version="1.0"?>

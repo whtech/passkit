@@ -41,7 +41,7 @@ Note that the PassKit account ID and Secret are required and are stored in the c
       // initiate curl
       $session = curl_init($api_url);
      
-      // If post-field paramaters have been provided
+      // If post-field parameters have been provided
       if(!empty($post)){
         // Turn it into a string
         $post_string='';

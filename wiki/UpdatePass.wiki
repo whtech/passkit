@@ -110,7 +110,7 @@ Optionally, each pass can hold up to 10 locations. When submitting locations, th
 </code>
 
 ==== XML Format ====
-_Note that for XML requests, spaces in tag names must be replaced by 'middle dot' (·).  If a tag starts with an invalid character (E.g. a Number), the tag should be prexied with two underscores (`__`_)_
+_Note that for XML requests, spaces in tag names must be replaced by 'middle dot' (·).  If a tag starts with an invalid character (E.g. a Number), the tag should be prefixed with two underscores (`__`_)_
 {{{
 <?xml version="1.0" encoding="UTF-8" ?>
 <PassKit_API_Request>
@@ -237,7 +237,7 @@ $pk->pass_validate();
 // Update pass
 $pk->pass_update($data);
 
-// Example 2: this example shows you how to set the pass via the unqiue pass id, and then update the pass data (use either example 1 or 2)
+// Example 2: this example shows you how to set the pass via the unique pass id, and then update the pass data (use either example 1 or 2)
 $pk->set_pass_id($unique_pass_id);
 // Validate pass
 $pk->validate_pass();
@@ -286,7 +286,7 @@ namespace PassKitWebDemo
         PassKitResponse result = pk.UpdatePass(template_name, pass_serial, data, true);
         // Do something with result
 
-        // Example 2: this example shows you how to set the pass via the unqiue pass id
+        // Example 2: this example shows you how to set the pass via the unique pass id
         PassKitResponse result2 = pk.UpdatePass(unique_pass_id, data, true);
         // Do something with result
     }
