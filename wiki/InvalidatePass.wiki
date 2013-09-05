@@ -16,7 +16,7 @@ For additional security, there is a request parameter that will remove the barco
 
 Invalidated passes remain in the database for analytics purposes but once invalidated, they cannot be reactivated.
 
-Note that in order to change the pass on a users device, they must have notifications turned on.  You should still maintain your own diligence checks before accepting any pass.  _(To help with pass validation, you can use the Get Pass Status method or Get Pass Values methods)_.
+Note that in order to change the pass on a users device, they must have notifications turned on.  You should still maintain your own diligence checks before accepting any pass.
 
 To help make this method as accessible as possible, it accepts GET, POST and PUT requests.  Key/Value pairs can be submitted via GET or POST, and JSON or XML files can be submitted via PUT.
 
