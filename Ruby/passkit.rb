@@ -6,13 +6,15 @@ require 'net/http/digest_auth'
 require './config.rb'
 
 class PassKit
+  API_URL = 'https://api.passkit.com/v1/'
+
   def initialize(key, secret)
     @key	= key
     @secret	= secret
   end
 
-  def authenticate
-    uri = URI.parse 'https://api.passkit.com/v1/authenticate'
+  def get(path)
+    uri = URI.parse API_URL + path
     uri.user = @key
     uri.password = @secret
   
@@ -31,28 +33,13 @@ class PassKit
   
     res = h.request req
   
-    puts res.body
+    res.body
+  end
+
+  def authenticate
+    puts get('authenticate')
   end
   def template_list
-    uri = URI.parse 'https://api.passkit.com/v1/template/list'
-    uri.user = @key
-    uri.password = @secret
-  
-    h = Net::HTTP.new uri.host, uri.port
-    h.use_ssl = uri.scheme == 'https'
-  
-    req = Net::HTTP::Get.new uri.request_uri
-  
-    res = h.request req
-  
-    digest_auth = Net::HTTP::DigestAuth.new
-    auth = digest_auth.auth_header uri, res['www-authenticate'], 'GET'
-  
-    req = Net::HTTP::Get.new uri.request_uri
-    req.add_field 'Authorization', auth
-  
-    res = h.request req
-  
-    puts res.body
+    puts get('template/list')
   end
 end
