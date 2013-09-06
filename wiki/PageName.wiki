@@ -1,8 +1,8 @@
-#summary More language
+#summary Use
 
 = Introduction =
 
-You can consume this API via [https://www.mashape.com/passkit/passkit Mashape], which provides PHP, Ruby, Python, Objective-C and Java libraries.
+You can consume this API via [https://www.mashape.com/passkit/passkit Mashape], which provides PHP, Ruby, Python, Objective-C, .Net, and Java libraries.
 
 = Details =
 
