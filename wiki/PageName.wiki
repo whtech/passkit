@@ -1,10 +1,8 @@
-#summary Use
+#summary Accessing PassKit’s API in Other Languages
 
-= Introduction =
+= Accessing PassKit’s API in Other Languages =
 
 You can consume this API via [https://www.mashape.com/passkit/passkit Mashape], which provides PHP, Ruby, Python, Objective-C, .Net, and Java libraries.
-
-= Details =
 
 To get started:
   # Create an account on [https://www.mashape.com/signup Mashape].
