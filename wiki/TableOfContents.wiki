@@ -52,3 +52,4 @@
             * [Admin Admin Methods]
                * [Authenticate Authenticate]
       * [PassProcessingPHPExample PHP Example Class]
+      * [MoreLanguages More Languages]
