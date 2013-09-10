@@ -1,6 +1,6 @@
-require './passkit.rb'
 require 'json'
 require 'test/unit'
+require './passkit.rb'
 
 require './config.rb'
 
