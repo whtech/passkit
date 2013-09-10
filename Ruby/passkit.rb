@@ -1,8 +1,8 @@
 require 'json'
-require 'uri'
 require 'net/http'
 require 'net/http/digest_auth'
 require 'net/https'
+require 'uri'
 
 class PassKit
   API_URL = 'https://api.passkit.com/v1/'
