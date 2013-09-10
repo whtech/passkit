@@ -4,8 +4,6 @@ require 'net/http'
 require 'net/http/digest_auth'
 require 'net/https'
 
-require './config.rb'
-
 class PassKit
   API_URL = 'https://api.passkit.com/v1/'
 

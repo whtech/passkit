@@ -2,6 +2,8 @@ require './passkit.rb'
 require 'json'
 require 'test/unit'
 
+require './config.rb'
+
 class TestPassKit < Test::Unit::TestCase
   def setup
     @pk = PassKit.new($key, $secret)
