@@ -2,6 +2,7 @@ require 'json'
 require 'uri'
 require 'net/http'
 require 'net/http/digest_auth'
+require 'net/https'
 
 require './config.rb'
 
