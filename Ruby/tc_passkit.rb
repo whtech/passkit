@@ -2,11 +2,10 @@ require 'json'
 require 'test/unit'
 require './passkit.rb'
 
-require './config.rb'
-
 class TestPassKit < Test::Unit::TestCase
   def setup
-    @pk = PassKit.new($key, $secret)
+    h = JSON.parse IO.read "#{ENV['HOME']}/.passkit.json"
+    @pk = PassKit.new(h['key'], h['secret'])
   end
   def test_authenticate
     h = JSON.parse @pk.authenticate
