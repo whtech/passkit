@@ -55,4 +55,12 @@ class PassKit
   def template_passes(template)
     get("template/#{URI.escape template}/passes")
   end
+  def template_update(template, data)
+    enc_data = []
+    data.each do |k, v|
+      enc_data.push(URI.escape(k) + '=' + URI.escape(v))
+    end
+    enc_str = enc_data.join '&'
+    get("template/update/#{URI.escape template}/?#{enc_str}")
+  end
 end

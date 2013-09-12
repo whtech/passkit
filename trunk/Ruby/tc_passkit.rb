@@ -1,6 +1,9 @@
 require 'json'
+require 'pp'
 require 'test/unit'
 require './passkit.rb'
+
+$VERBOSE = true
 
 class TestPassKit < Test::Unit::TestCase
   def setup
@@ -30,5 +33,9 @@ class TestPassKit < Test::Unit::TestCase
       h = JSON.parse @pk.template_passes t
       assert h['success']
     end
+  end
+  def test_template_update
+    j = JSON.parse @pk.template_update('test', {'textItem' => 'New Defaults'})
+    assert j['success']
   end
 end
