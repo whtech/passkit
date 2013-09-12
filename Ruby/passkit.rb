@@ -25,17 +25,21 @@ class PassKit
     end
   
     req = Net::HTTP::Get.new uri.request_uri
-  
     res = h.request req
-  
-    digest_auth = Net::HTTP::DigestAuth.new
-    auth = digest_auth.auth_header uri, res['www-authenticate'], 'GET'
-  
-    req = Net::HTTP::Get.new uri.request_uri
-    req.add_field 'Authorization', auth
-  
-    res = h.request req
-  
+    if (res.code == '401')
+      digest_auth = Net::HTTP::DigestAuth.new
+      if (res['www-authenticate'] == nil)
+	warn "warning: missing www-authenticate header"
+        return res.body
+      end
+      auth = digest_auth.auth_header uri, res['www-authenticate'], 'GET'
+
+      req.add_field 'Authorization', auth
+      res = h.request req
+    else
+      warn "warning: expected 401 Unauthorized header, got " + res.code
+    end
+
     res.body
   end
 
