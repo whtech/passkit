@@ -18,7 +18,12 @@ class PassKit
     uri.password = @secret
   
     h = Net::HTTP.new uri.host, uri.port
-    h.use_ssl = uri.scheme == 'https'
+    if (uri.scheme == 'https')
+      h.use_ssl = true
+      #h.ca_path = '/etc/ssl/cert.pem'
+      #h.verify_mode = OpenSSL::SSL::VERIFY_PEER
+      #h.verify_depth = 5
+    end
   
     req = Net::HTTP::Get.new uri.request_uri
   
