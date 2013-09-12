@@ -48,4 +48,7 @@ class PassKit
   def template_fieldnames(template)
     get("template/#{URI.escape template}/fieldnames")
   end
+  def template_passes(template)
+    get("template/#{URI.escape template}/passes")
+  end
 end

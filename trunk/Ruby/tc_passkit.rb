@@ -24,4 +24,11 @@ class TestPassKit < Test::Unit::TestCase
       assert h['success']
     end
   end
+  def test_template_passes
+    templates = JSON.parse @pk.template_list
+    templates['templates'].each do |t|
+      h = JSON.parse @pk.template_passes t
+      assert h['success']
+    end
+  end
 end
