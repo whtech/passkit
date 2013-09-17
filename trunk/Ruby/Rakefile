@@ -1,5 +1,5 @@
 task :default => [:test]
 
 task :test do
-  ruby "tc_passkit.rb"
+  ruby "-rubygems tc_passkit.rb"
 end
