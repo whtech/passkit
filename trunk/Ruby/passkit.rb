@@ -1,3 +1,4 @@
+require 'json'
 require 'net/http'
 require 'net/http/digest_auth'
 require 'net/https'
@@ -11,7 +12,7 @@ class PassKit
     @secret	= secret
   end
 
-  def get(path)
+  def connect(path, data)
     uri = URI.parse API_URL + path
     uri.user = @key
     uri.password = @secret
@@ -24,7 +25,10 @@ class PassKit
       #h.verify_depth = 5
     end
   
-    req = Net::HTTP::Get.new uri.request_uri
+    req = data ? Net::HTTP::Put.new(uri.request_uri) :
+      Net::HTTP::Get.new(uri.request_uri)
+    req.add_field 'Content-Type', 'application/json'
+    req.body = data
     res = h.request req
     if (res.code == '401')
       digest_auth = Net::HTTP::DigestAuth.new
@@ -42,6 +46,14 @@ class PassKit
     end
 
     res.body
+  end
+
+  def get(path)
+    connect(path, nil)
+  end
+
+  def put(path, data)
+    connect(path, data)
   end
 
   def authenticate
@@ -63,5 +75,8 @@ class PassKit
     end
     enc_str = enc_data.join '&'
     get("template/update/#{URI.escape template}/?#{enc_str}")
+  end
+  def pass_update_passid(passid, data)
+    put("pass/update/passid/#{URI.escape passid}", JSON.generate(data))
   end
 end
