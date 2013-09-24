@@ -63,20 +63,24 @@ class PassKit
     get('template/list')
   end
   def template_fieldnames(template)
-    get("template/#{URI.escape template}/fieldnames")
+    t = URI.encode_www_form_component template
+    get("template/#{t}/fieldnames")
   end
   def template_passes(template)
-    get("template/#{URI.escape template}/passes")
+    t = URI.encode_www_form_component template
+    get("template/#{t}/passes")
   end
   def template_update(template, data)
-    enc_data = []
-    data.each do |k, v|
-      enc_data.push(URI.escape(k) + '=' + URI.escape(v))
-    end
-    enc_str = enc_data.join '&'
-    get("template/update/#{URI.escape template}/?#{enc_str}")
+    t = URI.encode_www_form_component template
+    q = URI.encode_www_form data
+    get("template/update/#{t}/?#{q}")
+  end
+  def pass_get_passid(passid)
+    id = URI.encode_www_form_component passid
+    get("pass/get/passid/#{id}")
   end
   def pass_update_passid(passid, data)
-    put("pass/update/passid/#{URI.escape passid}", JSON.generate(data))
+    id = URI.encode_www_form_component passid
+    put("pass/update/passid/#{id}", JSON.generate(data))
   end
 end
