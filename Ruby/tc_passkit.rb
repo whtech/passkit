@@ -39,12 +39,22 @@ class TestPassKit < Test::Unit::TestCase
     assert j['success']
   end
   def test_pass_update_passid
-    j = JSON.parse @pk.pass_update_passid('feKpNoscFpL9',
-      {'expirationDate' => '2013-09-17T06:44Z',
-	'voided' => true,
-        'groupingIdentifier' => 'PassKit',
-	'ignoresTimeZone' => true,
-      })
+    data = {
+      'expirationDate' => '2013-09-17T06:44Z',
+      'voided' => true,
+      'groupingIdentifier' => 'PassKit',
+      'ignoresTimeZone' => true,
+      'associatedStoreIdentifiers' => 12345678,
+      'appLaunchURL' => 'http://passkit.com',
+      'userInfo' => '{"name": "Percy PassKit"}',
+      'beacons' => [{
+	'major' => 123456,
+	'minor' => 654321,
+	'proximityUUID' => 'I AM A UNIQUE ID',
+	'relevantText' => 'irrelevant'
+      }]
+    }
+    j = JSON.parse @pk.pass_update_passid('feKpNoscFpL9', data)
     assert j['success']
   end
 end
