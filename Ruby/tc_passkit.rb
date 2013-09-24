@@ -38,4 +38,13 @@ class TestPassKit < Test::Unit::TestCase
     j = JSON.parse @pk.template_update('test', {'textItem' => 'New Defaults'})
     assert j['success']
   end
+  def test_pass_update_passid
+    j = JSON.parse @pk.pass_update_passid('feKpNoscFpL9',
+      {'expirationDate' => '2013-09-17T06:44Z',
+	'voided' => true,
+        'groupingIdentifier' => 'PassKit',
+	'ignoresTimeZone' => true,
+      })
+    assert j['success']
+  end
 end
