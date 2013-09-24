@@ -32,7 +32,8 @@ class PassKit
 	warn "warning: missing www-authenticate header"
         return res.body
       end
-      auth = digest_auth.auth_header uri, res['www-authenticate'], 'GET'
+      auth = digest_auth.auth_header uri, res['www-authenticate'],
+	req.method
 
       req.add_field 'Authorization', auth
       res = h.request req
