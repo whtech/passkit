@@ -2,9 +2,7 @@
 
 = Obtaining your keys =
 
-For security,  API Keys are emailed automatically to all accounts when they sign up for one of our service plans.
-
-In certain circumstances we will issue keys to free accounts. However, since all of our plans come with a free 30 day trial period, such circumstances are exceptional.  If you are requesting a free API key, please provide as much information as possible about you business, how you intend to use the key and why a paid plan is not appropriate for you.
+You can request your API Keys from the Details tab from the account section of the pass designer at https://create.passkit.com/.
 
 == Key Format ==
 
