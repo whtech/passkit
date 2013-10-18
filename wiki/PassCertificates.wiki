@@ -1,4 +1,4 @@
-= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
+= <font color="#ff0000">Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub].</font> =
 
 =Pass Certificates (PassID)=
 

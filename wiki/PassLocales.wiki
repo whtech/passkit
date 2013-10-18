@@ -1,6 +1,6 @@
 #summary Designing your Pass for different languages (**MOVED TO GITHUB**)
 
-= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
+= <font color="#ff0000">Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub].</font> =
 
 =Designing your Pass so it is appropriate for other languages=
 

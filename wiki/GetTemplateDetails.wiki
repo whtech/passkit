@@ -1,6 +1,6 @@
 #summary Get Template Field Names (**MOVED TO GITHUB**)
 
-= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
+= <font color="#ff0000">Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub].</font> =
 
 = Get Template Field Names =
 

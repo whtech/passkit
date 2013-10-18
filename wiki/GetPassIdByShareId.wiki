@@ -1,6 +1,6 @@
 #summary Get Unique Pass ID (by share ID) (**MOVED TO GITHUB**)
 
-= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
+= <font color="#ff0000">Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub].</font> =
 
 = Get Unique Pass ID (by share ID) =
 
