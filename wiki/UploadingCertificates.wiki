@@ -1,4 +1,6 @@
-#summary Generating and Uploading Pass Certificates
+#summary Generating and Uploading Pass Certificates (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 = Generating and Uploading Pass Certificates =
 

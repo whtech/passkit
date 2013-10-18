@@ -1,4 +1,6 @@
-#summary The lifecycle of a Pass
+#summary The lifecycle of a Pass (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 = The Lifecycle of a Pass =
 

@@ -1,4 +1,6 @@
-#summary Get Unique Pass ID (by share ID)
+#summary Get Unique Pass ID (by share ID) (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 = Get Unique Pass ID (by share ID) =
 

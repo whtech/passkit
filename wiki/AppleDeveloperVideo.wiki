@@ -1,4 +1,6 @@
-#summary Enrolling for an Apple Developer Account
+#summary Enrolling for an Apple Developer Account (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 =Enrolling for an Apple Developer Account=
 

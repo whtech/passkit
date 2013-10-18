@@ -1,4 +1,6 @@
-#summary Get Pass Details (by pass id)
+#summary Get Pass Details (by pass id) (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 = Get Pass Details (by pass id) =
 

@@ -1,4 +1,6 @@
-#summary What is PassKit?
+#summary What is PassKit? (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 = About PassKit =
 

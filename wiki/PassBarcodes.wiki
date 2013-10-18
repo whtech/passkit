@@ -1,4 +1,6 @@
-#summary Choosing the style and contents of the Barcode
+#summary Choosing the style and contents of the Barcode (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 = Choosing the style and contents of the Barcode =
 

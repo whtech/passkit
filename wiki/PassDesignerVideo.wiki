@@ -1,4 +1,6 @@
-#summary A video demonstration of the Pass Designer web interface
+#summary A video demonstration of the Pass Designer web interface (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 = Video demonstration of the Pass Designer web interface =
 

@@ -1,4 +1,6 @@
-#summary Adding a Pass to Passbook
+#summary Adding a Pass to Passbook (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 = Adding a Pass to Passbook =
 

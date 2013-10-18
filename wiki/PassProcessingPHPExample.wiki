@@ -1,5 +1,7 @@
-#summary Full PHP class with functions for processing passes
+#summary Full PHP class with functions for processing passes (**MOVED TO GITHUB**)
 #labels passkit,api,php,class,Phase-Implementation
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 = Introduction =
 Interacting with PassKit is really quite simple – especially when compared to interacting with Apple directly for Passbook passes. The following are some excerpts from a PassKit PHP class with explanations. (The full class with documentation is included as a download.)

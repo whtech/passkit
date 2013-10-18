@@ -1,4 +1,6 @@
-#summary API Authentication and Access
+#summary API Authentication and Access (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 == Authentication & Access ==
 

@@ -1,4 +1,6 @@
-#summary PassKit API Methods
+#summary PassKit API Methods (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 = PassKit API Methods =
 

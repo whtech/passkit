@@ -1,4 +1,6 @@
-#summary Batch Issue Pass API Method
+#summary Batch Issue Pass API Method (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 = Batch Issue Pass =
 

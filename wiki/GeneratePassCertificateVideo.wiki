@@ -1,4 +1,6 @@
-#summary How to generate and upload your own Pass Certificate - Video Tutorial
+#summary How to generate and upload your own Pass Certificate - Video Tutorial (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 =How to generate and upload your own Pass Certificate=
 

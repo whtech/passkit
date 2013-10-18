@@ -1,4 +1,6 @@
-#summary PassKit Documentation Table of Contents
+#summary PassKit Documentation Table of Contents (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 =Table of Contents=
 

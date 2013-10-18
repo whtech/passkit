@@ -1,4 +1,6 @@
-#summary Uploading your images
+#summary Uploading your images (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 = Uploading your images =
 

@@ -1,4 +1,6 @@
-#summary Distributing a Passbook Pass
+#summary Distributing a Passbook Pass (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 = Distributing a Passbook Pass =
 

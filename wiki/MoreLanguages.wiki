@@ -1,4 +1,6 @@
-#summary Accessing PassKit’s API in Other Languages
+#summary Accessing PassKit’s API in Other Languages (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 = Accessing PassKit’s API in Other Languages =
 

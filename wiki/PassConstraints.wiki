@@ -1,4 +1,6 @@
-#summary Constraints of each Pass Type
+#summary Constraints of each Pass Type (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 = Constraints of each Pass Type =
 

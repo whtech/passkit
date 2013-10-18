@@ -1,4 +1,6 @@
-#summary Formatting Fields
+#summary Formatting Fields (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 = Formatting Fields =
 

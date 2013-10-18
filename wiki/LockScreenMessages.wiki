@@ -1,4 +1,6 @@
-#summary Displaying messages on the Lock Screen
+#summary Displaying messages on the Lock Screen (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 = Displaying messages on the Lock Screen =
 

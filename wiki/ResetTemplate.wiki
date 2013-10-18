@@ -1,4 +1,6 @@
-#summary Reset Template
+#summary Reset Template (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 = Reset Template =
 

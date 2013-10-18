@@ -1,3 +1,5 @@
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
+
 =Pass Certificates (PassID)=
 
 Certificates, also referred to as Pass IDs play an important role in how a Pass functions in Passbook.

@@ -1,4 +1,6 @@
-#summary Pass Methods
+#summary Pass Methods (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 = Admin Methods =
 

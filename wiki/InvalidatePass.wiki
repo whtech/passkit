@@ -1,4 +1,6 @@
-#summary Invalidate Pass Method
+#summary Invalidate Pass Method (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 = Invalidate Pass =
 

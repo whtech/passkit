@@ -1,4 +1,6 @@
-#summary Get Passes For Template
+#summary Get Passes For Template (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 = Get Passes For Template =
 

@@ -1,4 +1,6 @@
-#summary Customizing your Pass Colors
+#summary Customizing your Pass Colors (**MOVED TO GITHUB**)
+
+= Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub]. =
 
 = Customizing your Pass Colors =
 
