@@ -89,6 +89,20 @@ Optionally, each pass can hold up to 10 locations. When submitting locations, th
   * *<font color="blue">location_{number}_locationAlert</font>* <font color="green">_(string)_</font> <font color="grey">_required_</font>
     *_ The message to be displayed on the lockscreen when the device is close to the location. 
 
+==== Beacon Parameters ====
+
+Optionally, each pass can hold up to 10 beacons. When submitting beacons, the name parameter is required.
+  * *<font color="blue">beacon{number}</font> <font color="green">_(bool)_</font> <font color="grey">_required_</font>
+    *_ Set to true to use the beacon. 
+  * *<font color="blue">beacon{number}name</font>* <font color="green">_(string)_</font> <font color="grey">_required_</font>
+    *_ A UUID or other meaningful text that will help you identify the beacon.
+  * *<font color="blue">beacon{number}major</font>* <font color="green">_(16-bit unsigned integer)_</font> <font color="grey">_optional_</font>
+    *_ The major identifier of a beacon.
+  * *<font color="blue">beacon{number}minor</font>* <font color="green">_(16-bit unsigned integer)_</font> <font color="grey">_optional_</font>
+    *_ The minor identifier of a beacon.
+  * *<font color="blue">beacon{number}beaconAlert</font>* <font color="green">_(string)_</font> <font color="grey">_required_</font>
+    *_ The message to be displayed on the lockscreen when the device is close to the beacon.
+
 === Request Examples ===
 
 ==== GET Request ====
