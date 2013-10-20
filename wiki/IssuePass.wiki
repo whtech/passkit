@@ -92,7 +92,7 @@ Optionally, each pass can hold up to 10 locations. When submitting locations, th
 ==== Beacon Parameters ====
 
 Optionally, each pass can hold up to 10 beacons. When submitting beacons, the name parameter is required.
-  * *<font color="blue">beacon{number}</font> <font color="green">_(bool)_</font> <font color="grey">_required_</font>
+  * *<font color="blue">beacon{number}</font>* <font color="green">_(bool)_</font> <font color="grey">_required_</font>
     *_ Set to true to use the beacon. 
   * *<font color="blue">beacon{number}name</font>* <font color="green">_(string)_</font> <font color="grey">_required_</font>
     *_ A UUID or other meaningful text that will help you identify the beacon.
