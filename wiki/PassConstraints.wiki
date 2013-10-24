@@ -1,6 +1,6 @@
 #summary Constraints of each Pass Type (**MOVED TO GITHUB**)
 
-= <font color="#ff0000">Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub].</font> =
+= <font color="#ff0000">Note: This project has moved to [https://github.com/PassKit/PassKitSDK/wiki/ PassKit/PassKitSDK on GitHub].</font> =
 
 = Constraints of each Pass Type =
 

@@ -1,6 +1,6 @@
 #summary Accessing PassKit’s API in Other Languages (**MOVED TO GITHUB**)
 
-= <font color="#ff0000">Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub].</font> =
+= <font color="#ff0000">Note: This project has moved to [https://github.com/PassKit/PassKitSDK/wiki/ PassKit/PassKitSDK on GitHub].</font> =
 
 = Accessing PassKit’s API in Other Languages =
 

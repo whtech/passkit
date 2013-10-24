@@ -1,6 +1,6 @@
 #summary PassKit Documentation Table of Contents (**MOVED TO GITHUB**)
 
-= <font color="#ff0000">Note: This project has moved to [https://github.com/PassKit/PassKitSDK PassKit/PassKitSDK on GitHub].</font> =
+= <font color="#ff0000">Note: This project has moved to [https://github.com/PassKit/PassKitSDK/wiki/ PassKit/PassKitSDK on GitHub].</font> =
 
 =Table of Contents=
 
