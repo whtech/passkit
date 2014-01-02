@@ -1,6 +1,6 @@
-#summary What is PassKit? (**MOVED TO GITHUB**)
+#summary What is PassKit? (**MOVED TO PassKit.com**)
 
-= <font color="#ff0000">Note: This project has moved to [https://github.com/PassKit/PassKitSDK/wiki/ PassKit/PassKitSDK on GitHub].</font> =
+= <font color="#ff0000">Note: This project has moved to [https://passkit.com/documentation/ PassKit.com].</font> =
 
 = About PassKit =
 

@@ -1,6 +1,6 @@
-#summary How to generate and upload your own Pass Certificate - Video Tutorial (**MOVED TO GITHUB**)
+#summary How to generate and upload your own Pass Certificate - Video Tutorial (**MOVED TO PassKit.com**)
 
-= <font color="#ff0000">Note: This project has moved to [https://github.com/PassKit/PassKitSDK/wiki/ PassKit/PassKitSDK on GitHub].</font> =
+= <font color="#ff0000">Note: This project has moved to [https://passkit.com/documentation/ PassKit.com].</font> =
 
 =How to generate and upload your own Pass Certificate=
 

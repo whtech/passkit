@@ -1,6 +1,6 @@
-#summary Choosing the style and contents of the Barcode (**MOVED TO GITHUB**)
+#summary Choosing the style and contents of the Barcode (**MOVED TO PassKit.com**)
 
-= <font color="#ff0000">Note: This project has moved to [https://github.com/PassKit/PassKitSDK/wiki/ PassKit/PassKitSDK on GitHub].</font> =
+= <font color="#ff0000">Note: This project has moved to [https://passkit.com/documentation/ PassKit.com].</font> =
 
 = Choosing the style and contents of the Barcode =
 

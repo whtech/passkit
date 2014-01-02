@@ -1,6 +1,6 @@
-#summary A video demonstration of the Pass Designer web interface (**MOVED TO GITHUB**)
+#summary A video demonstration of the Pass Designer web interface (**MOVED TO PassKit.com**)
 
-= <font color="#ff0000">Note: This project has moved to [https://github.com/PassKit/PassKitSDK/wiki/ PassKit/PassKitSDK on GitHub].</font> =
+= <font color="#ff0000">Note: This project has moved to [https://passkit.com/documentation/ PassKit.com].</font> =
 
 = Video demonstration of the Pass Designer web interface =
 

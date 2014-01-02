@@ -1,6 +1,6 @@
-#summary Text Fields on as Pass (**MOVED TO GITHUB**)
+#summary Text Fields on as Pass (**MOVED TO PassKit.com**)
 
-= <font color="#ff0000">Note: This project has moved to [https://github.com/PassKit/PassKitSDK/wiki/ PassKit/PassKitSDK on GitHub].</font> =
+= <font color="#ff0000">Note: This project has moved to [https://passkit.com/documentation/ PassKit.com].</font> =
 
 = Text fields on a Pass =
 
