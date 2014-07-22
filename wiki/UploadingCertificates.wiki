@@ -1,6 +1,4 @@
-#summary Generating and Uploading Pass Certificates (**MOVED TO PassKit.com**)
-
-= <font color="#ff0000">Note: This project has moved to [https://passkit.com/documentation/ PassKit.com].</font> =
+#summary Generating and Uploading Pass Certificates
 
 = Generating and Uploading Pass Certificates =
 
