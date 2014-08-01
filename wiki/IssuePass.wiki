@@ -216,8 +216,8 @@ Download latest PassKit PHP -and/or C# SDK: https://code.google.com/p/passkit/do
 require_once ('class-PassKit.php');
 
 // Set variables
-$api_key = "apiKey"; // Add your PassKit API Key
-$api_secret = "apiSecret"; // Add your PassKit API Secret
+$apiKey = "apiKey"; // Add your PassKit API Key
+$apiSecret = "apiSecret"; // Add your PassKit API Secret
 $template_name = "My template"; // Add your template name here
 
 // Create new PassKit instance
